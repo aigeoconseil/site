@@ -1,0 +1,1017 @@
+<meta charset="utf-8">
+<link rel="icon" href="favicon.png">
+<title>AIGEO · Visibilité des marques dans les réponses IA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AIGEO mesure si votre marque est citée quand un acheteur demande conseil à une IA, et corrige ce qui l'en empêche. Relevé, corpus de conseil, présence locale. Marques e-commerce et commerces de proximité.">
+<style>
+:root{
+  --ink:#0E0E12; --paper:#FAF9F6; --muted:#6E6E78; --line:#E4E2DC;
+  --accent:#4A1FD4; --accent2:#C93AC9; --surface:#FFFFFF;
+  --absent:#E0432E; --cite:#12A15C; --shadow:0 1px 2px rgba(14,14,18,.05),0 12px 32px rgba(14,14,18,.06);
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#8B6BFF; --accent2:#E05FDD; --surface:#1A1A21;
+  --absent:#FF6A55; --cite:#3ED18A; --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+a{color:inherit}
+.ilink{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent);font-weight:600}
+.ilink:hover{border-bottom-color:var(--accent)}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(34px,5.2vw,60px);font-weight:680}
+h2{font-size:clamp(25px,3.2vw,36px);font-weight:640;margin-bottom:18px}
+h3{font-size:19px;font-weight:640;margin-bottom:8px}
+p{margin:0 0 18px}
+.lead{font-size:clamp(18px,2.1vw,21px);color:var(--muted);max-width:62ch}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- header : pleine largeur, logo collé à gauche ---------- */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block;cursor:pointer;margin-right:auto;flex:0 0 auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav button{
+  font:inherit;font-size:15px;background:none;border:0;color:var(--muted);
+  padding:8px 12px;border-radius:8px;cursor:pointer;transition:.15s;
+}
+nav button:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+nav button.on{color:var(--ink);font-weight:600}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{
+  background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:15px;font-weight:600;
+  padding:10px 18px;border-radius:9px;cursor:pointer;transition:.15s;white-space:nowrap;
+}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.cta.big{padding:14px 26px;font-size:16px}
+.cta.full{width:100%}
+
+/* ---------- layout ---------- */
+.page{display:none;animation:in .3s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section{padding:74px 0;border-bottom:1px solid var(--line)}
+section:last-child{border-bottom:0}
+section.tight{padding-top:0}
+.hero{padding:92px 0 72px}
+.hero.short{padding-bottom:44px}
+.eyebrow{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:640;margin-bottom:22px;display:flex;align-items:center;gap:11px}
+.eyebrow::before{content:"";width:26px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.start{align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow)}
+.card p:last-child{margin-bottom:0}
+.num{font-variant-numeric:tabular-nums;font-size:13px;font-weight:700;color:var(--paper);background:var(--ink);width:24px;height:24px;border-radius:6px;display:grid;place-items:center;margin-bottom:14px}
+.bars{display:flex;flex-direction:column;gap:5px;margin-bottom:18px}
+.bars i{height:7px;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.bars i:nth-child(1){width:64px}.bars i:nth-child(2){width:46px}.bars i:nth-child(3){width:26px}
+
+/* ---------- relevé demo ---------- */
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.demo-head{padding:20px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.row{display:grid;grid-template-columns:1fr 150px 220px;gap:16px;padding:16px 26px;border-bottom:1px solid var(--line);align-items:center;font-size:15.5px}
+.row:last-child{border-bottom:0}
+.row.head{font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:640}
+.tag{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:640}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%}
+.tag.no::before{background:var(--absent)} .tag.no{color:var(--absent)}
+.tag.yes::before{background:var(--cite)} .tag.yes{color:var(--cite)}
+
+/* ---------- offres ---------- */
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.plan.hi{border-color:transparent;outline:2px solid var(--accent);outline-offset:-2px}
+.plan .grow{flex:1}
+.badge{display:inline-block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;margin-bottom:14px}
+.badge.soft{background:none;border:1px solid var(--line);color:var(--muted)}
+.price{display:flex;align-items:baseline;gap:9px;margin:4px 0 18px;flex-wrap:wrap}
+.price b{font-size:38px;font-weight:680;letter-spacing:-.03em}
+ul.check{list-style:none;padding:0;margin:0 0 8px}
+ul.check li{padding-left:26px;position:relative;margin-bottom:11px;font-size:15px}
+ul.check li::before{content:"";position:absolute;left:0;top:9px;width:11px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+ul.no{list-style:none;padding:0;margin:0}
+ul.no li{padding-left:26px;position:relative;margin-bottom:11px;color:var(--muted);font-size:15px}
+ul.no li::before{content:"×";position:absolute;left:4px;top:-1px;color:var(--muted);font-size:18px}
+.tranches{width:100%;border-collapse:collapse;font-size:15px;margin-top:6px}
+.tranches th,.tranches td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
+.tranches thead th{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line)}
+.tranches tbody td:first-child{font-weight:640}
+.tranches tbody tr:last-child td{border-bottom:0}
+.tranches td:not(:first-child){font-variant-numeric:tabular-nums;color:var(--muted)}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+
+/* ---------- blog ---------- */
+.post{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.15s}
+.post:hover{transform:translateY(-2px)}
+.post .meta{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:640;margin-bottom:13px}
+.post h3{margin-bottom:10px}
+.post .grow{flex:1}
+.feature{display:grid;grid-template-columns:1.15fr 1fr;gap:0;overflow:hidden;padding:0}
+.feature .txt{padding:34px}
+.feature .vis{background:linear-gradient(140deg,var(--accent),var(--accent2));display:grid;place-items:center;padding:34px;min-height:230px}
+.feature .vis div{color:#fff;font-size:15px;line-height:1.5;max-width:26ch}
+.feature .vis b{display:block;font-size:34px;letter-spacing:-.02em;margin-bottom:8px}
+
+/* ---------- portraits ---------- */
+.person{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.person img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 22%;display:block;background:var(--line)}
+.person .txt{padding:24px 26px 26px}
+.person .txt .bars{margin-bottom:14px}
+.faces{display:flex;gap:16px;align-items:center;margin-top:4px}
+.face{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:0 0 auto;border:1px solid var(--line)}
+[data-photos="nb"] .person img,[data-photos="nb"] .face{filter:grayscale(1) contrast(1.04)}
+
+/* ---------- témoignages ---------- */
+.testi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.testi .q{font-size:16.5px;line-height:1.6;flex:1;margin-bottom:20px}
+.testi .who{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.testi .av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));flex:0 0 auto}
+.notice{border:1px dashed var(--line);border-radius:12px;padding:14px 18px;font-size:14px;color:var(--muted);margin-bottom:24px;background:color-mix(in srgb,var(--ink) 3%,transparent)}
+
+/* ---------- misc ---------- */
+.quote{border-left:3px solid transparent;border-image:linear-gradient(180deg,var(--accent),var(--accent2)) 1;padding-left:22px;font-size:19px;line-height:1.55;max-width:64ch}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px}
+.stat b{display:block;font-size:32px;font-weight:680;letter-spacing:-.02em;line-height:1.2}
+form{display:grid;gap:14px}
+input,textarea,select{font:inherit;padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);width:100%;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 19px) 21px,calc(100% - 14px) 21px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;cursor:pointer}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);outline-offset:1px}
+input::placeholder,textarea::placeholder{color:var(--muted);opacity:.75}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:14px;font-weight:600;line-height:1.5;margin-bottom:6px;display:block}
+.social{display:flex;gap:10px;flex-wrap:wrap}
+.social a{
+  width:40px;height:40px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;
+  color:var(--muted);text-decoration:none;transition:.15s;background:var(--surface);
+}
+.social a:hover{color:var(--ink);border-color:var(--ink);transform:translateY(-1px)}
+.social svg{width:19px;height:19px;fill:currentColor}
+footer .social a{width:34px;height:34px}
+footer .social svg{width:16px;height:16px}
+footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line)}
+.mt0{margin-top:0}.mb0{margin-bottom:0}
+@media(max-width:1020px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .feature{grid-template-columns:1fr}
+}
+@media(max-width:840px){
+  .wrap{padding:0 22px}
+  .g2,.g3,.g4,.stats{grid-template-columns:1fr}
+  .f2{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:6px;padding:18px 22px}
+  .row.head{display:none}
+  .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
+  .logo{height:22px;margin-right:auto}
+  nav{width:100%;order:3;margin-left:0;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav button{white-space:nowrap;padding:7px 11px;font-size:14.5px}
+  nav .cta{display:none}
+  .themebtn{margin-left:0}
+  section{padding:54px 0}
+  .hero{padding:56px 0 44px}
+}
+</style>
+
+<header>
+  <div class="bar">
+    <img class="logo" id="logo" src="logo-sur-clair.png" alt="AIGEO" onclick="go('accueil')">
+    <nav id="nav"></nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= ACCUEIL ================= -->
+<div class="page on" id="accueil">
+  <div class="wrap hero">
+    <div class="eyebrow">Visibilité des marques dans les réponses IA</div>
+    <h1>Vos acheteurs ne comparent plus dix liens.<br>Ils lisent <span class="grad">une réponse.</span></h1>
+    <p class="lead" style="margin-top:24px">Nous mesurons si votre marque est citée quand un client demande conseil à une IA, et nous corrigeons ce qui l'en empêche. Pour les marques e-commerce, à distance. Pour les commerces et artisans, sur place en Alsace.</p>
+    <div class="btns">
+      <button class="cta big" onclick="go('contact')">Tester gratuitement deux questions</button>
+      <button class="cta big ghost" onclick="go('preuve')">Voir un relevé réel</button>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Le problème n'est pas votre notoriété.</h2>
+      <p class="lead">Quand un acheteur pose sa question à une IA, le modèle ne classe pas des pages. Il compose une réponse et choisit quelques marques à nommer. Ce choix ne dépend pas de votre budget publicitaire. Il dépend de la façon dont votre catalogue et vos contenus sont structurés, et de ce que le reste du web dit de vous.</p>
+      <div class="grid g3" style="margin-top:38px">
+        <div class="card">
+          <div class="bars"><i></i><i></i><i></i></div>
+          <h3>Un catalogue illisible</h3>
+          <p class="small mb0">Vos fiches produits sont écrites pour un humain qui parcourt une grille. Le modèle, lui, cherche des attributs explicites : usage, morphologie, contre-indication, matière, cas d'emploi.</p>
+        </div>
+        <div class="card">
+          <div class="bars"><i></i><i></i><i></i></div>
+          <h3>Un corpus absent</h3>
+          <p class="small mb0">Les marques citées le sont souvent parce qu'un comparateur, un blog spécialisé ou leur propre documentation existent et sont exploitables. Si personne n'écrit sur vous de façon structurée, vous n'existez pas.</p>
+        </div>
+        <div class="card">
+          <div class="bars"><i></i><i></i><i></i></div>
+          <h3>Un concurrent à votre place</h3>
+          <p class="small mb0">L'espace dans une réponse est limité à quelques noms. Chaque question où vous êtes absent est une question où quelqu'un d'autre est recommandé, gratuitement, à votre client.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Ce qui change maintenant</div>
+      <h2>La publicité entre dans les réponses IA.</h2>
+      <div class="grid g2 start" style="margin-top:26px">
+        <div>
+          <p class="small">Les grands assistants génératifs ouvrent leurs réponses à des formats publicitaires : produits sponsorisés, carrousels marchands, placements payants au sein même du conseil. Après les États-Unis, ces formats se déploient sur le marché européen.</p>
+          <p class="small mb0">Beaucoup de marques vont acheter cet espace sans avoir jamais mesuré ce que l'IA dit d'elles gratuitement. C'est l'erreur que nous voyons arriver.</p>
+        </div>
+        <div class="card">
+          <h3>Notre position sur les IA Ads</h3>
+          <p class="small">Nous n'achetons pas de média et nous n'en vendons pas. Nous travaillons sur ce qui se passe avant l'enchère : la façon dont un modèle comprend, classe et cite votre marque quand personne n'a payé.</p>
+          <p class="small mb0">Une marque structurellement citable achète mieux son espace payant, et dépend moins de lui. Une marque invisible loue une visibilité qu'elle ne possédera jamais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Notre conviction</div>
+      <p class="quote">Nous ne vendons pas une promesse de résultat. Nous vendons une mesure. Vous saurez précisément où vous êtes, pourquoi, et qui apparaît à votre place, avant de décider si vous voulez que ça change.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Trois façons de travailler avec nous</h2>
+      <div class="grid g3 start" style="margin-top:30px">
+        <div class="card">
+          <div class="num">1</div>
+          <h3>La sonde gratuite</h3>
+          <p class="small">Deux questions, un modèle, deux captures datées et commentées. Vous voyez si votre marque sort, et qui sort à sa place.</p>
+          <p class="small mb0"><b>Gratuite, sous 48 heures ouvrées.</b></p>
+        </div>
+        <div class="card">
+          <div class="num">2</div>
+          <h3>Le relevé, en deux paliers</h3>
+          <p class="small">Trente questions d'acheteur, trois modèles, deux passages espacés de sept jours. En version commentée : analyse des sources, diagnostic catalogue et fiches d'action.</p>
+          <p class="small mb0"><b>Sur devis, deux à trois semaines.</b></p>
+        </div>
+        <div class="card">
+          <div class="num">3</div>
+          <h3>La restructuration et le suivi</h3>
+          <p class="small">Exécution directe sur le catalogue et le corpus, re-mesure sur quatre semaines, puis abonnement mensuel pour suivre l'évolution des réponses.</p>
+          <p class="small mb0"><b>Sur devis, après le relevé.</b></p>
+        </div>
+      </div>
+      <div class="btns"><button class="cta" onclick="go('offres')">Voir le détail des offres</button></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Sans frontière</div>
+      <h2>Votre marché nous intéresse,<br>autant que votre rue.</h2>
+      <p class="lead">Un relevé se mène là où se trouvent vos acheteurs. Pour une marque qui vend en ligne, tout se fait à distance et nous n'avons jamais besoin de venir dans vos locaux. Pour un commerce ou un artisan, nous nous déplaçons en Alsace.</p>
+      <div class="stats">
+        <div class="stat card">
+          <b>100 %</b>
+          <div class="small mb0">à distance pour les marques e-commerce. Cadrage en visio, livrables écrits. Aucun déplacement facturé, où que vous soyez.</div>
+        </div>
+        <div class="stat card">
+          <b>FR · EN</b>
+          <div class="small mb0">Nous relevons en français et en anglais, sur le marché que vous visez, pas sur le nôtre.</div>
+        </div>
+        <div class="stat card">
+          <b>Tout fuseau</b>
+          <div class="small mb0">Nous calons les points d'étape sur votre horaire. Le reste du travail ne dépend pas du vôtre.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Pour qui</h2>
+      <p class="lead">Des marques qui vendent un produit que l'on n'achète pas sans demander conseil : literie, nutrition animale, équipement sportif, mobilier, matériel technique, cosmétique. Si votre client pose une question avant d'acheter, une IA y répond déjà. La seule question est de savoir si elle vous nomme.</p>
+      <div class="btns"><button class="cta big" onclick="go('contact')">Tester gratuitement deux questions</button></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= MÉTHODE ================= -->
+<div class="page" id="methode">
+  <div class="wrap hero">
+    <div class="eyebrow">Méthode</div>
+    <h1>Mesurer, comprendre,<br><span class="grad">corriger.</span></h1>
+    <p class="lead" style="margin-top:24px">Quatre étapes. La première est facturée et se suffit à elle-même : vous pouvez vous arrêter là et repartir avec un document exploitable par n'importe qui.</p>
+  </div>
+
+  <section>
+    <div class="wrap grid g2">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>Cartographier les questions</h3>
+        <p class="small mb0">Nous reconstituons les questions réelles de vos acheteurs, dans leurs mots, à chaque étape : découverte, comparaison, objection, cas particulier. Ce sont ces questions qui sont posées aux modèles, pas vos mots-clés.</p>
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3>Relever</h3>
+        <p class="small mb0">Chaque question est posée en conversation neuve, sans mémoire ni personnalisation, sur plusieurs assistants génératifs et à plusieurs jours d'intervalle. Tout est capturé et daté. Aucune affirmation qui ne soit pas documentée.</p>
+      </div>
+      <div class="card">
+        <div class="num">3</div>
+        <h3>Diagnostiquer</h3>
+        <p class="small mb0">Nous remontons aux causes : quelles sources le modèle a consultées, quels attributs manquent à vos fiches, quelles pages existent chez vos concurrents et pas chez vous, où votre nom est mal associé.</p>
+      </div>
+      <div class="card">
+        <div class="num">4</div>
+        <h3>Restructurer, puis re-mesurer</h3>
+        <p class="small mb0">Catalogue produit, données structurées, corpus éditorial, présence sur les sources tierces. Puis on repose exactement les mêmes questions, et on compare au relevé initial. C'est la seule preuve qui compte.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Ce que nous ne faisons pas</h2>
+      <div class="grid g2">
+        <div>
+          <ul class="no">
+            <li>Nous n'achetons pas d'espace publicitaire pour vous, IA Ads compris.</li>
+            <li>Nous ne garantissons pas une position : personne ne le peut honnêtement.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="no">
+            <li>Nous n'affirmons jamais un classement que nous n'avons pas mesuré nous-mêmes.</li>
+            <li>Nous ne produisons pas de contenu automatisé en masse : c'est exactement ce que les modèles apprennent à ignorer.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= LE RELEVÉ ================= -->
+<div class="page" id="preuve">
+  <div class="wrap hero">
+    <div class="eyebrow">Le relevé</div>
+    <h1>Un constat daté,<br>capture à <span class="grad">l'appui.</span></h1>
+    <p class="lead" style="margin-top:24px">Tout ce qui suit a été mesuré par nous, à une date précise, capture d'écran à l'appui. Les marques ne sont pas nommées : elles ne sont pas clientes et n'ont donné aucune autorisation d'usage de leur nom.</p>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="demo">
+        <div class="demo-head">
+          <div>
+            <b>Ce que change la façon dont la question est posée</b>
+            <div class="small">27 marques françaises · 2 questions chacune · 54 relevés · ChatGPT, conversations neuves · 4 septembre 2026</div>
+          </div>
+          <div class="small">Marques anonymisées</div>
+        </div>
+        <div class="row head"><div>La question posée au modèle</div><div>Recommandées</div><div>Le reste du panel</div></div>
+        <div class="row">
+          <div><b>On décrit la marque.</b><div class="small" style="margin-top:5px">Sa promesse, mot pour mot, sans jamais la nommer.</div></div>
+          <div><span class="tag yes">10 sur 27</span></div>
+          <div class="small">5 citées sans être choisies, 12 absentes</div>
+        </div>
+        <div class="row">
+          <div><b>Un acheteur parle.</b><div class="small" style="margin-top:5px">Son problème, sa situation, son budget. Comme il l'écrirait vraiment.</div></div>
+          <div><span class="tag no">3 sur 27</span></div>
+          <div class="small">3 citées sans être choisies, 21 absentes</div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat card">
+          <b>9 sur 10</b>
+          <div class="small mb0">Des marques recommandées en première position quand on les décrit perdent leur place dès qu'un acheteur parle. Huit disparaissent complètement de la réponse.</div>
+        </div>
+        <div class="stat card">
+          <b>8 fois</b>
+          <div class="small mb0">La marque qui prend la place est une autre marque française du même panel. Ce n'est pas un géant qui écrase : c'est un concurrent direct, de taille comparable.</div>
+        </div>
+        <div class="stat card">
+          <b>8 réponses</b>
+          <div class="small mb0">Sur la question d'achat, ne citent aucune marque du tout. Le modèle conseille sans nommer personne. La place est vide, et elle est à prendre.</div>
+        </div>
+      </div>
+
+      <div class="grid g2 start" style="margin-top:34px">
+        <div>
+          <h3>Pourquoi cet écart compte plus que le reste</h3>
+          <p class="small">Une marque qui sort quand on la décrit se croit visible. Elle ne l'est pas. Elle est retrouvable par quelqu'un qui la cherche déjà, et ce client-là était acquis. Sortir quand un acheteur expose son problème, sans citer personne, c'est autre chose : c'est être choisie au moment où la décision se prend.</p>
+          <p class="small mb0">Le relevé sépare ces deux situations parce qu'elles sont commercialement opposées, et parce qu'aucun outil d'analyse d'audience ne fait la distinction. C'est aussi pour ça que nous écrivons les questions comme un acheteur les pose, jamais comme une marque aimerait qu'on les pose.</p>
+        </div>
+        <div class="card">
+          <h3>Une question d'arbitrage, sur le terrain</h3>
+          <p class="small">« Je cherche une bonne boulangerie artisanale dans le centre-ville, laquelle me conseilles-tu ? » Le modèle recommande une adresse en priorité, puis une seconde en alternative. La maison que nous suivions n'apparaît dans aucune des deux réponses.</p>
+          <p class="small mb0">Elle n'est même pas citée, alors qu'elle fait aussi traiteur. Aucune des deux adresses retenues ne propose ce service. La cause la plus probable : pas de page de conseil qui positionne clairement son activité traiteur, et rien pour l'indiquer non plus sur les annuaires comme les Pages Jaunes. Un modèle ne recommande pas une activité qu'il ne voit nulle part.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">Comment un relevé est mené</div>
+      <h2 style="margin-top:10px">La méthode, avant le prix.</h2>
+      <ul class="check" style="margin-top:22px">
+        <li>Les questions sont écrites depuis le parcours d'achat réel, pas depuis le catalogue</li>
+        <li>Une seule question par conversation, toujours neuve, jamais de relance dans le fil</li>
+        <li>Plusieurs assistants génératifs, et deux passages espacés d'au moins sept jours</li>
+        <li>Chaque réponse est capturée en plein écran, la date système visible dans l'image</li>
+        <li>Trois statuts seulement, recommandée, citée, absente, et en cas de doute on descend d'un cran</li>
+        <li>Les sources citées par le modèle sont relevées, question par question</li>
+      </ul>
+      <p class="small" style="margin-top:18px">Le volume de questions, le nombre de modèles et la profondeur du diagnostic changent selon l'offre retenue. <a class="ilink" href="#offres" onclick="go('offres');return false">Voir le détail des offres</a></p>
+    </div>
+  </section>
+</div>
+
+<!-- ================= OFFRES ================= -->
+<div class="page" id="offres">
+  <div class="wrap hero short">
+    <div class="eyebrow">Offres</div>
+    <h1>Trois paliers,<br>puis <span class="grad">le suivi.</span></h1>
+    <p class="lead" style="margin-top:24px">Chaque palier se suffit à lui-même et se commande seul. Vous pouvez vous arrêter après le relevé, après la restructuration, ou continuer en abonnement. Tout est chiffré sur devis au cadrage, avant toute commande.</p>
+    <p class="small" style="margin-top:18px">Avant d'engager quoi que ce soit, la <b>sonde est gratuite</b> : deux questions d'acheteur posées à une IA en conversation neuve, deux captures datées et commentées, sous 48 heures ouvrées. <a class="ilink" href="#contact" onclick="go('contact');return false">Demander la sonde</a></p>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="grid g3 start">
+
+        <div class="plan">
+          <span class="badge soft">Palier 1</span>
+          <h3>Le relevé de présence</h3>
+          <div class="price"><b>Sur devis</b><span class="small">deux semaines</span></div>
+          <div class="grow">
+            <p class="small">La mesure brute, sans interprétation. Vous saurez où vous sortez, où vous n'apparaissez pas, et qui apparaît à votre place.</p>
+            <ul class="check">
+              <li>Trente questions d'acheteur, réparties sur quatre moments d'achat</li>
+              <li>Trois IA différentes, conversation neuve à chaque fois</li>
+              <li>Deux passages espacés de sept jours</li>
+              <li>Cent quatre-vingts captures intégrales et horodatées, en annexe</li>
+              <li>Un tableau de présence, un relevé de concurrence, un taux de présence global</li>
+            </ul>
+            <p class="tiny" style="margin:18px 0 8px"><b>Ce palier ne contient pas :</b></p>
+            <ul class="no">
+              <li>Aucune analyse des sources</li>
+              <li>Aucun diagnostic du catalogue</li>
+              <li>Aucune recommandation</li>
+            </ul>
+          </div>
+          <div class="btns" style="margin-top:24px"><button class="cta full ghost" onclick="go('contact')">Demander le relevé</button></div>
+        </div>
+
+        <div class="plan hi">
+          <span class="badge">Produit principal</span>
+          <h3>Le relevé commenté</h3>
+          <div class="price"><b>Sur devis</b><span class="small">deux à trois semaines</span></div>
+          <div class="grow">
+            <p class="small">Tout le palier 1, plus l'explication des causes et ce qu'il faut corriger. C'est le livrable qui se suffit à lui-même.</p>
+            <ul class="check">
+              <li>Tout ce que contient le relevé de présence</li>
+              <li>Analyse des sources pour chaque question où vous êtes absent</li>
+              <li>Diagnostic catalogue : attributs manquants, fiches annotées</li>
+              <li>Diagnostic de corpus face à la concurrence</li>
+              <li>Douze à quinze fiches d'action, avec les trois priorités</li>
+              <li>Une restitution d'une heure en visio, enregistrée</li>
+            </ul>
+            <p class="tiny" style="margin:18px 0 0">Si vous passez au relevé commenté dans les trente jours suivant la livraison du palier 1, le relevé de présence est intégralement déduit.</p>
+          </div>
+          <div class="btns" style="margin-top:24px"><button class="cta full" onclick="go('contact')">Demander le relevé commenté</button></div>
+        </div>
+
+        <div class="plan">
+          <span class="badge soft">Palier 3</span>
+          <h3>La restructuration</h3>
+          <div class="price"><b>Sur devis</b><span class="small">selon la tranche</span></div>
+          <div class="grow">
+            <p class="small">L'exécution, pas la recommandation. Nous prenons les manettes, puis nous remesurons sur les mêmes questions.</p>
+            <ul class="check">
+              <li>Cinquante questions, trois IA, deux passages : trois cents captures au relevé initial</li>
+              <li>Exécution directe : fiches produits, données structurées, pages de conseil</li>
+              <li>Re-mesure sur quatre semaines : panel témoin hebdomadaire, panel complet en fin de mois</li>
+              <li>Réunion bilan et rapport de fin de mission</li>
+            </ul>
+            <div class="tblwrap" style="margin-top:18px">
+              <table class="tranches">
+                <thead><tr><th>Tranche</th><th>Fiches</th><th>Pages conseil</th></tr></thead>
+                <tbody>
+                  <tr><td>S</td><td>25</td><td>3</td></tr>
+                  <tr><td>M</td><td>50</td><td>6</td></tr>
+                  <tr><td>L</td><td>100</td><td>12</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="tiny" style="margin-top:14px">Chaque tranche double la précédente. Le parcours couvert reste toujours complet, du home au catalogue produit : c'est la profondeur qui augmente.</p>
+          </div>
+          <div class="btns" style="margin-top:24px"><button class="cta full ghost" onclick="go('contact')">Nous en parler</button></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Après la restructuration, le suivi</h2>
+      <p class="lead">Une réponse d'IA n'est pas un classement figé. Les modèles changent, vos concurrents publient, les formats publicitaires arrivent. Re-mesurer régulièrement est le seul moyen de savoir où vous en êtes.</p>
+      <div class="grid g2 start" style="margin-top:32px">
+
+        <div class="plan">
+          <span class="badge soft">Veille</span>
+          <h3>Vous mesurez et corrigez, nous fournissons la mesure</h3>
+          <div class="price"><b>Sur devis</b><span class="small">mensuel</span></div>
+          <div class="grow">
+            <ul class="check">
+              <li>Relevé hebdomadaire sur le panel témoin, quinze questions sur trois IA</li>
+              <li>Relevé mensuel complet sur trente à cinquante questions</li>
+              <li>Tableau d'évolution semaine par semaine</li>
+              <li>Alerte quand un concurrent apparaît ou disparaît</li>
+              <li>Veille sur les formats publicitaires dans les réponses IA</li>
+              <li>Réunion bilan mensuelle</li>
+            </ul>
+          </div>
+          <div class="btns" style="margin-top:24px"><button class="cta full ghost" onclick="go('contact')">Choisir Veille</button></div>
+        </div>
+
+        <div class="plan">
+          <span class="badge soft">Pilotage</span>
+          <h3>Nous mesurons et nous corrigeons</h3>
+          <div class="price"><b>Sur devis</b><span class="small">mensuel</span></div>
+          <div class="grow">
+            <ul class="check">
+              <li>Tout ce que contient Veille</li>
+              <li>Production éditoriale mensuelle sur les angles manquants</li>
+              <li>Corrections catalogue en continu</li>
+              <li>Ajustements selon l'actualité et les tendances marché</li>
+              <li>Accès direct à nous deux, sans intermédiaire</li>
+            </ul>
+            <p class="small mb0" style="margin-top:16px">Nous limitons volontairement le nombre de marques suivies en simultané, pour garder le temps de produire.</p>
+          </div>
+          <div class="btns" style="margin-top:24px"><button class="cta full" onclick="go('contact')">Choisir Pilotage</button></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid g3 start">
+      <div>
+        <h3>Facturation</h3>
+        <p class="small mb0">Relevés : 50 % à la commande, 50 % à la livraison. Restructuration : échelonnée sur la durée de la mission. Abonnement : mensuel, à terme échu. Facturation en euros, par virement. TVA non applicable, article 293 B du code général des impôts : le montant annoncé est le montant dû, sans taxe à ajouter.</p>
+      </div>
+      <div>
+        <h3>Ce qui n'est jamais facturé</h3>
+        <p class="small mb0">La sonde, le premier échange de cadrage, et nos déplacements en Alsace. Nous ne facturons pas non plus l'achat média, puisque nous n'en achetons pas.</p>
+      </div>
+      <div>
+        <h3>Si le constat est bon</h3>
+        <p class="small mb0">Si le relevé montre que vous êtes déjà correctement cité, nous vous le disons et nous ne vous proposons pas de suite. Le relevé reste dû, le reste ne l'est pas.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= LOCAL ================= -->
+<div class="page" id="local">
+  <div class="wrap hero short">
+    <div class="eyebrow">Commerces et artisans</div>
+    <h1>Vos clients demandent<br>conseil à une IA. <span class="grad">Et elle répond.</span></h1>
+    <p class="lead" style="margin-top:24px">Un traiteur, un vélociste, un caviste, un artisan. Quand quelqu'un demande à ChatGPT ou à Google qui appeler dans votre secteur, un nom sort. Nous mesurons si c'est le vôtre, nous cherchons pourquoi, et nous écrivons avec vous les réponses qui manquent.</p>
+    <p class="small" style="margin-top:18px">Nous nous déplaçons en Alsace. Le premier échange ne coûte rien.</p>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Trois endroits où l'on agit</h2>
+      <p class="lead">Rarement les trois en même temps. Le relevé de départ dit lequel compte pour vous.</p>
+      <div class="grid g3 start" style="margin-top:30px">
+
+        <div class="plan">
+          <span class="badge soft">Présence locale</span>
+          <h3>Être trouvé</h3>
+          <div class="grow">
+            <p class="small">Quand la question porte sur votre ville, la réponse vient des annuaires et des fiches, pas de votre site. Encore faut-il y figurer, et dans la bonne catégorie.</p>
+            <ul class="check">
+              <li>Fiche Google Business Profile</li>
+              <li>Cohérence des annuaires et des pages jaunes</li>
+              <li>Annuaires de votre métier</li>
+              <li>Dispositif d'avis clients et réponses aux avis</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="plan hi">
+          <span class="badge">Le cœur du travail</span>
+          <h3>Être cité</h3>
+          <div class="grow">
+            <p class="small">Quand la question porte sur un conseil, la réponse vient de ce qui est écrit. Nous publions vos réponses, à partir de ce que vous seul savez.</p>
+            <ul class="check">
+              <li>Fiches conseil : la question réelle, la réponse chiffrée</li>
+              <li>Fiches conseil spécialisées par métier</li>
+              <li>Corpus éditorial et blog</li>
+              <li>Fiches produits ou prestations : les attributs qui manquent</li>
+              <li>Vos plaquettes PDF transformées en pages lisibles</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="plan">
+          <span class="badge soft">Lecture par les IA</span>
+          <h3>Être lisible</h3>
+          <div class="grow">
+            <p class="small">Un modèle lit le texte de vos pages. S'il est enfermé dans une image ou dans un PDF à télécharger, il n'existe pas pour lui.</p>
+            <ul class="check">
+              <li>Données structurées du site</li>
+              <li>Accès des robots d'IA à vos pages</li>
+              <li>Structure des titres et des réponses courtes</li>
+              <li>Liens entre fiches conseil et fiches produits</li>
+              <li>Remaniement du site quand il le faut</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Comment ça se passe</h2>
+      <div class="grid g4 start" style="margin-top:30px">
+        <div class="card">
+          <div class="num">1</div>
+          <h3>La sonde</h3>
+          <p class="small mb0">Nous posons à une IA une question que vos clients posent vraiment, sans jamais vous nommer. Vous voyez la réponse, datée, et qui sort à votre place. <b>Gratuit.</b></p>
+        </div>
+        <div class="card">
+          <div class="num">2</div>
+          <h3>Vingt minutes</h3>
+          <p class="small mb0">Sur place, chez vous, à une heure creuse. Nous regardons votre site, vos fiches, vos annuaires, et nous vous disons ce qui bloque.</p>
+        </div>
+        <div class="card">
+          <div class="num">3</div>
+          <h3>La production</h3>
+          <p class="small mb0">Un entretien d'une heure pour extraire ce que vous savez, puis nous écrivons et publions. Vous relisez et validez tout avant mise en ligne.</p>
+        </div>
+        <div class="card">
+          <div class="num">4</div>
+          <h3>La re-mesure</h3>
+          <p class="small mb0">Les mêmes questions, quelques semaines plus tard, avec les captures datées. Vous voyez ce qui a bougé, et ce qui n'a pas bougé.</p>
+        </div>
+      </div>
+      <div class="btns"><button class="cta big" onclick="go('contact')">Demander la sonde gratuite</button></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid g2 start">
+      <div class="card">
+        <h3>Ce qui est toujours inclus</h3>
+        <p class="small mb0">Un relevé avant et un relevé après, sur les mêmes questions, avec les captures horodatées. Le relevé n'est jamais vendu seul : il sert de preuve de l'effet, pas de produit. S'il ne bouge pas, nous vous le disons aussi.</p>
+      </div>
+      <div class="card">
+        <h3>Ce que nous ne faisons jamais</h3>
+        <ul class="no" style="margin-top:10px">
+          <li>Promettre une position, sur Google ou dans une réponse d'IA</li>
+          <li>Annoncer un nombre de clients ou un chiffre d'affaires</li>
+          <li>Écrire ou acheter de faux avis</li>
+          <li>Publier un contenu que vous n'avez pas relu</li>
+          <li>Demander un mot de passe</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid g3 start">
+      <div>
+        <h3>Le prix</h3>
+        <p class="small mb0">Chiffré au cas par cas, selon ce qu'il y a à faire et la taille de votre catalogue. Nous vous donnons le montant au cadrage, avant toute commande. TVA non applicable, article 293 B du code général des impôts : le montant annoncé est le montant dû.</p>
+      </div>
+      <div>
+        <h3>Sans engagement</h3>
+        <p class="small mb0">Un paquet de départ se commande seul. L'abonnement mensuel est facultatif et se propose après, seulement si le premier travail a produit quelque chose de mesurable.</p>
+      </div>
+      <div>
+        <h3>Si vous sortez déjà</h3>
+        <p class="small mb0">Si la sonde montre que vous êtes déjà proposé, nous vous le disons, nous vous laissons la capture et nous ne vous proposons rien. C'est aussi ça, une mesure.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= BLOG ================= -->
+<div class="page" id="blog">
+  <div class="wrap hero short">
+    <div class="eyebrow">Blog</div>
+    <h1>Ce que nous voyons<br>dans les <span class="grad">réponses.</span></h1>
+    <p class="lead" style="margin-top:24px">Nos relevés, nos méthodes et nos erreurs, et ce que nous lisons du marché. Pas de conseils génériques : quand nous avançons un chiffre, il vient soit de nos propres mesures avec les captures qui vont avec, soit d'une source citée.</p>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <a class="post feature" href="/blog/publicite-reponses-ia-visibilite-marque-geo/" style="text-decoration:none">
+        <div class="txt">
+          <div class="meta">Publicité et GEO · 8 septembre 2026 · 6 min</div>
+          <h3>Publicité dans les réponses IA : faut-il l'intégrer à votre visibilité de marque ?</h3>
+          <p class="small">ChatGPT teste des annonces sponsorisées, Google migre ses campagnes Search vers AI Max, Perplexity a fait marche arrière. Trois positions opposées en 2026, et ce que ça change (ou non) pour la citation organique de votre marque.</p>
+          <p class="small mb0"><b>Lire l'article &rarr;</b></p>
+        </div>
+        <div class="vis"><div><b>63%</b>des sondés disent perdre confiance dans une réponse IA qui contient de la publicité.</div></div>
+      </a>
+
+      <div class="grid g3 start" style="margin-top:24px">
+        <a class="post" href="/blog/geo-vs-seo-ce-qui-change/" style="text-decoration:none">
+          <div class="meta">GEO vs SEO · 3 septembre 2026 · 6 min</div>
+          <h3>GEO vs SEO : ce qui change vraiment quand Google répond à votre place</h3>
+          <p class="small grow">Une étude Ahrefs sur 963 domaines français chiffre la perte de clics depuis l'arrivée des AI Overviews : jusqu'à -24,8 % de CTR pour les sites les plus exposés.</p>
+          <p class="small mb0"><b>Lire l'article &rarr;</b></p>
+        </a>
+        <a class="post" href="/blog/requetes-conversationnelles-achat/" style="text-decoration:none">
+          <div class="meta">Comportement d'achat · 1<sup>er</sup> septembre 2026 · 6 min</div>
+          <h3>Ce que les Français demandent vraiment à l'IA avant d'acheter</h3>
+          <p class="small grow">48 % des acheteurs en ligne français disent que l'IA influence leurs décisions, mais les assistants ne pèsent que 14 % des points de départ d'un achat.</p>
+          <p class="small mb0"><b>Lire l'article &rarr;</b></p>
+        </a>
+        <div class="post">
+          <div class="meta">Étude de cas · à paraître</div>
+          <h3>Une marque de nutrition animale, absente de ses cinq questions</h3>
+          <p class="small grow">Cinq questions d'acheteur réelles sur le marché de l'alimentation pour chien. La marque étudiée n'apparaît dans aucune. Sur la question qui la décrit mot pour mot, le modèle cite des concurrents et pas elle.</p>
+        </div>
+
+      </div>
+
+      <div class="btns"><button class="cta big" onclick="go('contact')">Recevoir nos publications</button></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= À PROPOS ================= -->
+<div class="page" id="apropos">
+  <div class="wrap hero">
+    <div class="eyebrow">À propos</div>
+    <h1>Deux associés,<br>une <span class="grad">méthode.</span></h1>
+    <p class="lead" style="margin-top:24px">AIGEO est né d'un constat simple : les marques que Georges accompagnait en publicité sociale commençaient à perdre des clients avant même la première impression, dans une conversation avec une IA, où elles n'étaient pas citées.</p>
+  </div>
+
+  <section>
+    <div class="wrap grid g2 start">
+      <div class="card person">
+        <div class="txt">
+          <div class="bars"><i></i><i></i><i></i></div>
+          <h3>Georges Hartmann</h3>
+          <p class="tiny" style="margin-bottom:12px">Cofondateur</p>
+          <p class="small mb0">Issu de la sphère sportive, diplômes fédéraux et licence STAPS, il a lancé à son compte des accompagnements de campagnes créatives pour des marques e-commerce du sport. Aujourd'hui il s'associe à Romain dans un second défi, AIGEO.</p>
+        </div>
+      </div>
+      <div class="card person">
+        <div class="txt">
+          <div class="bars"><i></i><i></i><i></i></div>
+          <h3>Romain Boos</h3>
+          <p class="tiny" style="margin-bottom:12px">Cofondateur</p>
+          <p class="small mb0">Issu du monde de l'innovation, il donne suite à son master de marketing digital avec AIGEO. Passionné d'innovation digitale depuis le lycée, c'est tout naturellement qu'il fait le choix d'accompagner autrui face aux grands défis à venir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid g2 start">
+      <div>
+        <h2>Une structure légère, volontairement</h2>
+        <p class="small">Nous sommes deux, nous n'avons pas de bureau à amortir et pas de structure à nourrir. C'est ce qui nous permet de proposer un audit à un tarif que les grandes agences ne peuvent pas tenir, et d'accepter des marques qu'elles trouvent trop petites.</p>
+        <p class="small mb0">Nous nous connaissons depuis le lycée, ce qui rend les désaccords rapides et les décisions courtes. C'est aussi ce qui nous impose une limite : nous n'acceptons qu'un petit nombre de missions en simultané, pour garder le temps de produire. Quand c'est plein, nous le disons.</p>
+      </div>
+      <div>
+        <h2>Ce que vous devez savoir avant de nous appeler</h2>
+        <p class="small">La discipline générative est jeune, et le marché est plein de promesses invérifiables. Nous préférons dire les choses : nous mesurons rigoureusement, nous documentons tout, nous ne vous vendons la suite que si le constat la justifie.</p>
+        <p class="small mb0">Si vous cherchez une garantie de première position, personne ne peut honnêtement vous la donner, et surtout pas nous.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="page" id="contact">
+  <div class="wrap hero short">
+    <div class="eyebrow">Contact</div>
+    <h1>Commençons par <span class="grad">deux questions.</span></h1>
+    <p class="lead" style="margin-top:24px">Dites-nous votre marché et les questions que vos clients vous posent le plus souvent. Nous en posons deux à une IA et nous vous envoyons les réponses capturées et commentées, gratuitement, sous 48 heures ouvrées.</p>
+  </div>
+
+  <section>
+    <div class="wrap grid g2 start">
+
+      <div class="card">
+        <h3 style="margin-bottom:18px">Votre demande</h3>
+        <form onsubmit="send(event)">
+          <div>
+            <label for="f0">Ce qui vous amène</label>
+            <select id="f0">
+              <option value="Sonde gratuite (2 questions)">La sonde gratuite sur deux questions</option>
+              <option value="Palier 1 - Relevé de présence (sur devis)">Le relevé de présence, sur devis</option>
+              <option value="Palier 2 - Relevé commenté (sur devis)">Le relevé commenté, sur devis</option>
+              <option value="Palier 3 - Restructuration (sur devis)">La restructuration, sur devis</option>
+              <option value="Abonnement Veille (sur devis)">L'abonnement Veille, sur devis</option>
+              <option value="Abonnement Pilotage (sur devis)">L'abonnement Pilotage, sur devis</option>
+              <option value="Commerce local - présence locale">Je suis un commerce ou un artisan : présence locale</option>
+              <option value="Commerce local - corpus conseil">Je suis un commerce ou un artisan : corpus de fiches conseil</option>
+              <option value="Question ouverte">Je ne sais pas encore, j'ai des questions</option>
+            </select>
+          </div>
+          <div class="f2">
+            <div><label for="f1">Votre marque</label><input id="f1" placeholder="Nom de la marque" required></div>
+            <div><label for="f4">Votre secteur</label><input id="f4" placeholder="literie, nutrition animale…" required></div>
+          </div>
+          <div class="f2">
+            <div><label for="f2">Votre email</label><input id="f2" type="email" placeholder="prenom@marque.com" required></div>
+            <div><label for="f5">Pays ou marché visé</label><input id="f5" placeholder="France, Belgique, UK…" required></div>
+          </div>
+          <div>
+            <label for="f3">La question que vos clients posent le plus souvent</label>
+            <textarea id="f3" rows="4" placeholder="Dans leurs mots, telle qu'ils la poseraient à une IA." required></textarea>
+          </div>
+          <div><button class="cta big full" type="submit">Envoyer ma demande</button></div>
+          <p class="tiny mb0">Le formulaire ouvre votre logiciel de messagerie avec le message pré-rempli. Rien n'est enregistré sur ce site.</p>
+        </form>
+      </div>
+
+      <div class="grid" style="gap:24px">
+        <div class="card">
+          <h3>Qui vous répondra</h3>
+          <p class="small">Nous sommes deux, et c'est l'un de nous deux qui lit votre message. Pas de commercial, pas de formulaire qui part dans le vide.</p>
+          <div class="faces">
+            <div class="tiny">Georges Hartmann<br>Romain Boos</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Par email, directement</h3>
+          <p class="small mb0"><a class="mailto" href="#">contact@aigeoconseil.com</a><br>Réponse sous 48 heures ouvrées, du lundi au vendredi.</p>
+        </div>
+        <div class="card">
+          <h3>La sonde gratuite, concrètement</h3>
+          <p class="small">Nous posons deux questions à une IA en conversation neuve, sans mémoire ni personnalisation. Nous capturons les réponses, nous les datons et nous vous les envoyons commentées, avec le nom des marques citées à votre place.</p>
+          <p class="small">C'est une version bridée de l'audit : deux questions, un seul modèle, pas d'analyse des sources ni de plan d'action. Sans contrepartie et sans relance si vous n'en voulez pas.</p>
+          <p class="small mb0">Si vous êtes déjà bien cité, nous vous le dirons. Sinon, nous vous proposerons l'audit complet, et vous serez libre de refuser.</p>
+        </div>
+        <div class="card">
+          <h3>Où que vous soyez</h3>
+          <p class="small mb0">Pour une marque qui vend en ligne, tout se fait à distance, en français ou en anglais, et votre fuseau horaire ne change rien au délai. Pour un commerce ou un artisan, nous venons sur place en Alsace.</p>
+        </div>
+        <div class="card">
+          <h3>Nous suivre</h3>
+          <p class="small">Nous publions nos relevés et ce qu'ils nous apprennent, marché par marché.</p>
+          <div class="social" id="social-contact"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+</main>
+
+<div class="wrap"><footer>
+  <div>© 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>Visibilité des marques dans les réponses génératives · E-commerce à distance, commerces de proximité en Alsace<br><a class="ilink" href="/mentions-legales/">Mentions légales</a></div>
+  <div class="social" id="social-footer"></div>
+</footer></div>
+
+<script>
+/* =========================================================
+   RÉGLAGES : tout ce qui se modifie sans toucher au reste.
+   ========================================================= */
+const EMAIL = "contact@aigeoconseil.com";
+
+/* Photos en noir et blanc, pour harmoniser deux prises de vue
+   très différentes. Passe à false pour revenir à la couleur. */
+const PHOTOS_NB = true;
+
+const SOCIALS = [
+  {name:"LinkedIn",  url:"https://www.linkedin.com/company/agence-aigeo/", icon:'<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/>'}
+];
+
+/* ---------------------------------------------------------
+   RETOURS CLIENTS
+   Tant que TEMOIGNAGES_EXEMPLE vaut true, un bandeau signale
+   que ce sont des exemples de mise en page. Remplace les
+   trois entrées par de vrais retours, avec l'accord écrit
+   de la personne citée, puis passe la valeur à false.
+   --------------------------------------------------------- */
+const TEMOIGNAGES_EXEMPLE = false;
+const TEMOIGNAGES = [];
+
+const PAGES=[
+  ['accueil','Accueil'],['methode','Méthode'],['preuve','Le relevé'],
+  ['offres','Offres'],['local','Commerces'],['blog','Blog'],['apropos','À propos'],['contact','Contact']
+];
+
+/* ========================= MOTEUR ========================= */
+const LOGO_D="logo-sur-clair.png", LOGO_L="logo-sur-sombre.png";
+
+function buildSocials(){
+  const html=SOCIALS.map(s=>
+    `<a href="${s.url}" target="_blank" rel="noopener" aria-label="${s.name}" title="${s.name}"><svg viewBox="0 0 24 24">${s.icon}</svg></a>`
+  ).join('');
+  ['social-contact','social-footer'].forEach(id=>{
+    const el=document.getElementById(id); if(el) el.innerHTML=html;
+  });
+}
+
+function buildTestimonials(){
+  const grid=document.getElementById('testi-grid');
+  const note=document.getElementById('testi-notice');
+  if(!grid) return;
+  if(TEMOIGNAGES_EXEMPLE && note){
+    note.innerHTML='<div class="notice"><b>Exemples de mise en page.</b> À remplacer par de vrais retours clients, avec accord écrit, avant la mise en ligne.</div>';
+  }
+  grid.innerHTML=TEMOIGNAGES.map(t=>
+    `<div class="testi"><div class="q">« ${t.q} »</div>
+     <div class="who"><div class="av"></div><div><b>${t.n}</b><div class="tiny">${t.r}</div></div></div></div>`
+  ).join('');
+}
+
+const nav=document.getElementById('nav');
+PAGES.forEach(([id,label])=>{
+  const b=document.createElement('button');b.textContent=label;b.dataset.id=id;
+  b.onclick=()=>go(id);nav.appendChild(b);
+});
+const ctaTop=document.createElement('button');
+ctaTop.className='cta';ctaTop.textContent='Sonde gratuite';ctaTop.style.marginLeft='10px';
+ctaTop.onclick=()=>go('contact');nav.appendChild(ctaTop);
+
+function go(id){
+  if(!document.getElementById(id)) id='accueil';
+  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('on',p.id===id));
+  nav.querySelectorAll('button[data-id]').forEach(b=>b.classList.toggle('on',b.dataset.id===id));
+  window.scrollTo({top:0,behavior:'instant'});
+  history.replaceState(null,'','#'+id);
+}
+
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src = (t==='dark')?LOGO_L:LOGO_D;
+  document.getElementById('ticon').innerHTML = (t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+document.documentElement.dataset.photos = PHOTOS_NB ? 'nb' : 'couleur';
+buildSocials();
+buildTestimonials();
+document.querySelectorAll('.mailto').forEach(a=>{a.href='mailto:'+EMAIL;a.textContent=EMAIL;});
+go((location.hash||'#accueil').slice(1));
+
+function v(id){const el=document.getElementById(id);return el?el.value.trim():'';}
+function send(e){
+  e.preventDefault();
+  const objet=v('f0'), marque=v('f1');
+  const s=encodeURIComponent(objet+' · '+marque);
+  const b=encodeURIComponent(
+    'Demande : '+objet+
+    '\nMarque : '+marque+
+    '\nSecteur : '+v('f4')+
+    '\nPays ou marché visé : '+v('f5')+
+    '\nEmail : '+v('f2')+
+    '\n\nLa question que nos clients posent le plus souvent :\n'+v('f3')
+  );
+  window.location.href='mailto:'+EMAIL+'?subject='+s+'&body='+b;
+}
+</script>
