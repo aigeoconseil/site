@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.png">
+<title>Conditions générales de prestation · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Conditions générales de prestation de services du site aigeoconseil.com : objet, formation du contrat, prix, obligations, propriété intellectuelle, droit de rétractation.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aigeoconseil.com/conditions-generales/">
+<style>
+:root{
+  --ink:#0E0E12; --paper:#FAF9F6; --muted:#6E6E78; --line:#E4E2DC;
+  --accent:#4A1FD4; --accent2:#C93AC9; --surface:#FFFFFF;
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#8B6BFF; --accent2:#E05FDD; --surface:#1A1A21;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+a{color:inherit}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:46px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:34px 0 8px;scroll-margin-top:92px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block;margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.meta{font-size:14px;color:var(--muted);margin-top:22px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+article{padding-bottom:20px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin-bottom:10px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:640px){ .bar{padding:0 18px;gap:10px} .hero{padding:40px 0 4px} }
+</style><style>
+.wrap{max-width:720px}
+.legal h2{font-size:clamp(20px,2.4vw,25px);margin:44px 0 14px}
+.legal h3{margin:26px 0 6px}
+.legal p{font-size:16px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/logo-sur-clair.png"></a>
+    <nav>
+      <a href="/#methode">Méthode</a>
+      <a href="/#preuve">Le relevé</a>
+      <a href="/#offres">Offres</a>
+      <a href="/#blog">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Informations légales</div>
+    <h1>Conditions générales <span class="grad">de prestation.</span></h1>
+    <div class="meta">Site aigeoconseil.com · Version 1, en vigueur depuis le 18 septembre 2026</div>
+  </div>
+
+  <article class="legal">
+
+    <p class="chapo">Les présentes conditions générales régissent les prestations de conseil, de mesure et de correction de visibilité dans les réponses d'intelligence artificielle générative fournies par AIGEO. Elles complètent les <a href="/mentions-legales/">mentions légales</a> du site.</p>
+
+    <h2>Article 1 — Objet</h2>
+    <p>Les présentes conditions définissent les termes dans lesquels le Prestataire, Georges Hartmann, entrepreneur individuel, nom commercial Georges ADS, marque AIGEO, fournit au Client les prestations suivantes, telles que décrites plus précisément dans le devis accepté par le Client : le relevé de présence, le relevé commenté, la restructuration, et les abonnements Veille et Pilotage.</p>
+    <p>Le contenu technique exact de chaque prestation est celui décrit dans l'offre en vigueur au moment de la commande et rappelé dans le devis.</p>
+
+    <h2>Article 2 — Formation du contrat</h2>
+    <p>Le contrat est formé à la signature du devis par le Client, ou par tout accord écrit équivalent. Le devis signé, les présentes conditions générales et les conditions particulières éventuelles constituent l'intégralité de l'accord entre les parties.</p>
+
+    <h2>Article 3 — Prix et paiement</h2>
+    <p>Le prix de chaque prestation est celui indiqué dans le devis accepté par le Client. Le Prestataire étant en franchise en base de TVA au sens de l'article 293 B du code général des impôts, les montants indiqués sont dus sans taxe à ajouter.</p>
+    <p>Les modalités de paiement sont précisées dans le devis. À défaut, le paiement est dû à réception de facture, par virement.</p>
+    <p>Tout retard de paiement entraîne, sans mise en demeure préalable, l'application de pénalités calculées au taux d'intérêt légal en vigueur majoré de dix points, ainsi qu'une indemnité forfaitaire pour frais de recouvrement de 40 euros, due de plein droit en application de l'article D441-5 du code de commerce.</p>
+
+    <h2>Article 4 — Durée et résiliation des abonnements</h2>
+    <p>Le relevé de présence, le relevé commenté et la restructuration sont des prestations ponctuelles, exécutées et facturées selon le calendrier du devis.</p>
+    <p>Les abonnements Veille et Pilotage sont conclus pour une durée initiale d'un mois, reconduits tacitement par périodes d'un mois sauf résiliation notifiée par écrit, un email suffisant, avec un préavis de trente jours avant l'échéance en cours.</p>
+
+    <h2>Article 5 — Obligations du Prestataire</h2>
+    <p>Le Prestataire est tenu à une obligation de moyens, non de résultat. Conformément à la méthode AIGEO, aucune position, aucun classement et aucune apparition garantie dans une réponse d'intelligence artificielle générative n'est promis. Les statuts rapportés, recommandée, citée, absente, reflètent un constat daté, pas une prédiction ni une garantie de maintien dans le temps, les réponses des modèles évoluant en permanence.</p>
+
+    <h2>Article 6 — Obligations du Client</h2>
+    <p>Le Client s'engage à fournir au Prestataire les accès, informations et validations nécessaires à l'exécution de la prestation dans les délais convenus.</p>
+    <p>Le Client s'interdit de demander au Prestataire, et le Prestataire s'interdit d'exécuter, toute prestation relevant de pratiques interdites par conception au sens de la méthode AIGEO : faux avis, sollicitation d'avis contre contrepartie, publication de commentaires en se présentant faussement comme un consommateur, réseaux de liens réciproques artificiels, génération de contenu en masse sans validation humaine.</p>
+
+    <h2>Article 7 — Propriété intellectuelle des livrables</h2>
+    <p>Les livrables spécifiques au Client, fiches conseil, corpus et artefacts de remédiation produits pour lui, lui sont cédés en pleine propriété à réception complète du paiement. Le Prestataire conserve tous les droits sur sa méthode, ses gabarits et ses outils internes, qui ne sont ni cédés ni transmis au Client.</p>
+
+    <h2>Article 8 — Confidentialité</h2>
+    <p>Les informations transmises par le Client dans le cadre de la prestation, catalogue, corpus interne, statistiques de vente, sont confidentielles et ne sont utilisées que pour l'exécution de la prestation. Aucun résultat, position ou absence mesuré chez un client n'est communiqué à un tiers ni cité publiquement sans l'accord écrit du Client.</p>
+
+    <h2>Article 9 — Données personnelles</h2>
+    <p>Dans le cadre de l'exécution des prestations décrites à l'article 1, le Prestataire traite les données transmises par le Client comme responsable de traitement autonome, pour les besoins de sa propre prestation de mesure. Ce traitement est décrit dans les <a href="/mentions-legales/#donnees-personnelles">mentions légales</a>, section Données personnelles.</p>
+
+    <h2>Article 10 — Responsabilité</h2>
+    <p>La responsabilité du Prestataire est limitée aux dommages directs et prouvés, et plafonnée, sauf faute lourde ou dolosive, au montant total payé par le Client au titre du contrat en cause. Le Prestataire ne saurait être tenu responsable de l'évolution des réponses des modèles d'intelligence artificielle générative postérieurement à un constat daté, ni du comportement de plateformes tierces hors de son contrôle.</p>
+
+    <h2>Article 11 — Droit de rétractation hors établissement</h2>
+    <p>Lorsque le contrat est conclu hors établissement, au domicile ou dans les locaux du Client, en dehors de tout lieu habituel d'exercice du Prestataire, avec un Client employant cinq salariés ou moins, et que la prestation n'entre pas dans le champ de son activité principale, le Client bénéficie du droit de rétractation prévu à l'article L221-3 du code de la consommation : délai de quatorze jours, formulaire type joint au devis concerné, aucun paiement ni commencement d'exécution avant l'expiration d'un délai de sept jours sauf demande expresse du Client.</p>
+
+    <h2>Article 12 — Force majeure</h2>
+    <p>Aucune des parties ne peut être tenue responsable d'un manquement à ses obligations causé par un événement de force majeure au sens de l'article 1218 du code civil, notamment une indisponibilité prolongée et non imputable au Prestataire des modèles d'intelligence artificielle interrogés dans le cadre de la prestation. La partie affectée informe l'autre sans délai. Si l'événement se prolonge au delà de trente jours, chaque partie peut résilier le contrat en cours sans indemnité, pour la seule partie restée inexécutée.</p>
+
+    <h2>Article 13 — Droit applicable et juridiction</h2>
+    <p>Les présentes conditions sont soumises au droit français. À défaut de résolution amiable, les tribunaux français sont seuls compétents.</p>
+
+  </article>
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/">Retour à l'accueil</a>
+  </footer>
+</main>
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/logo-sur-sombre.png':'/logo-sur-clair.png';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+</body>
+</html>
