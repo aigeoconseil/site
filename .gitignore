@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store
+
+# Outil de facturation local. Le dépôt est public et le site est servi tel quel :
+# ce dossier ne doit jamais entrer dans l'historique ni dans un déploiement.
+facturation/
