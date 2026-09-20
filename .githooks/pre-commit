@@ -1,0 +1,8 @@
+#!/bin/sh
+# Bloque toute clé Stripe (sk_ ou rk_) avant qu'elle n'entre dans l'historique.
+# Activation : git config core.hooksPath .githooks
+if git diff --cached -U0 | grep -nE '^\+.*\b[sr]k_(test|live)_[A-Za-z0-9]' >/dev/null; then
+  echo "✋ Commit bloqué : une clé API Stripe (sk_/rk_) apparaît dans les modifications."
+  echo "   Retirez-la et placez-la dans facturation/.env (ignoré par git)."
+  exit 1
+fi

@@ -1,0 +1,7 @@
+# Le déploiement d'aigeoconseil.com est un site statique : tout fichier présent
+# dans le dépôt est servi publiquement. Cet outil de facturation ne doit jamais
+# l'être — il est exclu de l'upload Vercel.
+facturation/
+.env
+.env.*
+node_modules/
