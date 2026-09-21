@@ -57,7 +57,7 @@ nav button.on{color:var(--ink);font-weight:600}
 .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 .cta.big{padding:14px 26px;font-size:16px}
 .cta.full{width:100%}
-a.cta{display:inline-block;text-decoration:none}
+a.cta{display:inline-block;text-decoration:none;text-align:center}
 
 /* ---------- layout ---------- */
 .page{display:none;animation:in .3s ease}
@@ -830,15 +830,15 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
 <div class="page" id="contact">
   <div class="wrap hero short">
     <div class="eyebrow">Contact</div>
-    <h1>Commençons par <span class="grad">deux questions.</span></h1>
+    <h1>Commençons, par écrit<br><span class="grad">ou en direct.</span></h1>
     <p class="lead" style="margin-top:24px">Dites-nous votre marché et les questions que vos clients vous posent le plus souvent. Nous en posons deux à une IA et nous vous envoyons les réponses capturées et commentées, gratuitement, sous 48 heures ouvrées.</p>
   </div>
 
   <section>
-    <div class="wrap grid g2 start">
+    <div class="wrap grid g2">
 
       <div class="card">
-        <h3 style="margin-bottom:18px">Votre demande</h3>
+        <h3 style="margin-bottom:18px">Par écrit, sous 48 heures</h3>
         <form onsubmit="send(event)">
           <div>
             <label for="f0">Ce qui vous amène</label>
@@ -871,7 +871,23 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
         </form>
       </div>
 
-      <div class="grid" style="gap:24px">
+      <div class="card" style="display:flex;flex-direction:column">
+        <h3 style="margin-bottom:18px">En direct, 30 minutes</h3>
+        <div style="flex:1">
+          <ul class="check">
+            <li>La question telle qu'elle est posée au modèle, mot pour mot</li>
+            <li>La réponse complète, telle qu'elle s'affiche, sans montage ni sélection</li>
+            <li>Qui est nommé à votre place quand votre marque n'apparaît pas</li>
+          </ul>
+          <p class="small"><b>Gratuit.</b></p>
+        </div>
+        <div><a class="cta big full" href="https://calendly.com/aigeo/releve-en-direct" target="_blank" rel="noopener noreferrer">Choisir un créneau</a></div>
+        <p class="tiny mb0" style="margin-top:14px">La réservation se fait sur Calendly, un service tiers. <a class="ilink" href="/rendez-vous/">Ce que vous verrez, et ce que nous ne promettons pas</a></p>
+      </div>
+
+    </div>
+
+    <div class="wrap grid g3 start" style="margin-top:24px">
         <div class="card">
           <h3>Qui vous répondra</h3>
           <p class="small">Nous sommes deux, et c'est l'un de nous deux qui lit votre message. Pas de commercial, pas de formulaire qui part dans le vide.</p>
@@ -898,7 +914,6 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
           <p class="small">Nous publions nos relevés et ce qu'ils nous apprennent, marché par marché.</p>
           <div class="social" id="social-contact"></div>
         </div>
-      </div>
 
     </div>
   </section>
