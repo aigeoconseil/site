@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.png">
+<title>Relevé en direct · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Réservez un relevé en direct avec AIGEO : nous posons devant vous, à une IA, des questions d'acheteur de votre marché, et vous voyez si votre marque est citée. Ce que vous verrez, et ce que nous ne promettons pas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aigeoconseil.com/rendez-vous/">
+<style>
+:root{
+  --ink:#0E0E12; --paper:#FAF9F6; --muted:#6E6E78; --line:#E4E2DC;
+  --accent:#4A1FD4; --accent2:#C93AC9; --surface:#FFFFFF;
+  --shadow:0 1px 2px rgba(14,14,18,.05),0 12px 32px rgba(14,14,18,.06);
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#8B6BFF; --accent2:#E05FDD; --surface:#1A1A21;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+a{color:inherit}
+.ilink{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent);font-weight:600}
+.ilink:hover{border-bottom-color:var(--accent)}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:52px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:0 0 8px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.mb0{margin-bottom:0}
+.grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block;margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:640;margin-bottom:22px;display:flex;align-items:center;gap:11px}
+.eyebrow::before{content:"";width:26px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:26px 0 0}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow)}
+.card p:last-child{margin-bottom:0}
+.steps{display:grid;gap:16px;margin-top:22px}
+.num{font-variant-numeric:tabular-nums;font-size:13px;font-weight:700;color:var(--paper);background:var(--ink);width:24px;height:24px;border-radius:6px;display:grid;place-items:center;margin-bottom:12px}
+ul.check{list-style:none;padding:0;margin:0}
+ul.check li{padding-left:26px;position:relative;margin-bottom:12px;font-size:16px}
+ul.check li::before{content:"";position:absolute;left:0;top:11px;width:11px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+ul.no{list-style:none;padding:0;margin:0}
+ul.no li{padding-left:26px;position:relative;margin-bottom:12px;color:var(--muted);font-size:16px}
+ul.no li::before{content:"×";position:absolute;left:4px;top:-1px;color:var(--muted);font-size:18px}
+.book{margin:56px 0 20px;padding:30px;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow)}
+.book h2{margin-top:0}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:640px){ .bar{padding:0 18px;gap:10px} .hero{padding:40px 0 4px} .book{padding:22px} .wrap{padding:0 16px} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/logo-sur-clair.png"></a>
+    <nav>
+      <a href="/#methode">Méthode</a>
+      <a href="/#preuve">Le relevé</a>
+      <a href="/#offres">Offres</a>
+      <a href="/#local">Commerces</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Rendez-vous</div>
+    <h1>Le relevé, <span class="grad">en direct.</span></h1>
+    <p class="chapo">Nous posons devant vous, à une IA, les questions que vos acheteurs posent avant d'acheter. Vous voyez la réponse s'écrire, et vous voyez si votre marque y est nommée.</p>
+    <div class="btns">
+      <a class="cta" href="https://calendly.com/aigeo/releve-en-direct" target="_blank" rel="noopener noreferrer">Choisir un créneau</a>
+      <a class="cta ghost" href="#ce-que-nous-ne-promettons-pas">Ce que nous ne promettons pas</a>
+    </div>
+  </div>
+
+  <h2 id="ce-que-c-est">Ce qu'est le relevé en direct</h2>
+  <p>C'est un rendez-vous en visio, écran partagé. Au lieu de recevoir des captures après coup, vous assistez au relevé pendant qu'il se fait. Nous appliquons la même règle que dans nos relevés écrits : une question par conversation, toujours neuve, sans mémoire ni personnalisation, écrite comme un acheteur la poserait et jamais comme une marque aimerait qu'on la pose.</p>
+  <p>Le but n'est pas de vous montrer un résultat choisi à l'avance. C'est de vous montrer comment un modèle répond à vos clients aujourd'hui, et de vous laisser juger par vous-même.</p>
+
+  <div class="steps">
+    <div class="card">
+      <div class="num">1</div>
+      <h3>Avant le rendez-vous</h3>
+      <p class="small">Vous nous indiquez votre marque, votre marché et les questions que vos clients vous posent le plus souvent. Nous les réécrivons dans les mots d'un acheteur, sans jamais vous nommer.</p>
+    </div>
+    <div class="card">
+      <div class="num">2</div>
+      <h3>Pendant le rendez-vous</h3>
+      <p class="small">Nous ouvrons une conversation neuve pour chaque question et nous la posons devant vous. Nous lisons la réponse ensemble, marque par marque.</p>
+    </div>
+    <div class="card">
+      <div class="num">3</div>
+      <h3>À la fin</h3>
+      <p class="small">Nous vous disons ce que nous en lisons, et ce qu'un relevé complet permettrait d'établir ou non. Si le constat ne justifie aucune suite, nous vous le disons aussi.</p>
+    </div>
+  </div>
+
+  <h2 id="ce-que-vous-verrez">Ce que vous verrez</h2>
+  <ul class="check">
+    <li>La question telle qu'elle est posée au modèle, mot pour mot</li>
+    <li>La réponse complète, telle qu'elle s'affiche, sans montage ni sélection</li>
+    <li>Les marques nommées, et pour chacune l'un de nos trois statuts : recommandée, citée ou absente</li>
+    <li>Les sources que le modèle affiche, quand il en affiche</li>
+    <li>Qui est nommé à votre place quand votre marque n'apparaît pas</li>
+    <li>Notre lecture à chaud, en distinguant ce qui est observé de ce qui reste à vérifier</li>
+  </ul>
+
+  <h2 id="ce-que-nous-ne-promettons-pas">Ce que nous ne promettons pas</h2>
+  <ul class="no">
+    <li>Aucune position, aucun classement, aucune apparition dans une réponse. Personne ne le peut honnêtement, et surtout pas nous.</li>
+    <li>Aucune conclusion définitive. Une réponse d'IA varie d'un jour à l'autre et d'un modèle à l'autre : ce que vous voyez est un constat à un instant donné.</li>
+    <li>Aucun diagnostic complet. Le relevé en direct ne remplace ni le relevé de présence ni le relevé commenté, qui portent sur davantage de questions, plusieurs IA et plusieurs passages espacés dans le temps.</li>
+    <li>Aucune accusation contre un concurrent. Nous montrons qui est nommé, pas pourquoi il l'a mérité ou non.</li>
+    <li>Aucune pression. Nous ne vous proposons une suite que si le constat la justifie, et vous restez libre de la refuser.</li>
+  </ul>
+  <p class="small" style="margin-top:18px">Le détail des relevés écrits et de ce qu'ils contiennent est sur la page <a class="ilink" href="/#offres">Offres</a>.</p>
+
+  <div class="book" id="reserver">
+    <h2>Réserver un créneau</h2>
+    <p>La réservation se fait sur Calendly, un service tiers. Le bouton ci-dessous vous emmène sur leur site, dans un nouvel onglet : cette page n'intègre aucun module Calendly et ne dépose aucun traceur. Les informations que vous saisissez lors de la réservation sont reçues par Calendly, dans les conditions décrites dans nos <a class="ilink" href="/mentions-legales/#rendez-vous">mentions légales</a>.</p>
+    <div class="btns" style="margin-top:8px">
+      <a class="cta" href="https://calendly.com/aigeo/releve-en-direct" target="_blank" rel="noopener noreferrer">Choisir un créneau sur Calendly</a>
+    </div>
+    <p class="small mb0" style="margin-top:22px">Vous préférez ne pas passer par Calendly ? Écrivez-nous à <a class="ilink" href="mailto:contact@aigeoconseil.com">contact@aigeoconseil.com</a> et nous fixerons le rendez-vous par email.</p>
+  </div>
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/">Retour à l'accueil</a> · <a href="/mentions-legales/">Mentions légales</a> · <a href="/conditions-generales/">Conditions générales</a>
+  </footer>
+</main>
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/logo-sur-sombre.png':'/logo-sur-clair.png';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+</body>
+</html>
