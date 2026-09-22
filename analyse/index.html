@@ -5,7 +5,7 @@
 <link rel="icon" href="/favicon.png">
 <title>Analyse · AIGEO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Ce que contient une analyse AIGEO de la présence de votre marque dans les réponses des IA, et comment la demander : en visio, par un rappel ou sur devis.">
+<meta name="description" content="Ce qu'une IA comprend de votre site, et comment AIGEO le mesure : le parcours, un exemple de rapport, et trois façons de nous joindre.">
 <meta name="robots" content="noindex">
 <style>
 :root{
@@ -32,10 +32,11 @@ a{color:inherit}
 .ilink{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent);font-weight:600}
 .ilink:hover{border-bottom-color:var(--accent)}
 h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
-h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
-h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:52px 0 16px;scroll-margin-top:92px}
-h3{font-size:19px;font-weight:640;margin:0 0 8px}
+h1{font-size:clamp(34px,5.2vw,60px);font-weight:680}
+h2{font-size:clamp(25px,3.2vw,36px);font-weight:640}
+h3{font-size:19px;font-weight:640;margin-bottom:8px}
 p{margin:0 0 18px}
+.lead{font-size:clamp(18px,2.1vw,21px);color:var(--muted);max-width:62ch}
 .small{font-size:14.5px;color:var(--muted)}
 .tiny{font-size:13px;color:var(--muted)}
 .mb0{margin-bottom:0}
@@ -54,43 +55,88 @@ nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transpar
 .cta:hover{transform:translateY(-1px);opacity:.9}
 .cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
 
-.wrap{max-width:760px;margin:0 auto;padding:0 28px}
-.hero{padding:64px 0 8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+section{padding:74px 0;border-bottom:1px solid var(--line)}
 .eyebrow{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:640;margin-bottom:22px;display:flex;align-items:center;gap:11px}
 .eyebrow::before{content:"";width:26px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:26px 0 0}
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:var(--shadow)}
 .card p:last-child{margin-bottom:0}
-ul.no{list-style:none;padding:0;margin:0}
-ul.no li{padding-left:26px;position:relative;margin-bottom:12px;color:var(--muted);font-size:16px}
-ul.no li::before{content:"×";position:absolute;left:4px;top:-1px;color:var(--muted);font-size:18px}
-.badge{display:inline-block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.badge{display:inline-block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;white-space:nowrap}
+.badge.soft{background:none;border:1px solid var(--line);color:var(--muted)}
+.grid{display:grid;gap:24px}
+.g3{grid-template-columns:repeat(3,1fr)}
 
-/* Encart à la place de l'analyse en ligne, qui n'est pas ouverte. */
-.soon{margin-top:44px;padding:26px;border:1px dashed var(--line);border-radius:14px;background:color-mix(in srgb,var(--ink) 3%,transparent)}
-.soon h2{margin:14px 0 10px;font-size:21px}
+/* En-tête de section : titre à gauche, texte à droite. */
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:34px}
+.shead .eyebrow{margin-bottom:16px}
+.shead p{max-width:46ch;margin:0}
+
+/* Accroche : texte à gauche, encart à la place du scan à droite. */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center;padding:92px 0 72px}
+.hero .lead{margin-top:24px}
+.hero .tiny{margin:22px 0 0}
+.soon{padding:28px;border:1px dashed var(--line);border-radius:16px;background:color-mix(in srgb,var(--ink) 3%,transparent)}
+.soon h2{font-size:23px;margin:16px 0 10px}
+.soon ol{list-style:none;padding:0;margin:18px 0 20px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.soon li{display:flex;gap:14px;padding:13px 16px;font-size:15px}
+.soon li+li{border-top:1px solid var(--line)}
+.soon li span{font-size:13px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:1px}
+.soon .label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-top:22px}
+
+/* Les trois étapes. */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{position:relative}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-19px;top:34px;z-index:2;width:24px;height:24px;border-radius:50%;background:var(--surface);border:1px solid var(--line);color:var(--accent);display:grid;place-items:center;font-size:13px}
+.step .n{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.step h3{margin:22px 0 8px}
+.step .badge{margin-top:14px}
+.foot{margin:18px 0 0}
 
 /* Exemple de rapport : une structure, jamais des résultats. */
-.report{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin-top:22px}
-.report-head{padding:20px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.report-row{display:grid;grid-template-columns:1fr auto;gap:8px 20px;padding:18px 26px;border-bottom:1px solid var(--line)}
-.report-row:last-child{border-bottom:0}
-.report-row h3{font-size:16.5px;margin:0}
-.report-row p{margin:0;grid-column:1/-1}
-.report-row .badge{align-self:start}
-.legend{display:flex;gap:10px 22px;flex-wrap:wrap;margin-top:12px}
+.diag{display:grid;grid-template-columns:.67fr 1.33fr;gap:24px;align-items:stretch}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.plan .price{font-size:38px;font-weight:680;letter-spacing:-.03em;line-height:1.1;margin:18px 0 6px}
+.plan .scope{font-size:14px;font-weight:640;color:var(--accent);margin-bottom:26px}
+.plan .cta{margin-top:auto;align-self:flex-start}
+.plan .tiny{margin:14px 0 0}
+.report{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.report-head{padding:18px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.report-body{padding:26px}
+.tabs{display:inline-flex;gap:6px;padding:5px;border:1px solid var(--line);border-radius:10px;background:var(--paper);margin:6px 0 18px;max-width:100%}
+.tabs button{font:inherit;font-size:14px;font-weight:600;border:0;background:none;color:var(--muted);padding:8px 14px;border-radius:7px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.finding{display:flex;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:color-mix(in srgb,var(--ink) 3%,transparent);margin-bottom:10px}
+.finding:last-child{margin-bottom:0}
+.finding .n{font-size:13px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:2px}
+.finding b{display:block;font-size:15.5px;margin-bottom:4px}
+.finding p{margin:0}
+.legend{display:flex;gap:8px 20px;flex-wrap:wrap;margin-top:10px}
 .tag{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:640;color:var(--muted)}
 .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted)}
 .tag.yes{color:var(--cite)} .tag.yes::before{background:var(--cite)}
 .tag.no{color:var(--absent)} .tag.no::before{background:var(--absent)}
+.note{margin:26px 0 0;border-left:3px solid transparent;border-image:linear-gradient(180deg,var(--accent),var(--accent2)) 1;padding-left:20px;max-width:80ch}
 
-.ways{display:grid;gap:16px;margin-top:22px}
-.way{display:grid;grid-template-columns:1fr auto;gap:10px 24px;align-items:center}
-.way .cta{white-space:nowrap}
-.way .tiny{grid-column:1/-1;margin:0}
+/* Choix du mode de contact : des liens directs, aucune fenêtre ni formulaire. */
+.way{display:flex;flex-direction:column}
+.way .badge{align-self:flex-start;margin-bottom:18px}
+.way .line{font-size:21px;font-weight:660;letter-spacing:-.02em;margin:auto 0 16px}
+.way .cta{align-self:flex-start}
+.way .tiny{margin:14px 0 0}
 
-footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+.closing{text-align:center;background:color-mix(in srgb,var(--ink) 3%,transparent);border-bottom:0}
+.closing .eyebrow{justify-content:center}
+.closing h2{font-size:clamp(28px,4vw,46px);margin:0 auto 18px;max-width:20ch}
+.closing .lead{margin:0 auto}
+.closing .btns{justify-content:center}
+
+footer{border-top:1px solid var(--line);padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:1020px){
+  .hero{grid-template-columns:1fr;gap:44px}
+  .soon{max-width:620px}
+}
 @media(max-width:840px){
   .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
   .logo{height:22px}
@@ -98,16 +144,20 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font
   nav::-webkit-scrollbar{display:none}
   nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
   .themebtn{margin-left:0}
-  h2{scroll-margin-top:132px}
+  .wrap{padding:0 22px}
+  section{padding:54px 0;scroll-margin-top:80px}
+  .hero{padding:56px 0 44px}
+  .shead{flex-direction:column;align-items:flex-start;gap:14px}
+  .g3,.steps,.diag{grid-template-columns:1fr}
+  .step:not(:last-child)::after{display:none}
 }
 @media(max-width:640px){
-  .hero{padding:40px 0 4px} .wrap{padding:0 16px}
-  .soon,.card{padding:22px}
-  .report-head,.report-row{padding-left:20px;padding-right:20px}
-  .report-row{grid-template-columns:1fr}
-  .report-row .badge{justify-self:start}
-  .way{grid-template-columns:1fr}
-  .way .cta{width:100%}
+  .wrap{padding:0 16px}
+  .soon,.card,.plan{padding:22px}
+  .report-head,.report-body{padding-left:18px;padding-right:18px}
+  .tabs{display:flex;width:100%}
+  .tabs button{flex:1;padding:8px 6px;font-size:13.5px}
+  .hero .cta,.way .cta,.plan .cta,.closing .cta{width:100%}
 }
 </style>
 </head>
@@ -129,132 +179,219 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font
   </div>
 </header>
 
-<main class="wrap">
-  <div class="hero">
-    <div class="eyebrow">Analyse</div>
-    <h1>Ce qu'une IA répond <span class="grad">à vos acheteurs.</span></h1>
-    <p class="chapo">Une analyse AIGEO montre si votre marque est nommée quand un acheteur demande conseil à une IA, et qui l'est à sa place. Voici ce que contient le rapport, et comment le demander.</p>
-    <div class="btns">
-      <a class="cta" href="#nous-joindre">Demander une analyse</a>
-      <a class="cta ghost" href="#exemple-de-rapport">Voir un exemple de rapport</a>
-    </div>
-  </div>
+<main>
 
-  <div class="soon" id="analyse-en-ligne">
-    <span class="badge">Bientôt disponible</span>
-    <h2>L'analyse en ligne</h2>
-    <p class="small">Lancer une analyse depuis cette page, à partir de l'adresse de votre site, n'est pas encore possible. Rien n'est analysé ici pour l'instant.</p>
-    <p class="small mb0">D'ici là, l'analyse se fait avec nous : en visio, par un rappel ou sur devis. <a class="ilink" href="#nous-joindre">Nous joindre</a></p>
-  </div>
-
-  <h2 id="exemple-de-rapport">Exemple de rapport</h2>
-  <p>Un rapport est un constat daté : les questions posées, les réponses obtenues, les marques nommées. Voici comment il est construit. Cet exemple décrit des rubriques et ne montre aucun résultat.</p>
-
-  <div class="report">
-    <div class="report-head">
-      <div>
-        <b>Rapport d'analyse</b>
-        <div class="small">Structure type, sans aucune donnée</div>
+<section>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Visibilité des marques dans les réponses IA</div>
+      <h1>Que comprend une IA<br><span class="grad">de votre site ?</span></h1>
+      <p class="lead">Quand un acheteur demande conseil à une IA, elle répond avec ce qu'elle a compris des marques de votre marché. Nous regardons ce qu'elle comprend de la vôtre, et qui elle nomme à votre place.</p>
+      <div class="btns">
+        <a class="cta" href="#nous-joindre">Échanger avec AIGEO</a>
+        <a class="cta ghost" href="#parcours">Comment ça marche ?</a>
       </div>
-      <div class="small">Marque, marché et dates propres à chaque relevé</div>
+      <p class="tiny">Échange en visio gratuit · Rapport complet sur devis · Aucun paiement en ligne</p>
     </div>
 
-    <div class="report-row">
-      <h3>Le périmètre</h3>
-      <span class="badge">Relevé de présence</span>
-      <p class="small">Les questions posées, mot pour mot, écrites comme un acheteur les pose et réparties sur les moments d'achat. Les IA interrogées, et la date de chaque passage.</p>
+    <aside class="soon" id="analyse-en-ligne" aria-labelledby="soon-title">
+      <span class="badge soft">Bientôt disponible</span>
+      <h2 id="soon-title">L'analyse gratuite en ligne</h2>
+      <p class="small mb0">Une première lecture de votre site, à partir de son adresse. Elle n'est pas encore ouverte : rien n'est analysé depuis cette page pour l'instant.</p>
+      <div class="label">Ce qu'elle regardera</div>
+      <ol>
+        <li><span>01</span>Les pages publiques qu'une IA peut lire</li>
+        <li><span>02</span>La clarté de votre offre, expliquée en mots</li>
+        <li><span>03</span>Des acteurs comparables, présentés comme des hypothèses</li>
+      </ol>
+      <p class="tiny mb0">Elle lira votre site sans mesurer votre présence dans les réponses des IA : c'est l'objet du rapport complet. D'ici là, <a class="ilink" href="#nous-joindre">parlons-en</a>.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="parcours">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <div class="eyebrow">Une progression simple</div>
+        <h2>Analyser gratuitement.<br>Décider avec un expert.</h2>
+      </div>
+      <p class="small">La première étape donnera des repères. Si le sujet mérite d'aller plus loin, le périmètre est confirmé avec l'un de nous deux avant toute prestation.</p>
+    </div>
+    <div class="steps">
+      <div class="card step">
+        <div class="n">01 / Analyser</div>
+        <h3>Analyse gratuite</h3>
+        <p class="small mb0">Une première lecture de votre site : pages lisibles, clarté de l'offre, acteurs comparables.</p>
+        <span class="badge soft">Bientôt disponible</span>
+      </div>
+      <div class="card step">
+        <div class="n">02 / Approfondir</div>
+        <h3>Rapport complet</h3>
+        <p class="small mb0">Constats datés, marques nommées à votre place, sources, priorités et fiches d'action.</p>
+      </div>
+      <div class="card step">
+        <div class="n">03 / Échanger</div>
+        <h3>Diagnostic sur devis</h3>
+        <p class="small mb0">Visio, rappel ou devis écrit, pour définir ensemble le bon périmètre.</p>
+      </div>
+    </div>
+    <p class="small foot">Aucune vente ne se fait en ligne : le rapport complet est une prestation payante, proposée seulement après un échange et la validation d'un devis.</p>
+  </div>
+</section>
+
+<section id="exemple-de-rapport">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <div class="eyebrow">02 / Rapport complet sur devis</div>
+        <h2>Des constats.<br>Des preuves. Des actions.</h2>
+      </div>
+      <p class="small">Si le sujet justifie d'aller plus loin, nous confirmons le périmètre avec vous avant de lancer le rapport.</p>
     </div>
 
-    <div class="report-row">
-      <h3>Le tableau de présence</h3>
-      <span class="badge">Relevé de présence</span>
-      <p class="small">Pour chaque question et chaque IA, l'un de nos trois statuts seulement. En cas de doute, on descend d'un cran.</p>
-      <div class="legend" style="grid-column:1/-1">
-        <span class="tag yes">Recommandée</span>
-        <span class="tag">Citée</span>
-        <span class="tag no">Absente</span>
+    <div class="diag">
+      <div class="plan">
+        <span class="badge" style="align-self:flex-start">Prestation payante</span>
+        <div class="price">Sur devis</div>
+        <div class="scope">Périmètre et délai confirmés avant lancement</div>
+        <h3>Une image plus nette de votre visibilité.</h3>
+        <p class="small">Le rapport mesure un périmètre défini, montre qui est nommé à votre place, explique les écarts et les traduit en actions priorisées. C'est un constat daté, pas une promesse de position.</p>
+        <a class="cta" href="#nous-joindre">Demander le rapport complet</a>
+        <p class="tiny">Aucun achat immédiat : vous choisissez d'abord entre visio, rappel ou devis écrit.</p>
+      </div>
+
+      <div class="report">
+        <div class="report-head">
+          <b>Exemple de rapport</b>
+          <span class="small">Structure type, sans aucune donnée</span>
+        </div>
+        <div class="report-body">
+          <h3>Votre plan de lecture.</h3>
+          <p class="small">Les observations sont organisées pour expliquer ce qui se passe, puis quoi faire ensuite. Cet exemple décrit des rubriques : il ne montre aucun résultat.</p>
+
+          <div class="tabs" role="tablist" aria-label="Rubriques du rapport">
+            <button id="tab-constats" role="tab" type="button" aria-selected="true" aria-controls="pane-constats">Constats</button>
+            <button id="tab-actions" role="tab" type="button" aria-selected="false" aria-controls="pane-actions" tabindex="-1">Actions</button>
+            <button id="tab-suite" role="tab" type="button" aria-selected="false" aria-controls="pane-suite" tabindex="-1">Et après ?</button>
+          </div>
+
+          <div id="pane-constats" role="tabpanel" aria-labelledby="tab-constats">
+            <div class="finding"><span class="n">01</span><div>
+              <b>Votre présence, question par question</b>
+              <p class="small">Pour chaque question d'acheteur et chaque IA, l'un de nos trois statuts seulement. En cas de doute, on descend d'un cran.</p>
+              <div class="legend"><span class="tag yes">Recommandée</span><span class="tag">Citée</span><span class="tag no">Absente</span></div>
+            </div></div>
+            <div class="finding"><span class="n">02</span><div>
+              <b>Les marques nommées à votre place</b>
+              <p class="small">Chaque écart est relié aux réponses capturées et datées, et aux sources que le modèle affiche.</p>
+            </div></div>
+            <div class="finding"><span class="n">03</span><div>
+              <b>Les pages à clarifier</b>
+              <p class="small">Les hypothèses sont distinguées des observations vérifiables.</p>
+            </div></div>
+          </div>
+
+          <div id="pane-actions" role="tabpanel" aria-labelledby="tab-actions">
+            <div class="finding"><span class="n">01</span><div>
+              <b>Des fiches d'action, page par page</b>
+              <p class="small">Ce qu'il faut préciser : l'offre, la zone servie, les preuves, les questions fréquentes.</p>
+            </div></div>
+            <div class="finding"><span class="n">02</span><div>
+              <b>Les informations à structurer</b>
+              <p class="small">Les attributs manquants du catalogue et les données structurées à compléter, fiche par fiche.</p>
+            </div></div>
+            <div class="finding"><span class="n">03</span><div>
+              <b>Les priorités</b>
+              <p class="small">Parmi les fiches d'action, les trois à engager d'abord.</p>
+            </div></div>
+          </div>
+
+          <div id="pane-suite" role="tabpanel" aria-labelledby="tab-suite">
+            <div class="finding"><span class="n">01</span><div>
+              <b>Une restitution avec l'un de nous deux</b>
+              <p class="small">Une heure en visio, enregistrée, pour comprendre les constats, leurs limites et les choix possibles.</p>
+            </div></div>
+            <div class="finding"><span class="n">02</span><div>
+              <b>La mise en œuvre, si vous le souhaitez</b>
+              <p class="small">Nous exécutons les corrections sur le catalogue et le corpus, puis nous remesurons sur les mêmes questions.</p>
+            </div></div>
+            <div class="finding"><span class="n">03</span><div>
+              <b>Le suivi dans le temps</b>
+              <p class="small">Une re-mesure régulière, pour savoir comment les réponses évoluent.</p>
+            </div></div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="report-row">
-      <h3>Le relevé de concurrence</h3>
-      <span class="badge">Relevé de présence</span>
-      <p class="small">Les marques que le modèle nomme à votre place, question par question, telles qu'il les nomme. Nous montrons qui est nommé, pas pourquoi.</p>
-    </div>
-
-    <div class="report-row">
-      <h3>Les captures</h3>
-      <span class="badge">Relevé de présence</span>
-      <p class="small">Chaque réponse capturée en plein écran, la date système visible dans l'image, sans montage ni sélection. Elles sont jointes en annexe.</p>
-    </div>
-
-    <div class="report-row">
-      <h3>Les sources</h3>
-      <span class="badge">Relevé commenté</span>
-      <p class="small">Les sources que le modèle affiche, relevées pour chaque question où votre marque est absente.</p>
-    </div>
-
-    <div class="report-row">
-      <h3>Le diagnostic</h3>
-      <span class="badge">Relevé commenté</span>
-      <p class="small">Le catalogue, avec les attributs manquants et des fiches annotées, puis votre corpus face à celui de vos concurrents.</p>
-    </div>
-
-    <div class="report-row">
-      <h3>Les fiches d'action</h3>
-      <span class="badge">Relevé commenté</span>
-      <p class="small">Ce qu'il faut corriger, fiche par fiche, avec les priorités, et une restitution en visio.</p>
-    </div>
+    <p class="small note">L'analyse gratuite donnera des premiers repères. Le rapport complet mesure, documente et priorise sur un périmètre adapté, sans achat automatique ni engagement immédiat. Le détail de chaque palier est sur la page <a class="ilink" href="/#offres">Offres</a>.</p>
   </div>
+</section>
 
-  <p class="small" style="margin-top:18px">Le relevé de présence donne la mesure brute. Le relevé commenté y ajoute l'explication des causes et ce qu'il faut corriger. Le détail de chaque palier est sur la page <a class="ilink" href="/#offres">Offres</a>.</p>
-
-  <h2 id="ce-qu-un-rapport-ne-contient-pas">Ce qu'un rapport ne contient pas</h2>
-  <ul class="no">
-    <li>Aucune promesse de position, de classement ou d'apparition dans une réponse.</li>
-    <li>Aucune conclusion définitive. Une réponse d'IA varie d'un jour à l'autre et d'un modèle à l'autre : le rapport décrit un constat à un instant donné.</li>
-    <li>Aucune accusation contre un concurrent.</li>
-  </ul>
-
-  <h2 id="nous-joindre">Nous joindre</h2>
-  <p>Trois façons de lancer une analyse. Dans tous les cas, c'est l'un de nous deux qui vous répond.</p>
-
-  <div class="ways">
-    <div class="card way">
+<section id="nous-joindre">
+  <div class="wrap">
+    <div class="shead">
       <div>
+        <div class="eyebrow">03 / Choisir la suite</div>
+        <h2>Un échange humain.<br>Avant toute proposition.</h2>
+      </div>
+      <p class="small">La suite dépend de votre site, de vos marchés et de vos objectifs. Choisissez le mode qui vous convient : c'est l'un de nous deux qui vous répond.</p>
+    </div>
+
+    <div class="grid g3">
+      <div class="card way">
+        <span class="badge soft">Sans engagement</span>
         <h3>En visio, 30 minutes</h3>
-        <p class="small mb0">Nous posons devant vous, à une IA, les questions que vos acheteurs posent avant d'acheter. <b>Gratuit.</b></p>
+        <p class="small">Nous posons devant vous, à une IA, des questions d'acheteur de votre marché, puis nous voyons ensemble la suite la plus pertinente.</p>
+        <div class="line">Gratuit</div>
+        <a class="cta" href="https://calendly.com/aigeo/releve-en-direct" target="_blank" rel="noopener noreferrer">Choisir un créneau</a>
+        <p class="tiny">Sur Calendly, un service tiers, dans un nouvel onglet. <a class="ilink" href="/rendez-vous/">Ce que vous verrez</a></p>
       </div>
-      <a class="cta" href="https://calendly.com/aigeo/releve-en-direct" target="_blank" rel="noopener noreferrer">Choisir un créneau</a>
-      <p class="tiny">La réservation se fait sur Calendly, un service tiers, dans un nouvel onglet. <a class="ilink" href="/rendez-vous/">Ce que vous verrez, et ce que nous ne promettons pas</a></p>
-    </div>
 
-    <div class="card way">
-      <div>
+      <div class="card way">
+        <span class="badge soft">Par téléphone</span>
         <h3>Être rappelé</h3>
-        <p class="small mb0">Indiquez votre numéro et les moments où vous êtes joignable : l'un de nous deux vous rappelle.</p>
+        <p class="small">Vous préférez en parler de vive voix : indiquez votre numéro et les moments où vous êtes joignable, l'un de nous deux vous rappelle.</p>
+        <div class="line">Rappel téléphonique</div>
+        <a class="cta ghost" href="mailto:contact@aigeoconseil.com?subject=Demande%20de%20rappel">Demander un rappel</a>
+        <p class="tiny">Ouvre votre messagerie avec l'objet déjà rempli. Rien n'est enregistré sur ce site.</p>
       </div>
-      <a class="cta ghost" href="mailto:contact@aigeoconseil.com?subject=Demande%20de%20rappel">Demander un rappel</a>
-      <p class="tiny">Ce lien ouvre votre messagerie avec l'objet déjà rempli. Rien n'est enregistré sur ce site.</p>
+
+      <div class="card way">
+        <span class="badge soft">Besoin déjà défini</span>
+        <h3>Recevoir un devis</h3>
+        <p class="small">Décrivez votre site, le marché visé et votre objectif. Nous revenons vers vous avec un périmètre et un devis.</p>
+        <div class="line">Réponse sous 48 heures ouvrées</div>
+        <a class="cta ghost" href="mailto:contact@aigeoconseil.com?subject=Demande%20de%20devis">Demander un devis</a>
+        <p class="tiny">Ouvre votre messagerie avec l'objet déjà rempli. Rien n'est enregistré sur ce site.</p>
+      </div>
     </div>
 
-    <div class="card way">
-      <div>
-        <h3>Un devis</h3>
-        <p class="small mb0">Indiquez votre marque, le marché visé et les questions que vos clients posent le plus souvent. Tout est chiffré sur devis, avant toute commande.</p>
-      </div>
-      <a class="cta ghost" href="mailto:contact@aigeoconseil.com?subject=Demande%20de%20devis">Demander un devis</a>
-      <p class="tiny">Ce lien ouvre votre messagerie avec l'objet déjà rempli. Rien n'est enregistré sur ce site.</p>
+    <p class="small foot">Vous pouvez aussi écrire directement à <a class="ilink" href="mailto:contact@aigeoconseil.com">contact@aigeoconseil.com</a>. Toutes les prestations sont sur devis, et aucun paiement ne se fait en ligne.</p>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="eyebrow">Commencer sans engagement</div>
+    <h2>Un échange suffit pour faire le premier pas.</h2>
+    <p class="lead">L'analyse en ligne arrive bientôt. D'ici là, trente minutes en visio suffisent pour voir ce qu'une IA répond à vos acheteurs, et décider ensemble de la suite.</p>
+    <div class="btns">
+      <a class="cta" href="https://calendly.com/aigeo/releve-en-direct" target="_blank" rel="noopener noreferrer">Choisir un créneau</a>
+      <a class="cta ghost" href="#nous-joindre">Autres façons de nous joindre</a>
     </div>
   </div>
+</section>
 
-  <p class="small" style="margin-top:22px">Vous pouvez aussi nous écrire directement à <a class="ilink" href="mailto:contact@aigeoconseil.com">contact@aigeoconseil.com</a>. Réponse sous 48 heures ouvrées, du lundi au vendredi.</p>
+</main>
 
+<div class="wrap">
   <footer>
     © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
     Visibilité des marques dans les réponses génératives · <a href="/">Retour à l'accueil</a> · <a href="/mentions-legales/">Mentions légales</a> · <a href="/conditions-generales/">Conditions générales</a>
   </footer>
-</main>
+</div>
 
 <script>
 const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
@@ -276,6 +413,28 @@ try{
   else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
 }catch(e){}
 applyTheme(start);
+
+/* Onglets de l'exemple de rapport. Sans script, les trois rubriques restent visibles l'une sous l'autre. */
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function selectTab(tab){
+  tabs.forEach(t=>{
+    const on=t===tab;
+    t.setAttribute('aria-selected',on);
+    t.tabIndex=on?0:-1;
+    document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
+  });
+}
+tabs.forEach((tab,i)=>{
+  tab.addEventListener('click',()=>selectTab(tab));
+  tab.addEventListener('keydown',e=>{
+    const keys={ArrowRight:(i+1)%tabs.length,ArrowLeft:(i-1+tabs.length)%tabs.length,Home:0,End:tabs.length-1};
+    if(!(e.key in keys)) return;
+    e.preventDefault();
+    selectTab(tabs[keys[e.key]]);
+    tabs[keys[e.key]].focus();
+  });
+});
+selectTab(tabs[0]);
 </script>
 </body>
 </html>
