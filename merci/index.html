@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.png">
+<title>Merci · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Votre commande AIGEO est enregistrée.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://aigeoconseil.com/merci/">
+<style>
+:root{
+  --ink:#0E0E12; --paper:#FAF9F6; --muted:#6E6E78; --line:#E4E2DC;
+  --accent:#4A1FD4; --accent2:#C93AC9; --surface:#FFFFFF;
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#8B6BFF; --accent2:#E05FDD; --surface:#1A1A21;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+a{color:inherit}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:46px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:34px 0 8px;scroll-margin-top:92px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block}
+.bar>a:first-child{margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.meta{font-size:14px;color:var(--muted);margin-top:22px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+article{padding-bottom:20px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin-bottom:10px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:840px){
+  .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
+  .logo{height:22px}
+  nav{width:100%;order:3;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
+  .themebtn{margin-left:0}
+}
+@media(max-width:640px){ .hero{padding:40px 0 4px} }
+</style><style>
+.wrap{max-width:720px}
+.legal h2{font-size:clamp(20px,2.4vw,25px);margin:44px 0 14px}
+.legal h3{margin:26px 0 6px}
+.legal p{font-size:16px}
+.ptable{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:16px}
+.ptable th,.ptable td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable th{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.ptable td.num{text-align:right;white-space:nowrap;font-weight:640}
+.ptable tr:last-child td{border-bottom:0}
+.ptable td.go{text-align:right;white-space:nowrap}
+.ptable td.go a{font-weight:640}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/logo-sur-clair.png"></a>
+    <nav>
+      <a href="/#methode">Méthode</a>
+      <a href="/#preuve">Le relevé</a>
+      <a href="/#offres">Offres</a>
+      <a href="/#blog">Blog</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Commande</div>
+    <h1>Merci, <span class="grad">c'est enregistré.</span></h1>
+    <div class="meta" id="offre">Votre commande AIGEO.</div>
+  </div>
+
+  <article class="legal">
+    <h2>Le paiement</h2>
+    <p>Par carte, le paiement est confirmé : Stripe vous envoie le reçu par email. Par prélèvement SEPA, la confirmation arrive sous quelques jours ouvrés ; nous démarrons dès qu'elle est reçue, et vous êtes prévenu par email si le prélèvement échoue.</p>
+
+    <h2>La suite</h2>
+    <p>Nous vous écrivons à l'adresse indiquée lors du paiement pour cadrer vos questions d'acheteur : votre activité, le marché que vous servez réellement, les situations où un client demanderait conseil à une IA. La mesure ne démarre qu'une fois ces questions validées avec vous.</p>
+    <p id="engagement" hidden>Votre abonnement s'arrête automatiquement au terme de l'engagement choisi, sans reconduction.</p>
+
+    <h2>Une question</h2>
+    <p>Écrivez-nous à <a href="mailto:contact@aigeoconseil.com">contact@aigeoconseil.com</a>. Les conditions de votre commande sont celles des <a href="/conditions-generales/">conditions générales</a> en vigueur au jour de la commande.</p>
+
+    <div class="btns">
+      <a class="cta" href="/">Retour à l'accueil</a>
+    </div>
+  </article>
+
+<script>
+(function(){
+  var o = new URLSearchParams(location.search).get('offre') || '';
+  var noms = {oneshot:"Audit ponctuel", monthly:"Veille, sans engagement", commit_2:"Veille, engagement 2 mois", commit_4:"Veille, engagement 4 mois", commit_8:"Veille, engagement 8 mois", commit_12:"Veille, engagement 12 mois"};
+  if (noms[o]) document.getElementById('offre').textContent = "Votre commande : " + noms[o] + ".";
+  if (/^commit_/.test(o)) document.getElementById('engagement').hidden = false;
+})();
+</script>
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/">Retour à l'accueil</a> · <a href="/conditions-generales/">Conditions générales</a> · <a href="/mentions-legales/">Mentions légales</a>
+  </footer>
+</main>
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/logo-sur-sombre.png':'/logo-sur-clair.png';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+</body>
+</html>
