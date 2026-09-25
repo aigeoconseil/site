@@ -297,6 +297,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
 .vj-bar{height:12px;border-radius:999px;background:color-mix(in srgb,var(--ink) 8%,transparent);overflow:hidden}
 .vj-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .35s ease}
 .vj-save{font-size:14px;margin-top:8px}
+.vj-gift{font-size:13.5px;font-weight:650;color:var(--accent);margin:0 0 14px}
 .vj-go{display:block;width:100%;box-sizing:border-box;text-align:center;text-decoration:none;background:var(--ink);color:var(--paper);font-weight:600;font-size:16px;padding:14px 18px;border-radius:9px}
 .vj-go:hover{opacity:.9}
 .vj [hidden]{display:none!important}
@@ -667,6 +668,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
               <li>Un diagnostic avec son niveau de preuve</li>
               <li>Des fiches d'action prêtes à appliquer, où chaque information manquante est signalée plutôt que devinée</li>
             </ul>
+            <p class="tiny" style="margin-top:14px">Offert avec la Veille en engagement ou en paiement annuel, inclus dans le premier mois du sans engagement.</p>
           </div>
           <div class="btns" style="margin-top:24px"><a class="cta full" href="https://buy.stripe.com/00wcN7b5uabgb4icFH00000">Commander l'audit</a></div>
         </div>
@@ -683,20 +685,21 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
                 <button type="button" role="tab" aria-selected="false" data-vj-mode="avec">Avec engagement</button>
               </div>
               <div role="tabpanel">
-                <div class="vj-price"><b data-vj-price>59,99 €</b><span>par mois</span></div>
-                <p class="vj-sub" data-vj-sub>Mensuel, résiliable à tout moment, effet à la fin du mois en cours.</p>
+                <div class="vj-price"><b data-vj-price>59,99 €</b><span data-vj-unit>par mois</span></div>
+                <p class="vj-sub" data-vj-sub>Premier mois : 89,99 €, audit de départ inclus. Puis résiliable à tout moment, effet à la fin du mois en cours.</p>
+<p class="vj-gift" data-vj-avec hidden>Audit de départ offert, d'une valeur de 89,99 €.</p>
                 <div class="vj-range" data-vj-avec hidden>
                   <label>Durée d'engagement : <b data-vj-months>4 mois</b>
-                    <input type="range" min="0" max="3" step="1" value="1" aria-valuetext="4 mois" data-vj-range>
+                    <input type="range" min="0" max="4" step="1" value="1" aria-valuetext="4 mois" data-vj-range>
                   </label>
-                  <div class="vj-ticks"><button type="button" data-vj-i="0" aria-pressed="false">2 mois</button><button type="button" data-vj-i="1" aria-pressed="true">4 mois</button><button type="button" data-vj-i="2" aria-pressed="false">8 mois</button><button type="button" data-vj-i="3" aria-pressed="false">12 mois</button></div>
+                  <div class="vj-ticks"><button type="button" data-vj-i="0" aria-pressed="false">2 mois</button><button type="button" data-vj-i="1" aria-pressed="true">4 mois</button><button type="button" data-vj-i="2" aria-pressed="false">8 mois</button><button type="button" data-vj-i="3" aria-pressed="false">12 mois</button><button type="button" data-vj-i="4" aria-pressed="false">Annuel</button></div>
                 </div>
                 <div class="vj-gauge" data-vj-avec hidden>
-                  <div class="vj-gauge-head"><span>Vous économisez, par rapport au sans engagement</span><b data-vj-pct>33 %</b></div>
-                  <div class="vj-bar" role="img" aria-label="Économie de 33 %" data-vj-bar><i data-vj-fill style="width:33%"></i></div>
-                  <div class="vj-save" data-vj-save>80,00 € économisés sur 4 mois, soit 20,00 € par mois.</div>
+                  <div class="vj-gauge-head"><span>Vous économisez, par rapport au sans engagement</span><b data-vj-pct>41 %</b></div>
+                  <div class="vj-bar" role="img" aria-label="Économie de 41 %" data-vj-bar><i data-vj-fill style="width:41%"></i></div>
+                  <div class="vj-save" data-vj-save>110,00 € économisés sur 4 mois, audit de départ compris.</div>
                 </div>
-                <a class="vj-go" data-vj-go href="https://buy.stripe.com/5kQ4gB2yYbfk0pE6hj00001">S'abonner sans engagement</a>
+                <a class="vj-go" data-vj-go href="__LINK_MONTHLY_V2__">S'abonner sans engagement</a>
               </div>
             </div>
             <p class="tiny" style="margin-top:14px">Avec engagement, le prix reste le même pendant toute la durée choisie et l'abonnement s'arrête de lui-même au terme, sans reconduction. Sans engagement, résiliable à tout moment, effet à la fin du mois en cours. <a class="ilink" href="/tarifs/#veille">Toute la grille</a></p>
@@ -765,7 +768,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
     <div class="wrap grid g3 start">
       <div>
         <h3>Paiement</h3>
-        <p class="small mb0">L'audit et Veille se règlent en ligne, par carte ou prélèvement SEPA, via Stripe : l'audit à la commande, l'abonnement chaque mois d'avance. Par SEPA, la prestation démarre à la confirmation du prélèvement, sous quelques jours ouvrés. Les offres sur devis sont facturées selon l'échéancier du devis. TVA non applicable, article 293 B du code général des impôts : le montant affiché est le montant dû.</p>
+        <p class="small mb0">L'audit et Veille se règlent en ligne, par carte ou prélèvement SEPA, via Stripe : l'audit et la formule annuelle à la commande, les abonnements mensuels chaque mois d'avance. Par SEPA, la prestation démarre à la confirmation du prélèvement, sous quelques jours ouvrés. Les offres sur devis sont facturées selon l'échéancier du devis. TVA non applicable, article 293 B du code général des impôts : le montant affiché est le montant dû.</p>
       </div>
       <div>
         <h3>Ce qui n'est jamais facturé</h3>
@@ -1259,41 +1262,53 @@ function send(e){
 </script>
 <script>
 (function(){
-  var SANS = 5999, SANS_URL = "https://buy.stripe.com/5kQ4gB2yYbfk0pE6hj00001";
+  var SANS = 5999, SETUP = 3000, SANS_URL = "__LINK_MONTHLY_V2__";
   var PLANS = [
     {m:2, c:4999, u:"https://buy.stripe.com/3cIeVfa1qfvA2xMeNP00002"},
     {m:4, c:3999, u:"https://buy.stripe.com/cNi5kFehGfvAegucFH00003"},
     {m:8, c:2999, u:"https://buy.stripe.com/9B65kF1uU4QWfky6hj00004"},
-    {m:12, c:2499, u:"https://buy.stripe.com/14AbJ3ehG5V07S60WZ00005"}
+    {m:12, c:2499, u:"https://buy.stripe.com/14AbJ3ehG5V07S60WZ00005"},
+    {m:12, once:26999, u:"__LINK_ANNUAL__", annual:true}
   ];
-  function eur(c){ return (c/100).toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '\u202f') + '\u00a0€'; }
+  function eur(c){ return (c/100).toFixed(2).replace('.', ',') + '\u00a0€'; }
   document.querySelectorAll('[data-vj]').forEach(function(root){
     var q = function(s){ return root.querySelector(s); };
     var range = q('[data-vj-range]'), tabs = root.querySelectorAll('[data-vj-mode]'), ticks = root.querySelectorAll('[data-vj-i]');
     var mode = 'sans';
     function render(){
-      var avec = mode === 'avec';
+      var avec = mode === 'avec', go = q('[data-vj-go]');
       tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t.getAttribute('data-vj-mode') === mode)); });
       root.querySelectorAll('[data-vj-avec]').forEach(function(el){ el.hidden = !avec; });
-      var go = q('[data-vj-go]');
       if (!avec) {
         q('[data-vj-price]').textContent = eur(SANS);
-        q('[data-vj-sub]').textContent = "Mensuel, résiliable à tout moment, effet à la fin du mois en cours.";
+        q('[data-vj-unit]').textContent = "par mois";
+        q('[data-vj-sub]').textContent = "Premier mois : 89,99\u00a0€, audit de départ inclus. Puis résiliable à tout moment, effet à la fin du mois en cours.";
         go.href = SANS_URL; go.textContent = "S'abonner sans engagement";
         return;
       }
       var i = +range.value, p = PLANS[i];
-      var perMonth = SANS - p.c, total = perMonth * p.m, pct = Math.round(perMonth * 100 / SANS);
-      q('[data-vj-price]').textContent = eur(p.c);
-      q('[data-vj-sub]').textContent = p.m + " mensualités, soit " + eur(p.c * p.m) + " au total, puis arrêt automatique sans reconduction.";
-      q('[data-vj-months]').textContent = p.m + " mois";
-      range.setAttribute('aria-valuetext', p.m + ' mois');
+      var total = p.annual ? p.once : p.c * p.m, sansTotal = SETUP + SANS * p.m, save = sansTotal - total, pct = Math.round(save * 100 / sansTotal);
+      if (p.annual) {
+        q('[data-vj-price]').textContent = eur(p.once);
+        q('[data-vj-unit]').textContent = "une fois";
+        q('[data-vj-sub]').textContent = "Soit " + eur(Math.round(p.once / 12)) + " par mois sur 12 mois. Paiement unique, puis arrêt automatique, sans reconduction.";
+        q('[data-vj-months]').textContent = "12 mois, payés d'avance";
+        range.setAttribute('aria-valuetext', "12 mois payés d'avance");
+        go.textContent = "Payer l'année, " + eur(p.once);
+      } else {
+        q('[data-vj-price]').textContent = eur(p.c);
+        q('[data-vj-unit]').textContent = "par mois";
+        q('[data-vj-sub]').textContent = p.m + " mensualités, soit " + eur(total) + " au total, puis arrêt automatique sans reconduction.";
+        q('[data-vj-months]').textContent = p.m + " mois";
+        range.setAttribute('aria-valuetext', p.m + ' mois');
+        go.textContent = "S'abonner pour " + p.m + " mois";
+      }
+      go.href = p.u;
       ticks.forEach(function(t){ t.setAttribute('aria-pressed', String(+t.getAttribute('data-vj-i') === i)); });
       q('[data-vj-pct]').textContent = pct + "\u00a0%";
       q('[data-vj-bar]').setAttribute('aria-label', "Économie de " + pct + " %");
       q('[data-vj-fill]').style.width = pct + "%";
-      q('[data-vj-save]').textContent = eur(total) + " économisés sur " + p.m + " mois, soit " + eur(perMonth) + " par mois.";
-      go.href = p.u; go.textContent = "S'abonner pour " + p.m + " mois";
+      q('[data-vj-save]').textContent = eur(save) + " économisés sur " + p.m + " mois, audit de départ compris.";
     }
     tabs.forEach(function(t){ t.addEventListener('click', function(){ mode = t.getAttribute('data-vj-mode'); render(); }); });
     range.addEventListener('input', render);

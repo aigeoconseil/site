@@ -125,9 +125,9 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font
 <script>
 (function(){
   var o = new URLSearchParams(location.search).get('offre') || '';
-  var noms = {oneshot:"Audit ponctuel", monthly:"Veille, sans engagement", commit_2:"Veille, engagement 2 mois", commit_4:"Veille, engagement 4 mois", commit_8:"Veille, engagement 8 mois", commit_12:"Veille, engagement 12 mois"};
+  var noms = {oneshot:"Audit ponctuel", monthly:"Veille, sans engagement", commit_2:"Veille, engagement 2 mois", commit_4:"Veille, engagement 4 mois", commit_8:"Veille, engagement 8 mois", commit_12:"Veille, engagement 12 mois", annual:"Veille, 12 mois payés d'avance"};
   if (noms[o]) document.getElementById('offre').textContent = "Votre commande : " + noms[o] + ".";
-  if (/^commit_/.test(o)) document.getElementById('engagement').hidden = false;
+  if (/^commit_/.test(o) || o === 'annual') document.getElementById('engagement').hidden = false;
 })();
 </script>
 
