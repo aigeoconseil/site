@@ -699,7 +699,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
                   <div class="vj-bar" role="img" aria-label="Économie de 41 %" data-vj-bar><i data-vj-fill style="width:41%"></i></div>
                   <div class="vj-save" data-vj-save>110,00 € économisés sur 4 mois, audit de départ compris.</div>
                 </div>
-                <a class="vj-go" data-vj-go href="__LINK_MONTHLY_V2__">S'abonner sans engagement</a>
+                <a class="vj-go" data-vj-go href="https://buy.stripe.com/fZu4gBddCdns4FUdJL00006">S'abonner sans engagement</a>
               </div>
             </div>
             <p class="tiny" style="margin-top:14px">Avec engagement, le prix reste le même pendant toute la durée choisie et l'abonnement s'arrête de lui-même au terme, sans reconduction. Sans engagement, résiliable à tout moment, effet à la fin du mois en cours. <a class="ilink" href="/tarifs/#veille">Toute la grille</a></p>
@@ -1262,13 +1262,13 @@ function send(e){
 </script>
 <script>
 (function(){
-  var SANS = 5999, SETUP = 3000, SANS_URL = "__LINK_MONTHLY_V2__";
+  var SANS = 5999, SETUP = 3000, SANS_URL = "https://buy.stripe.com/fZu4gBddCdns4FUdJL00006";
   var PLANS = [
     {m:2, c:4999, u:"https://buy.stripe.com/3cIeVfa1qfvA2xMeNP00002"},
     {m:4, c:3999, u:"https://buy.stripe.com/cNi5kFehGfvAegucFH00003"},
     {m:8, c:2999, u:"https://buy.stripe.com/9B65kF1uU4QWfky6hj00004"},
     {m:12, c:2499, u:"https://buy.stripe.com/14AbJ3ehG5V07S60WZ00005"},
-    {m:12, once:26999, u:"__LINK_ANNUAL__", annual:true}
+    {m:12, once:26999, u:"https://buy.stripe.com/dRm00la1qcjofkycFH00007", annual:true}
   ];
   function eur(c){ return (c/100).toFixed(2).replace('.', ',') + '\u00a0€'; }
   document.querySelectorAll('[data-vj]').forEach(function(root){
