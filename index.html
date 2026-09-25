@@ -132,6 +132,7 @@ section.tight{padding-top:0}
 .plan{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column}
 .plan.hi{border-color:transparent;outline:2px solid var(--accent);outline-offset:-2px}
 .plan .grow{flex:1}
+.plan{min-width:0}
 .badge{display:inline-block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;margin-bottom:14px}
 .badge.soft{background:none;border:1px solid var(--line);color:var(--muted)}
 .price{display:flex;align-items:baseline;gap:9px;margin:4px 0 18px;flex-wrap:wrap}
@@ -276,7 +277,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
 /* Veille : onglets avec ou sans engagement, jauge d'économie */
 .vj{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:18px;margin-top:6px}
 .vj-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:11px;background:color-mix(in srgb,var(--ink) 6%,transparent)}
-.vj-tabs button{font:inherit;font-size:14.5px;font-weight:600;border:0;border-radius:8px;padding:10px 8px;background:transparent;color:var(--muted);cursor:pointer}
+.vj-tabs button{-webkit-tap-highlight-color:transparent;font:inherit;font-size:14.5px;font-weight:600;border:0;border-radius:8px;padding:10px 8px;background:transparent;color:var(--muted);cursor:pointer}
 .vj-tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(14,14,18,.12)}
 .vj-tabs button:focus-visible,.vj input:focus-visible,.vj-go:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .vj-price{display:flex;align-items:baseline;gap:8px;margin:18px 0 4px;flex-wrap:wrap}
@@ -288,7 +289,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
 .vj-range input{width:100%;accent-color:var(--accent);margin:0}
 .vj .vj-range input[type=range]{-webkit-appearance:auto;appearance:auto;background:none;border:0;padding:0;height:auto;min-height:0;box-shadow:none;border-radius:0}
 .vj-ticks{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-top:4px}
-.vj-ticks button{font:inherit;border:0;background:none;color:inherit;padding:2px 0;cursor:pointer}
+.vj-ticks button{-webkit-tap-highlight-color:transparent;font:inherit;border:0;background:none;color:inherit;padding:2px 0;cursor:pointer}
 .vj-ticks button[aria-pressed="true"]{color:var(--ink);font-weight:700}
 .vj-gauge{margin:0 0 18px}
 .vj-gauge-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:13.5px;color:var(--muted);margin-bottom:8px}
@@ -300,6 +301,8 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
 .vj-go:hover{opacity:.9}
 .vj [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.vj-bar i{transition:none}}
+@media (max-width:349px){.vj-tabs button{white-space:normal}}
+@media (max-width:520px){.vj{padding:12px}.plan .vj{border:0;padding:0;background:none;margin-top:14px}.vj-tabs button{font-size:13px;padding:10px 2px;white-space:nowrap}.vj-gauge-head span{font-size:12.5px}.vj-price{margin-top:14px}.vj-price b{font-size:30px}.vj-gauge-head{font-size:13px}.vj-gauge-head b{font-size:18px}.vj-go{font-size:15px;padding:13px 10px}}
 </style>
 
 <header>
@@ -676,24 +679,24 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
             <p class="small">Une remesure complète de vos questions chaque mois, dans les mêmes conditions que la mesure de départ. L'évolution n'est affichée que lorsque deux mesures sont réellement comparables ; sinon, nous l'écrivons.</p>
             <div class="vj" data-vj>
               <div class="vj-tabs" role="tablist" aria-label="Formule Veille">
-                <button type="button" role="tab" aria-selected="false" data-vj-mode="sans">Sans engagement</button>
-                <button type="button" role="tab" aria-selected="true" data-vj-mode="avec">Avec engagement</button>
+                <button type="button" role="tab" aria-selected="true" data-vj-mode="sans">Sans engagement</button>
+                <button type="button" role="tab" aria-selected="false" data-vj-mode="avec">Avec engagement</button>
               </div>
               <div role="tabpanel">
-                <div class="vj-price"><b data-vj-price>39,99 €</b><span>par mois</span></div>
-                <p class="vj-sub" data-vj-sub>4 mensualités, soit 159,96 € au total, puis arrêt automatique sans reconduction.</p>
-                <div class="vj-range" data-vj-avec>
+                <div class="vj-price"><b data-vj-price>59,99 €</b><span>par mois</span></div>
+                <p class="vj-sub" data-vj-sub>Mensuel, résiliable à tout moment, effet à la fin du mois en cours.</p>
+                <div class="vj-range" data-vj-avec hidden>
                   <label>Durée d'engagement : <b data-vj-months>4 mois</b>
                     <input type="range" min="0" max="3" step="1" value="1" aria-valuetext="4 mois" data-vj-range>
                   </label>
                   <div class="vj-ticks"><button type="button" data-vj-i="0" aria-pressed="false">2 mois</button><button type="button" data-vj-i="1" aria-pressed="true">4 mois</button><button type="button" data-vj-i="2" aria-pressed="false">8 mois</button><button type="button" data-vj-i="3" aria-pressed="false">12 mois</button></div>
                 </div>
-                <div class="vj-gauge" data-vj-avec>
-                  <div class="vj-gauge-head"><span>Économie par rapport au sans engagement</span><b data-vj-pct>33 %</b></div>
+                <div class="vj-gauge" data-vj-avec hidden>
+                  <div class="vj-gauge-head"><span>Vous économisez, par rapport au sans engagement</span><b data-vj-pct>33 %</b></div>
                   <div class="vj-bar" role="img" aria-label="Économie de 33 %" data-vj-bar><i data-vj-fill style="width:33%"></i></div>
                   <div class="vj-save" data-vj-save>80,00 € économisés sur 4 mois, soit 20,00 € par mois.</div>
                 </div>
-                <a class="vj-go" data-vj-go href="https://buy.stripe.com/cNi5kFehGfvAegucFH00003">S'abonner, engagement 4 mois</a>
+                <a class="vj-go" data-vj-go href="https://buy.stripe.com/5kQ4gB2yYbfk0pE6hj00001">S'abonner sans engagement</a>
               </div>
             </div>
             <p class="tiny" style="margin-top:14px">Avec engagement, le prix reste le même pendant toute la durée choisie et l'abonnement s'arrête de lui-même au terme, sans reconduction. Sans engagement, résiliable à tout moment, effet à la fin du mois en cours. <a class="ilink" href="/tarifs/#veille">Toute la grille</a></p>
@@ -1267,7 +1270,7 @@ function send(e){
   document.querySelectorAll('[data-vj]').forEach(function(root){
     var q = function(s){ return root.querySelector(s); };
     var range = q('[data-vj-range]'), tabs = root.querySelectorAll('[data-vj-mode]'), ticks = root.querySelectorAll('[data-vj-i]');
-    var mode = 'avec';
+    var mode = 'sans';
     function render(){
       var avec = mode === 'avec';
       tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t.getAttribute('data-vj-mode') === mode)); });
@@ -1290,7 +1293,7 @@ function send(e){
       q('[data-vj-bar]').setAttribute('aria-label', "Économie de " + pct + " %");
       q('[data-vj-fill]').style.width = pct + "%";
       q('[data-vj-save]').textContent = eur(total) + " économisés sur " + p.m + " mois, soit " + eur(perMonth) + " par mois.";
-      go.href = p.u; go.textContent = "S'abonner, engagement " + p.m + " mois";
+      go.href = p.u; go.textContent = "S'abonner pour " + p.m + " mois";
     }
     tabs.forEach(function(t){ t.addEventListener('click', function(){ mode = t.getAttribute('data-vj-mode'); render(); }); });
     range.addEventListener('input', render);
