@@ -66,6 +66,37 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font
   .themebtn{margin-left:0}
 }
 @media(max-width:640px){ .hero{padding:40px 0 4px} }
+
+/* Veille : onglets avec ou sans engagement, jauge d'économie */
+.vj{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:18px;margin-top:6px}
+.vj-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:11px;background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.vj-tabs button{font:inherit;font-size:14.5px;font-weight:600;border:0;border-radius:8px;padding:10px 8px;background:transparent;color:var(--muted);cursor:pointer}
+.vj-tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(14,14,18,.12)}
+.vj-tabs button:focus-visible,.vj input:focus-visible,.vj-go:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.vj-price{display:flex;align-items:baseline;gap:8px;margin:18px 0 4px;flex-wrap:wrap}
+.vj-price b{font-size:34px;font-weight:680;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.vj-price span{font-size:14.5px;color:var(--muted)}
+.vj-sub{font-size:14px;color:var(--muted);margin:0 0 16px}
+.vj-range{margin:0 0 18px}
+.vj-range label{display:block;font-size:14px;margin-bottom:8px}
+.vj-range input{width:100%;accent-color:var(--accent);margin:0}
+.vj .vj-range input[type=range]{-webkit-appearance:auto;appearance:auto;background:none;border:0;padding:0;height:auto;min-height:0;box-shadow:none;border-radius:0}
+.vj-ticks{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-top:4px}
+.vj-ticks button{font:inherit;border:0;background:none;color:inherit;padding:2px 0;cursor:pointer}
+.vj-ticks button[aria-pressed="true"]{color:var(--ink);font-weight:700}
+.vj-gauge{margin:0 0 18px}
+.vj-gauge-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.vj-gauge-head b{font-size:20px;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.vj-bar{height:12px;border-radius:999px;background:color-mix(in srgb,var(--ink) 8%,transparent);overflow:hidden}
+.vj-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .35s ease}
+.vj-save{font-size:14px;margin-top:8px}
+.vj-go{display:block;width:100%;box-sizing:border-box;text-align:center;text-decoration:none;background:var(--ink);color:var(--paper);font-weight:600;font-size:16px;padding:14px 18px;border-radius:9px}
+.vj-go:hover{opacity:.9}
+.vj [hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){.vj-bar i{transition:none}}
+.legal .vj{margin:8px 0 22px}
+.legal .vj-go{color:var(--paper);border:0}
+.legal .vj p{margin:0 0 16px}
 </style><style>
 .wrap{max-width:720px}
 .legal h2{font-size:clamp(20px,2.4vw,25px);margin:44px 0 14px}
@@ -118,16 +149,38 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font
 
     <h2 id="veille">Abonnement Veille</h2>
     <table class="ptable">
-      <thead><tr><th>Formule</th><th>Durée</th><th style="text-align:right">Prix par mois</th><th></th></tr></thead>
+      <thead><tr><th>Formule</th><th>Durée</th><th style="text-align:right">Prix par mois</th></tr></thead>
       <tbody>
-        <tr><td>Sans engagement</td><td>Mensuel, résiliable à tout moment</td><td class="num">59,99 €</td><td class="go"><a href="https://buy.stripe.com/5kQ4gB2yYbfk0pE6hj00001">S'abonner</a></td></tr>
-        <tr><td>Engagement 2 mois</td><td>2 mensualités, puis arrêt automatique</td><td class="num">49,99 €</td><td class="go"><a href="https://buy.stripe.com/3cIeVfa1qfvA2xMeNP00002">S'abonner</a></td></tr>
-        <tr><td>Engagement 4 mois</td><td>4 mensualités, puis arrêt automatique</td><td class="num">39,99 €</td><td class="go"><a href="https://buy.stripe.com/cNi5kFehGfvAegucFH00003">S'abonner</a></td></tr>
-        <tr><td>Engagement 8 mois</td><td>8 mensualités, puis arrêt automatique</td><td class="num">29,99 €</td><td class="go"><a href="https://buy.stripe.com/9B65kF1uU4QWfky6hj00004">S'abonner</a></td></tr>
-        <tr><td>Engagement 12 mois</td><td>12 mensualités, puis arrêt automatique</td><td class="num">24,99 €</td><td class="go"><a href="https://buy.stripe.com/14AbJ3ehG5V07S60WZ00005">S'abonner</a></td></tr>
+        <tr><td>Sans engagement</td><td>Mensuel, résiliable à tout moment</td><td class="num">59,99 €</td></tr>
+        <tr><td>Engagement 2 mois</td><td>2 mensualités, puis arrêt automatique</td><td class="num">49,99 €</td></tr>
+        <tr><td>Engagement 4 mois</td><td>4 mensualités, puis arrêt automatique</td><td class="num">39,99 €</td></tr>
+        <tr><td>Engagement 8 mois</td><td>8 mensualités, puis arrêt automatique</td><td class="num">29,99 €</td></tr>
+        <tr><td>Engagement 12 mois</td><td>12 mensualités, puis arrêt automatique</td><td class="num">24,99 €</td></tr>
       </tbody>
     </table>
     <p>Une remesure complète de vos questions chaque mois, dans les mêmes conditions que la mesure de départ. L'évolution n'est affichée, question par question, que lorsque deux mesures sont réellement comparables ; sinon, nous l'écrivons.</p>
+    <div class="vj" data-vj>
+    <div class="vj-tabs" role="tablist" aria-label="Formule Veille">
+      <button type="button" role="tab" aria-selected="false" data-vj-mode="sans">Sans engagement</button>
+      <button type="button" role="tab" aria-selected="true" data-vj-mode="avec">Avec engagement</button>
+    </div>
+    <div role="tabpanel">
+      <div class="vj-price"><b data-vj-price>39,99 €</b><span>par mois</span></div>
+      <p class="vj-sub" data-vj-sub>4 mensualités, soit 159,96 € au total, puis arrêt automatique sans reconduction.</p>
+      <div class="vj-range" data-vj-avec>
+        <label>Durée d'engagement : <b data-vj-months>4 mois</b>
+          <input type="range" min="0" max="3" step="1" value="1" aria-valuetext="4 mois" data-vj-range>
+        </label>
+        <div class="vj-ticks"><button type="button" data-vj-i="0" aria-pressed="false">2 mois</button><button type="button" data-vj-i="1" aria-pressed="true">4 mois</button><button type="button" data-vj-i="2" aria-pressed="false">8 mois</button><button type="button" data-vj-i="3" aria-pressed="false">12 mois</button></div>
+      </div>
+      <div class="vj-gauge" data-vj-avec>
+        <div class="vj-gauge-head"><span>Économie par rapport au sans engagement</span><b data-vj-pct>33 %</b></div>
+        <div class="vj-bar" role="img" aria-label="Économie de 33 %" data-vj-bar><i data-vj-fill style="width:33%"></i></div>
+        <div class="vj-save" data-vj-save>80,00 € économisés sur 4 mois, soit 20,00 € par mois.</div>
+      </div>
+      <a class="vj-go" data-vj-go href="https://buy.stripe.com/cNi5kFehGfvAegucFH00003">S'abonner, engagement 4 mois</a>
+    </div>
+            </div>
     <p>Avec engagement, le prix reste le même pendant toute la durée choisie, et l'abonnement s'arrête de lui-même au terme, sans reconduction. Sans engagement, la résiliation prend effet à la fin du mois en cours.</p>
 
     <h2>Offres sur devis</h2>
@@ -182,6 +235,51 @@ try{
   else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
 }catch(e){}
 applyTheme(start);
+</script>
+<script>
+(function(){
+  var SANS = 5999, SANS_URL = "https://buy.stripe.com/5kQ4gB2yYbfk0pE6hj00001";
+  var PLANS = [
+    {m:2, c:4999, u:"https://buy.stripe.com/3cIeVfa1qfvA2xMeNP00002"},
+    {m:4, c:3999, u:"https://buy.stripe.com/cNi5kFehGfvAegucFH00003"},
+    {m:8, c:2999, u:"https://buy.stripe.com/9B65kF1uU4QWfky6hj00004"},
+    {m:12, c:2499, u:"https://buy.stripe.com/14AbJ3ehG5V07S60WZ00005"}
+  ];
+  function eur(c){ return (c/100).toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '\u202f') + '\u00a0€'; }
+  document.querySelectorAll('[data-vj]').forEach(function(root){
+    var q = function(s){ return root.querySelector(s); };
+    var range = q('[data-vj-range]'), tabs = root.querySelectorAll('[data-vj-mode]'), ticks = root.querySelectorAll('[data-vj-i]');
+    var mode = 'avec';
+    function render(){
+      var avec = mode === 'avec';
+      tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t.getAttribute('data-vj-mode') === mode)); });
+      root.querySelectorAll('[data-vj-avec]').forEach(function(el){ el.hidden = !avec; });
+      var go = q('[data-vj-go]');
+      if (!avec) {
+        q('[data-vj-price]').textContent = eur(SANS);
+        q('[data-vj-sub]').textContent = "Mensuel, résiliable à tout moment, effet à la fin du mois en cours.";
+        go.href = SANS_URL; go.textContent = "S'abonner sans engagement";
+        return;
+      }
+      var i = +range.value, p = PLANS[i];
+      var perMonth = SANS - p.c, total = perMonth * p.m, pct = Math.round(perMonth * 100 / SANS);
+      q('[data-vj-price]').textContent = eur(p.c);
+      q('[data-vj-sub]').textContent = p.m + " mensualités, soit " + eur(p.c * p.m) + " au total, puis arrêt automatique sans reconduction.";
+      q('[data-vj-months]').textContent = p.m + " mois";
+      range.setAttribute('aria-valuetext', p.m + ' mois');
+      ticks.forEach(function(t){ t.setAttribute('aria-pressed', String(+t.getAttribute('data-vj-i') === i)); });
+      q('[data-vj-pct]').textContent = pct + "\u00a0%";
+      q('[data-vj-bar]').setAttribute('aria-label', "Économie de " + pct + " %");
+      q('[data-vj-fill]').style.width = pct + "%";
+      q('[data-vj-save]').textContent = eur(total) + " économisés sur " + p.m + " mois, soit " + eur(perMonth) + " par mois.";
+      go.href = p.u; go.textContent = "S'abonner, engagement " + p.m + " mois";
+    }
+    tabs.forEach(function(t){ t.addEventListener('click', function(){ mode = t.getAttribute('data-vj-mode'); render(); }); });
+    range.addEventListener('input', render);
+    ticks.forEach(function(t){ t.addEventListener('click', function(){ range.value = t.getAttribute('data-vj-i'); render(); }); });
+    render();
+  });
+})();
 </script>
 </body>
 </html>
