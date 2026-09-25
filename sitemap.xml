@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aigeoconseil.com/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-25</lastmod>
   </url>
   <url>
     <loc>https://aigeoconseil.com/rendez-vous/</loc>
@@ -35,5 +35,9 @@
   <url>
     <loc>https://aigeoconseil.com/conditions-generales/retractation/</loc>
     <lastmod>2026-09-20</lastmod>
+  </url>
+  <url>
+    <loc>https://aigeoconseil.com/tarifs/</loc>
+    <lastmod>2026-09-25</lastmod>
   </url>
 </urlset>
