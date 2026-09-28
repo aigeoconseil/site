@@ -191,6 +191,9 @@ ul.no li::before{content:"×";position:absolute;left:4px;top:-1px;color:var(--mu
 .test-step p{margin-bottom:0}
 .test-next{margin-top:38px;padding-top:28px;border-top:1px solid var(--line)}
 .test-next h3{font-size:23px;margin-bottom:14px}
+.test-after{margin-top:26px;padding-top:22px}
+.test-after .small{margin-bottom:0}
+.test-after .btns{margin-top:14px}
 .test-example{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:34px;box-shadow:var(--shadow)}
 .example-label{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:26px}
 .example-score{display:flex;align-items:center;gap:24px;padding-bottom:28px;border-bottom:1px solid var(--line)}
@@ -323,15 +326,15 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
 <div class="page on" id="accueil">
   <div class="wrap hero">
     <div class="eyebrow">Visibilité des marques dans les réponses IA</div>
-    <h1>Vos acheteurs ne comparent plus dix liens.<br>Ils lisent <span class="grad">une réponse.</span></h1>
-    <p class="lead" style="margin-top:24px">AIGEO mesure si votre entreprise apparaît quand un acheteur demande conseil à une IA. Le test gratuit prépare trois situations adaptées à votre activité, puis vous montre si vous êtes cité, quelles entreprises apparaissent et par quoi commencer.</p>
+    <h1>Quand vos clients demandent conseil à une IA, <span class="grad">votre entreprise est-elle citée&nbsp;?</span></h1>
+    <p class="lead" style="margin-top:24px">Pas de score opaque : nous vous montrons la réponse observée, les preuves disponibles et ce qu'elle permet réellement de conclure.</p>
     <form class="hero-scan" id="hero-scan-form" data-cta-location="hero-search" onsubmit="submitHeroScan(event)" novalidate>
-      <label class="hero-scan-label" for="hero-scan-url">Testez votre entreprise gratuitement</label>
+      <label class="hero-scan-label" for="hero-scan-url">L'adresse de votre site</label>
       <div class="hero-scan-shell">
         <input class="hero-scan-input" id="hero-scan-url" name="website" type="text" inputmode="url" autocomplete="url" maxlength="2048" placeholder="votreentreprise.fr" aria-describedby="hero-scan-help hero-scan-error" oninput="clearHeroScanError()">
-        <button class="cta glass-primary hero-scan-submit" type="submit">Analyser mon entreprise</button>
+        <button class="cta glass-primary hero-scan-submit" type="submit">Tester mon entreprise gratuitement</button>
       </div>
-      <p class="hero-scan-help" id="hero-scan-help">3 situations réalistes · 1 IA testée : Gemini, avec recherche web · résultat en ligne</p>
+      <p class="hero-scan-help" id="hero-scan-help">3 situations réalistes testées gratuitement sur Gemini avec recherche web · résultat en ligne</p>
       <p class="hero-scan-error" id="hero-scan-error" role="alert" aria-live="polite" hidden></p>
     </form>
     <div class="hero-secondary">
@@ -352,12 +355,12 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
         <div class="card">
           <div class="bars"><i></i><i></i><i></i></div>
           <h3>Un corpus absent</h3>
-          <p class="small mb0">Les marques citées le sont souvent parce qu'un comparateur, un blog spécialisé ou leur propre documentation existent et sont exploitables. Si personne n'écrit sur vous de façon structurée, vous n'existez pas.</p>
+          <p class="small mb0">Les marques citées le sont souvent parce qu'un comparateur, un blog spécialisé ou leur propre documentation existent et sont exploitables. Quand personne n'écrit sur vous de façon structurée, le modèle a peu de matière pour vous citer.</p>
         </div>
         <div class="card">
           <div class="bars"><i></i><i></i><i></i></div>
           <h3>Un concurrent à votre place</h3>
-          <p class="small mb0">L'espace dans une réponse est limité à quelques noms. Chaque question où vous êtes absent est une question où quelqu'un d'autre est recommandé, gratuitement, à votre client.</p>
+          <p class="small mb0">L'espace dans une réponse est limité à quelques noms, et parfois à aucun. Quand vous êtes absent, c'est souvent un concurrent qui est nommé, et parfois personne : la place reste à prendre.</p>
         </div>
       </div>
     </div>
@@ -367,7 +370,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
     <div class="wrap">
       <div class="eyebrow">Test gratuit AIGEO</div>
       <h2>Un test. Trois situations réalistes.</h2>
-      <p class="lead test-intro">Pas de score artificiel et pas de simulation. AIGEO teste réellement une IA à partir de situations adaptées à votre activité.</p>
+      <p class="lead test-intro">3 situations réalistes testées gratuitement sur Gemini avec recherche web. Pas de score et pas de simulation : vous voyez ce qui est observé, les preuves disponibles et de premières actions.</p>
       <div class="test-layout">
         <div>
           <p class="test-flow">Mesurer · Comprendre · Agir</p>
@@ -385,22 +388,26 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
             <div class="test-step">
               <div class="num">3</div>
               <h3>Gemini est interrogé</h3>
-              <p class="small">Avec recherche web. Vous voyez quelles entreprises apparaissent lorsque ces questions lui sont posées.</p>
+              <p class="small">Avec recherche web, une fois par situation, sans historique de conversation.</p>
             </div>
             <div class="test-step">
               <div class="num">4</div>
-              <h3>Vous découvrez votre visibilité</h3>
-              <p class="small">Vous voyez si votre entreprise apparaît, à quelle fréquence et quelles autres entreprises sont citées.</p>
+              <h3>Vous voyez ce qui est observé</h3>
+              <p class="small">Dans combien de situations votre entreprise est citée, quelles autres entreprises le sont, et les sources lorsque la réponse en affiche.</p>
             </div>
             <div class="test-step">
               <div class="num">5</div>
               <h3>Vous savez par quoi commencer</h3>
-              <p class="small">AIGEO propose de premières actions concrètes lorsque les éléments observés permettent de les justifier.</p>
+              <p class="small">De premières actions, lorsque les éléments observés permettent de les justifier. Le résultat dit aussi ce que le test ne permet pas de conclure.</p>
             </div>
           </div>
           <div class="test-next">
             <h3>Et votre entreprise ?</h3>
-            <a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="middle">Faire le test gratuit</a>
+            <a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="middle">Tester mon entreprise gratuitement</a>
+          </div>
+          <div class="test-next test-after">
+            <p class="small">Après le test gratuit, l'Audit AIGEO mesure les questions cadrées avec vous.</p>
+            <div class="btns"><a class="cta" href="/tarifs/" data-cta-location="after-free-scan">Découvrir l'Audit AIGEO · 89,99 €</a><button class="cta ghost" type="button" onclick="go('contact')">Parler à l'équipe</button></div>
           </div>
         </div>
         <aside class="test-example" aria-label="Exemple fictif de résultat du test AIGEO">
@@ -419,7 +426,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
             <p class="example-action-label">Première action</p>
             <strong>Clarifier dès la page d'accueil ce que votre entreprise propose.</strong>
           </div>
-          <p class="example-note">Exemple fictif. Le score, les entreprises et l'action servent uniquement à illustrer le fonctionnement.</p>
+          <p class="example-note">Exemple fictif. Les chiffres, les entreprises et l'action servent uniquement à illustrer la lecture d'un résultat. Un vrai résultat indique aussi l'IA utilisée, la date du test et les sources de chaque réponse.</p>
         </aside>
       </div>
     </div>
@@ -462,9 +469,9 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
         </div>
         <div class="card">
           <div class="num">2</div>
-          <h3>L'audit, puis la Veille</h3>
-          <p class="small">Un audit complet réalisé avec l'outil AIGEO : vos questions d'acheteur, plusieurs IA, les sources citées, un diagnostic et des fiches d'action. Puis, si vous le souhaitez, une remesure chaque mois.</p>
-          <p class="small mb0"><b>Audit 89,99 €, Veille dès 24,99 € par mois.</b></p>
+          <h3>L'Audit AIGEO, puis la Veille</h3>
+          <p class="small">Nous cadrons les questions à mesurer à partir de votre activité, de vos offres et de vos enjeux. L'audit indique précisément quel moteur a été interrogé et dans quelles conditions, avec un diagnostic et des fiches d'action. Puis, sur demande, la Veille pour remesurer les mêmes situations.</p>
+          <p class="small mb0"><b>Audit 89,99 €, Veille dès 24,99 € par mois, sur demande.</b></p>
         </div>
         <div class="card">
           <div class="num">3</div>
@@ -488,10 +495,6 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
           <div class="small mb0">à distance pour les marques e-commerce. Cadrage en visio, livrables écrits. Aucun déplacement facturé, où que vous soyez.</div>
         </div>
         <div class="stat card">
-          <b>FR · EN</b>
-          <div class="small mb0">Nous relevons en français et en anglais, sur le marché que vous visez, pas sur le nôtre.</div>
-        </div>
-        <div class="stat card">
           <b>Tout fuseau</b>
           <div class="small mb0">Nous calons les points d'étape sur votre horaire. Le reste du travail ne dépend pas du vôtre.</div>
         </div>
@@ -503,7 +506,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
     <div class="wrap">
       <h2>Pour qui</h2>
       <p class="lead">Des marques qui vendent un produit que l'on n'achète pas sans demander conseil : literie, nutrition animale, équipement sportif, mobilier, matériel technique, cosmétique. Si votre client pose une question avant d'acheter, une IA y répond déjà. La seule question est de savoir si elle vous nomme.</p>
-      <div class="btns"><a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="final">Tester gratuitement mon entreprise</a><button class="cta big ghost" onclick="go('contact')">Parler à AIGEO</button></div>
+      <div class="btns"><a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="final">Tester mon entreprise gratuitement</a><button class="cta big ghost" onclick="go('contact')">Parler à AIGEO</button></div>
     </div>
   </section>
 </div>
@@ -526,7 +529,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
       <div class="card">
         <div class="num">2</div>
         <h3>Relever</h3>
-        <p class="small mb0">Chaque question est posée en conversation neuve, sans mémoire ni personnalisation, sur plusieurs assistants génératifs et à plusieurs jours d'intervalle. Tout est capturé et daté. Aucune affirmation qui ne soit pas documentée.</p>
+        <p class="small mb0">Chaque question est posée en conversation neuve, sans mémoire ni personnalisation. Tout est daté, et les conditions de chaque mesure sont écrites. Aucune affirmation qui ne soit pas documentée.</p>
       </div>
       <div class="card">
         <div class="num">3</div>
@@ -596,7 +599,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
       <div class="stats">
         <div class="stat card">
           <b>9 sur 10</b>
-          <div class="small mb0">Des marques recommandées en première position quand on les décrit perdent leur place dès qu'un acheteur parle. Huit disparaissent complètement de la réponse.</div>
+          <div class="small mb0">Sur les 10 marques recommandées quand on les décrit, 9 ne le sont plus dès qu'un acheteur parle. Huit disparaissent complètement de la réponse.</div>
         </div>
         <div class="stat card">
           <b>8 fois</b>
@@ -635,7 +638,8 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
         <li>Trois statuts seulement, recommandée, citée, absente, et en cas de doute on descend d'un cran</li>
         <li>Les sources citées par le modèle sont relevées, question par question</li>
       </ul>
-      <p class="small" style="margin-top:18px">Le volume de questions, le nombre de modèles et la profondeur du diagnostic changent selon l'offre retenue. <a class="ilink" href="#offres" onclick="go('offres');return false">Voir le détail des offres</a></p>
+      <p class="small" style="margin-top:18px">Ce protocole décrit nos relevés menés à la main. L'Audit AIGEO suit son propre protocole : l'audit indique précisément quel moteur a été interrogé et dans quelles conditions.</p>
+      <p class="small">Le volume de questions, les moteurs interrogés et la profondeur du diagnostic changent selon l'offre retenue. <a class="ilink" href="#offres" onclick="go('offres');return false">Voir le détail des offres</a></p>
     </div>
   </section>
 </div>
@@ -645,7 +649,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
   <div class="wrap hero short">
     <div class="eyebrow">Offres</div>
     <h1>Un audit, un abonnement,<br>et <span class="grad">du sur-mesure.</span></h1>
-    <p class="lead" style="margin-top:24px">L'audit et l'abonnement Veille ont un prix affiché et se règlent en ligne. La restructuration et le pilotage se chiffrent au cadrage, avant toute commande. Chaque offre se commande seule.</p>
+    <p class="lead" style="margin-top:24px">L'Audit AIGEO a un prix affiché et se règle en ligne. La Veille a un prix affiché et s'ouvre sur demande. La restructuration et le pilotage se chiffrent au cadrage, avant toute commande. Chaque offre se commande seule.</p>
     <p class="small" style="margin-top:18px">Avant d'engager quoi que ce soit, le <b>test est gratuit</b> : trois situations adaptées à votre activité sont posées à Gemini. Vous obtenez un résultat en ligne après traitement, les entreprises apparues, les sources lorsqu'elles sont disponibles et de premières actions.</p>
     <div class="btns" style="margin-top:24px"><a class="cta" href="/tarifs/">Voir la grille des tarifs</a><a class="cta ghost" href="/rendez-vous/">Réserver un relevé en direct</a></div>
   </div>
@@ -656,29 +660,30 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
 
         <div class="plan hi">
           <span class="badge">Pour commencer</span>
-          <h3>L'audit ponctuel</h3>
+          <h3>L'Audit AIGEO</h3>
           <div class="price"><b>89,99 €</b><span class="small">paiement unique</span></div>
           <div class="grow">
-            <p class="small">Un audit complet réalisé avec l'outil AIGEO. Vous savez où vous sortez, qui sort à votre place, pourquoi, et quoi corriger en premier.</p>
+            <p class="small">Nous cadrons les questions à mesurer à partir de votre activité, de vos offres et de vos enjeux. L'audit indique précisément quel moteur a été interrogé et dans quelles conditions. Vous recevez une restitution structurée des mesures, preuves disponibles, diagnostics et actions issues de l'audit.</p>
             <ul class="check">
-              <li>Vos questions d'acheteur, écrites depuis votre activité réelle et figées avant la mesure</li>
-              <li>Posées à plusieurs assistants IA</li>
-              <li>Pour chaque question : recommandée, citée, absente ou non mesurée, avec ses conditions de mesure</li>
-              <li>Les sources citées par les réponses</li>
+              <li>Vos questions d'acheteur, cadrées sur votre activité et figées avant la mesure</li>
+              <li>Le moteur interrogé et les conditions de chaque mesure, indiqués dans l'audit</li>
+              <li>Pour chaque question : recommandée, citée, absente ou non mesurée</li>
+              <li>Les sources, lorsqu'elles sont présentes dans la réponse mesurée</li>
               <li>Un diagnostic avec son niveau de preuve</li>
               <li>Des fiches d'action prêtes à appliquer, où chaque information manquante est signalée plutôt que devinée</li>
             </ul>
             <p class="tiny" style="margin-top:14px">Offert avec la Veille en engagement ou en paiement annuel, inclus dans le premier mois du sans engagement.</p>
           </div>
-          <div class="btns" style="margin-top:24px"><a class="cta full" href="https://buy.stripe.com/00wcN7b5uabgb4icFH00000">Commander l'audit</a></div>
+          <div class="btns" style="margin-top:24px"><a class="cta full" href="https://buy.stripe.com/00wcN7b5uabgb4icFH00000">Commander l'Audit AIGEO</a></div>
+          <p class="tiny" style="margin-top:12px">Après votre commande, nous vous confirmons par écrit le périmètre et la date de remise.</p>
         </div>
 
         <div class="plan">
           <span class="badge soft">Veille</span>
-          <h3>La mesure, chaque mois</h3>
+          <h3>Veille AIGEO, disponible sur demande</h3>
           <div class="price"><b>dès 24,99 €</b><span class="small">par mois</span></div>
           <div class="grow">
-            <p class="small">Une remesure complète de vos questions chaque mois, dans les mêmes conditions que la mesure de départ. L'évolution n'est affichée que lorsque deux mesures sont réellement comparables ; sinon, nous l'écrivons.</p>
+            <p class="small">Remesurez régulièrement les mêmes situations pour suivre ce qui change. Un changement n'est présenté que lorsque deux mesures sont réellement comparables ; sinon, nous l'écrivons.</p>
             <div class="vj" data-vj>
               <div class="vj-tabs" role="tablist" aria-label="Formule Veille">
                 <button type="button" role="tab" aria-selected="true" data-vj-mode="sans">Sans engagement</button>
@@ -699,7 +704,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
                   <div class="vj-bar" role="img" aria-label="Économie de 41 %" data-vj-bar><i data-vj-fill style="width:41%"></i></div>
                   <div class="vj-save" data-vj-save>110,00 € économisés sur 4 mois, audit de départ compris.</div>
                 </div>
-                <a class="vj-go" data-vj-go href="https://buy.stripe.com/fZu4gBddCdns4FUdJL00006">S'abonner sans engagement</a>
+                <a class="vj-go" data-vj-go href="#contact" onclick="go('contact');return false">Nous contacter</a>
               </div>
             </div>
             <p class="tiny" style="margin-top:14px">Avec engagement, le prix reste le même pendant toute la durée choisie et l'abonnement s'arrête de lui-même au terme, sans reconduction. Sans engagement, résiliable à tout moment, effet à la fin du mois en cours. <a class="ilink" href="/tarifs/#veille">Toute la grille</a></p>
@@ -768,7 +773,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
     <div class="wrap grid g3 start">
       <div>
         <h3>Paiement</h3>
-        <p class="small mb0">L'audit et Veille se règlent en ligne, par carte ou prélèvement SEPA, via Stripe : l'audit et la formule annuelle à la commande, les abonnements mensuels chaque mois d'avance. Par SEPA, la prestation démarre à la confirmation du prélèvement, sous quelques jours ouvrés. Les offres sur devis sont facturées selon l'échéancier du devis. TVA non applicable, article 293 B du code général des impôts : le montant affiché est le montant dû.</p>
+        <p class="small mb0">L'Audit AIGEO se règle en ligne, à la commande, par carte ou prélèvement SEPA, via Stripe. La Veille s'ouvre sur demande ; ses conditions de paiement sont celles des conditions générales. Par SEPA, la prestation démarre à la confirmation du prélèvement, sous quelques jours ouvrés. Les offres sur devis sont facturées selon l'échéancier du devis. TVA non applicable, article 293 B du code général des impôts : le montant affiché est le montant dû.</p>
       </div>
       <div>
         <h3>Ce qui n'est jamais facturé</h3>
@@ -871,7 +876,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
           <p class="small mb0">Les mêmes questions, quelques semaines plus tard, avec les captures datées. Vous voyez ce qui a bougé, et ce qui n'a pas bougé.</p>
         </div>
       </div>
-      <div class="btns"><a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="middle">Faire le test gratuit</a><a class="cta big ghost" href="/rendez-vous/">Réserver un relevé en direct</a></div>
+      <div class="btns"><a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="middle">Tester mon entreprise gratuitement</a><a class="cta big ghost" href="/rendez-vous/">Réserver un relevé en direct</a></div>
     </div>
   </section>
 
@@ -929,7 +934,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
           <p class="small">ChatGPT Ads arrive en France, Amazon s'associe à OpenAI, et une étude mesure ce que Google AI Mode montre réellement en produits. Ce qui change pour votre marque, et ce que ça ne remplace pas.</p>
           <p class="small mb0"><b>Lire l'article &rarr;</b></p>
         </div>
-        <div class="vis"><div><b>-95%</b>de produits affichés par Google AI Mode, contre la recherche classique.</div></div>
+        <div class="vis"><div><b>Fin août 2026</b>ChatGPT Ads arrive en France.</div></div>
       </a>
 
       <div class="grid g4 start" style="margin-top:24px">
@@ -942,13 +947,13 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
         <a class="post" href="/blog/geo-vs-seo-ce-qui-change/" style="text-decoration:none">
           <div class="meta">GEO vs SEO · 3 septembre 2026 · 6 min</div>
           <h3>GEO vs SEO : ce qui change vraiment quand Google répond à votre place</h3>
-          <p class="small grow">Une étude Ahrefs sur 963 domaines français chiffre la perte de clics depuis l'arrivée des AI Overviews : jusqu'à -24,8 % de CTR pour les sites les plus exposés.</p>
+          <p class="small grow">Depuis le 22 juillet, Google affiche des Aperçus IA en France. Une première étude d'éditeur mesure une baisse de clics sur les sites les plus exposés ; l'effet durable reste à mesurer.</p>
           <p class="small mb0"><b>Lire l'article &rarr;</b></p>
         </a>
         <a class="post" href="/blog/requetes-conversationnelles-achat/" style="text-decoration:none">
           <div class="meta">Comportement d'achat · 1<sup>er</sup> septembre 2026 · 6 min</div>
           <h3>Ce que les Français demandent vraiment à l'IA avant d'acheter</h3>
-          <p class="small grow">48 % des acheteurs en ligne français disent que l'IA influence leurs décisions, mais les assistants ne pèsent que 14 % des points de départ d'un achat.</p>
+          <p class="small grow">Un cyberacheteur sur trois utilise l'IA quand il achète en ligne, surtout avant l'achat. Ce qu'il lui demande, et ce que ça change.</p>
           <p class="small mb0"><b>Lire l'article &rarr;</b></p>
         </a>
         <div class="post">
@@ -1022,17 +1027,17 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
 
       <div class="card">
         <h3>Par écrit</h3>
-        <p class="small" style="margin-bottom:18px"><b>Réponse sous 48 heures ouvrées.</b></p>
+        <p class="small" style="margin-bottom:18px"><b>Nous revenons vers vous rapidement.</b></p>
         <form onsubmit="send(event)">
           <div>
             <label for="f0">Ce qui vous amène</label>
             <select id="f0">
               <option value="Question ouverte">Je ne sais pas encore, j'ai des questions</option>
-              <option value="Audit ponctuel (89,99 €)">L'audit ponctuel, 89,99 €</option>
+              <option value="Audit AIGEO (89,99 €)">L'Audit AIGEO, 89,99 €</option>
               <option value="Palier 1 - Relevé de présence (sur devis)">Le relevé de présence, sur devis</option>
               <option value="Palier 2 - Relevé commenté (sur devis)">Le relevé commenté, sur devis</option>
               <option value="Expert - Restructuration (sur devis)">Expert : la restructuration, sur devis</option>
-              <option value="Abonnement Veille (dès 24,99 € par mois)">L'abonnement Veille, dès 24,99 € par mois</option>
+              <option value="Veille AIGEO, sur demande (dès 24,99 € par mois)">La Veille AIGEO, sur demande, dès 24,99 € par mois</option>
               <option value="Abonnement Pilote (sur devis)">L'abonnement Pilote, sur devis</option>
               <option value="Commerce local - présence locale">Je suis un commerce ou un artisan : présence locale</option>
               <option value="Commerce local - corpus conseil">Je suis un commerce ou un artisan : corpus de fiches conseil</option>
@@ -1081,7 +1086,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
         </div>
         <div class="card">
           <h3>Par email, directement</h3>
-          <p class="small mb0"><a class="mailto" href="#">contact@aigeoconseil.com</a><br>Réponse sous 48 heures ouvrées, du lundi au vendredi.</p>
+          <p class="small mb0"><a class="mailto" href="#">contact@aigeoconseil.com</a><br>Nous revenons vers vous rapidement.</p>
         </div>
         <div class="card">
           <h3>Le test gratuit, concrètement</h3>
@@ -1091,7 +1096,7 @@ footer{padding:44px 0;color:var(--muted);font-size:14.5px;display:flex;justify-c
         </div>
         <div class="card">
           <h3>Où que vous soyez</h3>
-          <p class="small mb0">Pour une marque qui vend en ligne, tout se fait à distance, en français ou en anglais, et votre fuseau horaire ne change rien au délai. Pour un commerce ou un artisan, nous venons sur place en Alsace.</p>
+          <p class="small mb0">Pour une marque qui vend en ligne, tout se fait à distance, et votre fuseau horaire ne change rien au délai. Pour un commerce ou un artisan, nous venons sur place en Alsace.</p>
         </div>
         <div class="card">
           <h3>Nous suivre</h3>
@@ -1262,13 +1267,13 @@ function send(e){
 </script>
 <script>
 (function(){
-  var SANS = 5999, SETUP = 3000, SANS_URL = "https://buy.stripe.com/fZu4gBddCdns4FUdJL00006";
+  var SANS = 5999, SETUP = 3000;
   var PLANS = [
-    {m:2, c:4999, u:"https://buy.stripe.com/3cIeVfa1qfvA2xMeNP00002"},
-    {m:4, c:3999, u:"https://buy.stripe.com/cNi5kFehGfvAegucFH00003"},
-    {m:8, c:2999, u:"https://buy.stripe.com/9B65kF1uU4QWfky6hj00004"},
-    {m:12, c:2499, u:"https://buy.stripe.com/14AbJ3ehG5V07S60WZ00005"},
-    {m:12, once:26999, u:"https://buy.stripe.com/dRm00la1qcjofkycFH00007", annual:true}
+    {m:2, c:4999},
+    {m:4, c:3999},
+    {m:8, c:2999},
+    {m:12, c:2499},
+    {m:12, once:26999, annual:true}
   ];
   function eur(c){ return (c/100).toFixed(2).replace('.', ',') + '\u00a0€'; }
   document.querySelectorAll('[data-vj]').forEach(function(root){
@@ -1276,14 +1281,13 @@ function send(e){
     var range = q('[data-vj-range]'), tabs = root.querySelectorAll('[data-vj-mode]'), ticks = root.querySelectorAll('[data-vj-i]');
     var mode = 'sans';
     function render(){
-      var avec = mode === 'avec', go = q('[data-vj-go]');
+      var avec = mode === 'avec';
       tabs.forEach(function(t){ t.setAttribute('aria-selected', String(t.getAttribute('data-vj-mode') === mode)); });
       root.querySelectorAll('[data-vj-avec]').forEach(function(el){ el.hidden = !avec; });
       if (!avec) {
         q('[data-vj-price]').textContent = eur(SANS);
         q('[data-vj-unit]').textContent = "par mois";
         q('[data-vj-sub]').textContent = "Premier mois : 89,99\u00a0€, audit de départ inclus. Puis résiliable à tout moment, effet à la fin du mois en cours.";
-        go.href = SANS_URL; go.textContent = "S'abonner sans engagement";
         return;
       }
       var i = +range.value, p = PLANS[i];
@@ -1294,16 +1298,15 @@ function send(e){
         q('[data-vj-sub]').textContent = "Soit " + eur(Math.round(p.once / 12)) + " par mois sur 12 mois. Paiement unique, puis arrêt automatique, sans reconduction.";
         q('[data-vj-months]').textContent = "12 mois, payés d'avance";
         range.setAttribute('aria-valuetext', "12 mois payés d'avance");
-        go.textContent = "Payer l'année, " + eur(p.once);
+
       } else {
         q('[data-vj-price]').textContent = eur(p.c);
         q('[data-vj-unit]').textContent = "par mois";
         q('[data-vj-sub]').textContent = p.m + " mensualités, soit " + eur(total) + " au total, puis arrêt automatique sans reconduction.";
         q('[data-vj-months]').textContent = p.m + " mois";
         range.setAttribute('aria-valuetext', p.m + ' mois');
-        go.textContent = "S'abonner pour " + p.m + " mois";
+
       }
-      go.href = p.u;
       ticks.forEach(function(t){ t.setAttribute('aria-pressed', String(+t.getAttribute('data-vj-i') === i)); });
       q('[data-vj-pct]').textContent = pct + "\u00a0%";
       q('[data-vj-bar]').setAttribute('aria-label', "Économie de " + pct + " %");

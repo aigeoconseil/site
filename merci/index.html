@@ -111,7 +111,7 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font
     <p>Par carte, le paiement est confirmé : Stripe vous envoie le reçu par email. Par prélèvement SEPA, la confirmation arrive sous quelques jours ouvrés ; nous démarrons dès qu'elle est reçue, et vous êtes prévenu par email si le prélèvement échoue.</p>
 
     <h2>La suite</h2>
-    <p>Nous vous écrivons à l'adresse indiquée lors du paiement pour cadrer vos questions d'acheteur : votre activité, le marché que vous servez réellement, les situations où un client demanderait conseil à une IA. La mesure ne démarre qu'une fois ces questions validées avec vous.</p>
+    <p>Nous vous écrivons à l'adresse indiquée lors du paiement pour cadrer vos questions d'acheteur : votre activité, le marché que vous servez réellement, les situations où un client demanderait conseil à une IA. La mesure ne démarre qu'une fois ces questions validées avec vous. Nous vous confirmons alors par écrit le périmètre et la date de remise.</p>
     <p id="engagement" hidden>Votre abonnement s'arrête automatiquement au terme de l'engagement choisi, sans reconduction.</p>
 
     <h2>Une question</h2>
@@ -125,7 +125,7 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font
 <script>
 (function(){
   var o = new URLSearchParams(location.search).get('offre') || '';
-  var noms = {oneshot:"Audit ponctuel", monthly:"Veille, sans engagement", commit_2:"Veille, engagement 2 mois", commit_4:"Veille, engagement 4 mois", commit_8:"Veille, engagement 8 mois", commit_12:"Veille, engagement 12 mois", annual:"Veille, 12 mois payés d'avance"};
+  var noms = {oneshot:"Audit AIGEO", monthly:"Veille, sans engagement", commit_2:"Veille, engagement 2 mois", commit_4:"Veille, engagement 4 mois", commit_8:"Veille, engagement 8 mois", commit_12:"Veille, engagement 12 mois", annual:"Veille, 12 mois payés d'avance"};
   if (noms[o]) document.getElementById('offre').textContent = "Votre commande : " + noms[o] + ".";
   if (/^commit_/.test(o) || o === 'annual') document.getElementById('engagement').hidden = false;
 })();
