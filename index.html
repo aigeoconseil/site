@@ -383,6 +383,28 @@ nav button{white-space:nowrap}
 .hero .btns{justify-content:center}
 .plan .badge{align-self:flex-start}
 @media(max-width:520px){nav button{padding:6px 5px;font-size:13px}}
+
+/* ---------- éléments graphiques de la charte (Hugo, 02/10) ---------- */
+.hero{position:relative;isolation:isolate}
+.hero-art{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.hero-art img{position:absolute;width:105px;opacity:.22}
+.hero-art .a1{right:-1%;top:10px;transform:rotate(38deg);animation:aigeo-float 14s ease-in-out infinite}
+.hero-art .a2{left:2%;bottom:-30px;width:80px;transform:rotate(-52deg);opacity:.16;animation:aigeo-float 18s ease-in-out infinite reverse}
+[data-theme="dark"] .hero-art img{opacity:.38}
+[data-theme="dark"] .hero-art .a2{opacity:.26}
+@keyframes aigeo-float{0%,100%{translate:0 0}50%{translate:0 -14px}}
+.cta-band{margin-top:30px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;padding:30px 32px;border-radius:18px;color:#fff;background:linear-gradient(90deg,rgba(18,18,22,.72),rgba(18,18,22,.25)),url(/brand/fonds/bandeau-violet.webp) center/cover,#6C10BF}
+.cta-band p{margin:0;font-family:var(--font-title);font-size:22px;font-weight:600;line-height:1.25;max-width:30ch;color:#fff}
+.cta-band small{display:block;margin-top:6px;font-family:var(--font-body);font-size:14px;font-weight:400;color:rgba(255,255,255,.82)}
+.cta-band .btns{margin:0}
+.cta-band .cta{background:#fff;color:#121216;border-color:#fff}
+.cta-band .cta.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.55)}
+.feature .vis{background:linear-gradient(140deg,rgba(18,18,22,.62),rgba(108,16,191,.35)),url(/brand/fonds/metaball-organique.webp) center/cover,#121216}
+section{border-bottom:0;position:relative}
+section:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-9px;width:150px;height:18px;transform:translateX(-50%);background:url(/brand/separateur-metaball.svg) center/contain no-repeat;opacity:.35;pointer-events:none}
+[data-theme="dark"] section:not(:last-child)::after{opacity:.55}
+@media (prefers-reduced-motion:reduce){.hero-art img{animation:none}}
+@media (max-width:640px){.hero-art .a1{width:70px;right:-24px;top:-10px}.hero-art .a2{display:none}.cta-band{padding:24px 20px}.cta-band p{font-size:19px}}
 </style>
 </head>
 <body>
@@ -402,6 +424,7 @@ nav button{white-space:nowrap}
 <!-- ================= ACCUEIL ================= -->
 <div class="page on" id="accueil">
   <div class="wrap hero">
+    <div class="hero-art" aria-hidden="true"><img class="a1" src="/brand/forme-metaball.svg" alt=""><img class="a2" src="/brand/forme-metaball.svg" alt=""></div>
     <div class="eyebrow">Visibilité des marques dans les réponses IA</div>
     <h1>Votre marque est-elle citée <span class="grad">par les IA&nbsp;?</span></h1>
     <form class="hero-scan" id="hero-scan-form" data-cta-location="hero-search" onsubmit="submitHeroScan(event)" novalidate>
@@ -539,7 +562,7 @@ nav button{white-space:nowrap}
     <div class="wrap">
       <h2>Pour qui</h2>
       <p class="lead">Des marques qui vendent un produit que l'on n'achète pas sans demander conseil : literie, nutrition animale, équipement sportif, mobilier, matériel technique, cosmétique. Nous travaillons à distance avec les marques e-commerce et nous nous déplaçons en Alsace pour les <a class="ilink" href="#commerces" onclick="go('commerces');return false">commerces et artisans</a>.</p>
-      <div class="btns"><a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="final">Tester mon entreprise gratuitement</a><button class="cta big ghost" onclick="go('contact')">Parler à AIGEO</button></div>
+      <div class="cta-band"><p>Votre marque est-elle citée par les IA&nbsp;?<small>Test gratuit · 3 situations · résultat en ligne</small></p><div class="btns"><a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="final">Tester mon entreprise gratuitement</a><button class="cta big ghost" onclick="go('contact')">Parler à AIGEO</button></div></div>
     </div>
   </section>
 
@@ -873,7 +896,7 @@ nav button{white-space:nowrap}
           <p class="small mb0">Les mêmes questions, quelques semaines plus tard, avec les captures datées. Vous voyez ce qui a bougé, et ce qui n'a pas bougé.</p>
         </div>
       </div>
-      <div class="btns"><a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="middle">Tester mon entreprise gratuitement</a><a class="cta big ghost" href="/rendez-vous/">Réserver un relevé en direct</a></div>
+      <div class="cta-band"><p>Votre marque est-elle citée par les IA&nbsp;?<small>Test gratuit · 3 situations · résultat en ligne</small></p><div class="btns"><a class="cta big" href="https://app.aigeoconseil.com/scan" data-cta-location="middle">Tester mon entreprise gratuitement</a><a class="cta big ghost" href="/rendez-vous/">Réserver un relevé en direct</a></div></div>
     </div>
   </section>
 
