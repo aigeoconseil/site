@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Questions fréquentes · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Questions fréquentes sur AIGEO : visibilité dans les réponses des IA, test gratuit, Audit AIGEO à 149 €, Veille, Expert et Pilote, commande, paiement et confidentialité.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aigeoconseil.com/faq/">
+<style>
+@font-face{font-family:"Space Grotesk";src:url("/fonts/space-grotesk-var.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url("/fonts/ibm-plex-sans-var.woff2") format("woff2");font-weight:100 700;font-stretch:85% 100%;font-style:normal;font-display:swap}
+:root{
+  --ink:#121216; --paper:#F5F5F7; --muted:#6B6B73; --line:#E4E2DC;
+  --accent:#6C10BF; --accent2:#D20DAD; --surface:#FFFFFF;
+  --g1:#6C10BF; --g2:#990DD2; --g3:#D20DAD;
+  --font-title:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font-body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#C77DFF; --accent2:#E44FC6; --surface:#1A1A21;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+h1,h2,h3,h4,.price b,.stat b{font-family:var(--font-title)}
+[data-theme="dark"] .grad{background-image:linear-gradient(90deg,#B57CF2,#C77DFF,#E44FC6)}
+
+a{color:inherit}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:46px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:34px 0 8px;scroll-margin-top:92px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block}
+.bar>a:first-child{margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.meta{font-size:14px;color:var(--muted);margin-top:22px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+article{padding-bottom:20px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin-bottom:10px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:840px){
+  .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
+  .logo{height:22px}
+  nav{width:100%;order:3;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
+  .themebtn{margin-left:0}
+}
+@media(max-width:640px){ .hero{padding:40px 0 4px} }
+
+/* Veille : onglets avec ou sans engagement, jauge d'économie */
+.vj{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:18px;margin-top:6px}
+.vj-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:11px;background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.vj-tabs button{-webkit-tap-highlight-color:transparent;font:inherit;font-size:14.5px;font-weight:600;border:0;border-radius:8px;padding:10px 8px;background:transparent;color:var(--muted);cursor:pointer}
+.vj-tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(14,14,18,.12)}
+.vj-tabs button:focus-visible,.vj input:focus-visible,.vj-go:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.vj-price{display:flex;align-items:baseline;gap:8px;margin:18px 0 4px;flex-wrap:wrap}
+.vj-price b{font-size:34px;font-weight:680;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.vj-price span{font-size:14.5px;color:var(--muted)}
+.vj-sub{font-size:14px;color:var(--muted);margin:0 0 16px}
+.vj-range{margin:0 0 18px}
+.vj-range label{display:block;font-size:14px;margin-bottom:8px}
+.vj-range input{width:100%;accent-color:var(--accent);margin:0}
+.vj .vj-range input[type=range]{-webkit-appearance:auto;appearance:auto;background:none;border:0;padding:0;height:auto;min-height:0;box-shadow:none;border-radius:0}
+.vj-ticks{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-top:4px}
+.vj-ticks button{-webkit-tap-highlight-color:transparent;font:inherit;border:0;background:none;color:inherit;padding:2px 0;cursor:pointer}
+.vj-ticks button[aria-pressed="true"]{color:var(--ink);font-weight:700}
+.vj-gauge{margin:0 0 18px}
+.vj-gauge-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.vj-gauge-head b{font-size:20px;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.vj-bar{height:12px;border-radius:999px;background:color-mix(in srgb,var(--ink) 8%,transparent);overflow:hidden}
+.vj-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));transition:width .35s ease}
+.vj-save{font-size:14px;margin-top:8px}
+.vj-gift{font-size:13.5px;font-weight:650;color:var(--accent);margin:0 0 14px}
+.vj-go{display:block;width:100%;box-sizing:border-box;text-align:center;text-decoration:none;background:var(--ink);color:var(--paper);font-weight:600;font-size:16px;padding:14px 18px;border-radius:9px}
+.vj-go:hover{opacity:.9}
+.vj [hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){.vj-bar i{transition:none}}
+@media (max-width:349px){.vj-tabs button{white-space:normal}}
+@media (max-width:520px){.vj{padding:12px}.plan .vj{border:0;padding:0;background:none;margin-top:14px}.vj-tabs button{font-size:13px;padding:10px 2px;white-space:nowrap}.vj-gauge-head span{font-size:12.5px}.vj-price{margin-top:14px}.vj-price b{font-size:30px}.vj-gauge-head{font-size:13px}.vj-gauge-head b{font-size:18px}.vj-go{font-size:15px;padding:13px 10px}}
+.legal .vj{margin:8px 0 22px}
+@media (max-width:560px){.ptable thead{display:none}.ptable tr{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:14px 0;border-bottom:1px solid var(--line)}.ptable tr:last-child{border-bottom:0}.ptable td{border:0!important;padding:0!important}.ptable td:nth-child(1){grid-row:1;grid-column:1;font-weight:600}.ptable td:nth-child(3){grid-row:1;grid-column:2}.ptable td:nth-child(2){grid-row:2;grid-column:1/-1;color:var(--muted);font-size:14.5px}}
+.legal .vj-go{color:var(--paper);border:0;text-decoration:none}
+.legal .vj p{margin:0 0 16px}
+@media(max-width:520px){nav a{padding:6px 5px;font-size:13px}}
+</style><style>
+.wrap{max-width:720px}
+.legal h2{font-size:clamp(20px,2.4vw,25px);margin:44px 0 14px}
+.legal h3{margin:26px 0 6px}
+.legal p{font-size:16px}
+.ptable{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:16px}
+.ptable th,.ptable td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable th{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.ptable td.num{text-align:right;white-space:nowrap;font-weight:640}
+.ptable tr:last-child td{border-bottom:0}
+.ptable td.go{text-align:right;white-space:nowrap}
+.ptable td.go a{font-weight:640}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+</style>
+<style>
+.faq-toc{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 6px}
+.faq-toc a{font-size:14px;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px;transition:.15s}
+.faq-toc a:hover{color:var(--ink);border-color:var(--accent)}
+.faq h2{display:flex;align-items:center;gap:12px}
+.faq h2::before{content:"";width:22px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));flex:0 0 auto}
+.faq details{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:0 0 10px;transition:border-color .15s}
+.faq details[open]{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;font-family:var(--font-title);font-weight:620;font-size:17.5px;line-height:1.35}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:9px;height:9px;flex:0 0 auto;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin-top:-4px;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:12px}
+.faq .rep{padding:0 18px 4px}
+.faq .rep p{font-size:16px}
+.faq .rep a{color:var(--accent)}
+@media(max-width:560px){.faq summary{font-size:16.5px;padding:14px 15px}.faq .rep{padding:0 15px 2px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "url": "https://aigeoconseil.com/faq/", "inLanguage": "fr-FR", "mainEntity": [{"@type": "Question", "name": "Que veut dire « être visible dans les réponses des IA » ?", "acceptedAnswer": {"@type": "Answer", "text": "Quand un acheteur demande conseil à un assistant comme ChatGPT ou Gemini, celui-ci ne renvoie pas une liste de liens : il compose une réponse et nomme quelques entreprises. Être visible, c'est faire partie de ces noms quand la question porte sur ce que vous vendez. AIGEO mesure si votre entreprise est citée dans ces réponses, cherche pourquoi elle l'est ou non, et corrige les causes."}}, {"@type": "Question", "name": "Est-ce la même chose que le référencement sur Google ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Le référencement travaille votre position dans une liste de résultats. Dans une réponse d'IA, il n'y a pas de liste : le modèle choisit quelques noms à partir de ce que votre site et le reste du web disent de vous. Les deux se complètent, mais un bon référencement ne garantit pas d'être cité. Seule une mesure permet de le savoir. Nous l'expliquons dans l'article GEO vs SEO : ce qui change."}}, {"@type": "Question", "name": "Achetez-vous de la publicité dans les IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Nous n'achetons aucun espace publicitaire, publicités dans les assistants IA comprises, et nous ne facturons donc pas d'achat média. Notre travail porte sur ce que les IA peuvent lire et citer : vos pages, vos fiches, vos données structurées et les sources tierces qui parlent de vous."}}, {"@type": "Question", "name": "Pouvez-vous garantir que mon entreprise sera citée ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, et personne ne peut le faire honnêtement. Aucune de nos offres ne promet une position, une citation ou une progression dans les réponses des IA. Nous mesurons, nous expliquons, nous corrigeons ce qui peut l'être, puis nous reposons les mêmes questions pour vous montrer ce qui a bougé et ce qui n'a pas bougé."}}, {"@type": "Question", "name": "Que montre le test gratuit ?", "acceptedAnswer": {"@type": "Answer", "text": "Le test prépare trois questions réalistes à partir de votre activité, après avoir consulté jusqu'à cinq pages publiques de votre site. Vous confirmez ces situations, puis chacune est posée une fois à Gemini avec recherche web, sans historique de conversation. Vous voyez dans combien de situations votre entreprise est citée, quelles autres entreprises le sont, les sources quand la réponse en affiche, et de premières actions lorsque les éléments observés permettent de les justifier. Le test est gratuit et sans obligation d'achat."}}, {"@type": "Question", "name": "Le test suffit-il pour savoir si je suis absent des IA ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Trois questions, une seule IA et un seul essai donnent un premier aperçu, pas une mesure. Une réponse d'IA peut varier d'un essai à l'autre et d'un assistant à l'autre. Le résultat indique aussi ce que le test ne permet pas de conclure. Pour une mesure qui tient, l'Audit AIGEO pose 15 questions, sur 2 IA, avec 3 essais chacune."}}, {"@type": "Question", "name": "Que devient l'adresse de mon site après le test ?", "acceptedAnswer": {"@type": "Answer", "text": "Les tests aboutis sont conservés 30 jours, ceux en échec 7 jours. L'adresse IP brute n'est pas conservée : une empreinte pseudonymisée sert seulement à limiter les abus. Le détail figure dans les mentions légales."}}, {"@type": "Question", "name": "Que comprend l'Audit AIGEO à 149 € ?", "acceptedAnswer": {"@type": "Answer", "text": "L'audit mesure 15 situations d'achat propres à votre activité, chacune sur 2 IA (OpenAI et Gemini) avec 3 essais : jusqu'à 90 réponses analysées. Vous recevez dans votre espace AIGEO les réponses et les concurrents observés IA par IA, les sources lorsqu'elles sont présentes, un diagnostic et vos actions prioritaires. Le prix est payé une fois, TVA non applicable (article 293 B du CGI) : le montant affiché est le montant dû."}}, {"@type": "Question", "name": "Comment sont choisies les 15 questions ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous partons de votre fiche entreprise, que vous confirmez : activité, zone réellement servie, concurrents, variantes de votre nom. Nous construisons ensuite 15 questions d'acheteur, par situations d'achat et dans leurs mots, pas vos mots-clés. Vous les validez, avec un aller-retour possible, puis elles sont figées. Rien n'est mesuré avant cette validation."}}, {"@type": "Question", "name": "Pourquoi 3 essais par question, et pourquoi chaque IA à part ?", "acceptedAnswer": {"@type": "Answer", "text": "Une IA ne répond pas toujours la même chose à la même question. Trois essais montrent si une citation est régulière ou ponctuelle. Chaque IA puise dans ses propres sources et répond à sa manière : additionner leurs résultats mélangerait deux réalités. Nous les présentons donc toujours séparément, jamais en total."}}, {"@type": "Question", "name": "Combien de temps faut-il pour recevoir l'audit ?", "acceptedAnswer": {"@type": "Answer", "text": "L'audit est remis sous 5 jours ouvrés après la validation des questions, dans votre espace AIGEO. Ce délai suppose que vous nous fournissiez les éléments et les accès nécessaires."}}, {"@type": "Question", "name": "Et si l'audit montre que je suis déjà bien cité ?", "acceptedAnswer": {"@type": "Answer", "text": "Nous vous le disons, et nous ne vous proposons pas de suite. L'audit reste dû, le reste ne l'est pas."}}, {"@type": "Question", "name": "L'audit corrige-t-il les problèmes trouvés ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. L'audit mesure, explique et priorise ; il vous laisse un document exploitable par n'importe qui. Si vous voulez que nous fassions les corrections, c'est l'objet des offres Expert et Pilote, chiffrées au devis avant toute commande. Les 149 € de l'audit sont entièrement déduits si vous passez à la Veille, à l'Expert ou au Pilote dans les 30 jours suivant la livraison."}}, {"@type": "Question", "name": "À quoi sert la Veille ?", "acceptedAnswer": {"@type": "Answer", "text": "Une mesure seule dit où vous en êtes aujourd'hui ; la Veille dit ce qui change ensuite. Chaque mois, les mêmes 15 questions sont reposées mot pour mot sur les mêmes 2 IA, avec 3 essais. L'évolution se lit IA par IA, et un changement n'est présenté que si deux mesures sont réellement comparables. La Veille inclut l'audit initial et coûte 99 € par mois sur 6 mois ou 89 € par mois sur 12 mois. Elle s'ouvre pour l'instant sur demande."}}, {"@type": "Question", "name": "Quelle différence entre Expert et Pilote ?", "acceptedAnswer": {"@type": "Answer", "text": "Expert : nous réalisons les corrections trouvées par l'audit, livrées à date, à partir de 500 € (150 € l'action standard, 225 € l'action complexe, 50 € de plus si nous la publions). Une action est une modification publiée sur un canal : page du site, fiche établissement, données structurées, plateforme tierce ou article. Pilote : nous pilotons le sujet avec vous chaque mois, de la mesure à la publication, avec jusqu'à 2 actions standard publiées par mois, audit et Veille inclus, pour 699 € par mois et 3 mois minimum."}}, {"@type": "Question", "name": "Comment savez-vous si une correction a eu un effet ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque action publiée est contrôlée à sa mise en ligne, puis les questions concernées sont remesurées 8 semaines plus tard, dans les mêmes conditions. Vous voyez ce qui a bougé, et ce qui n'a pas bougé : nous vous le disons aussi."}}, {"@type": "Question", "name": "Travaillez-vous avec les commerces et artisans ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Nous travaillons à distance avec les marques e-commerce et nous nous déplaçons en Alsace pour les commerces et artisans, sans frais de déplacement. Pour un commerce, un paquet de 5 fiches conseil coûte 750 €, ou 1 000 € si nous les publions. Voir la page Commerces."}}, {"@type": "Question", "name": "Comment se passe la commande ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous nous écrivez ou vous réservez un échange de 30 minutes, qui n'est pas facturé. Nous confirmons par écrit le périmètre et la date de remise, puis nous vous envoyons le lien de paiement. L'audit se règle en ligne par carte ou par prélèvement SEPA, sur une page sécurisée par Stripe ; AIGEO n'a jamais accès à vos coordonnées bancaires complètes. Vous recevez ensuite l'accès à votre espace client."}}, {"@type": "Question", "name": "Y a-t-il un engagement ?", "acceptedAnswer": {"@type": "Answer", "text": "L'audit se commande seul, sans abonnement. La Veille dure 6 ou 12 mois et s'arrête d'elle-même au terme, sans reconduction. Le Pilote demande 3 mois minimum, puis se poursuit au mois. Toutes les conditions sont dans les conditions générales."}}, {"@type": "Question", "name": "Travaillez-vous avec les particuliers ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Nos prestations s'adressent uniquement aux clients professionnels : entreprises, marques, commerces et artisans."}}, {"@type": "Question", "name": "Mes résultats restent-ils confidentiels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les informations que vous nous transmettez ne servent qu'à votre prestation. Aucun résultat, position ou absence mesuré chez vous n'est communiqué à un tiers ni cité publiquement sans votre accord écrit. Nous ne vous demandons jamais de mot de passe."}}]}</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIGEO">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Questions fréquentes · AIGEO">
+<meta property="og:description" content="Questions fréquentes sur AIGEO : visibilité dans les réponses des IA, test gratuit, Audit AIGEO à 149 €, Veille, Expert et Pilote, commande, paiement et confidentialité.">
+<meta property="og:url" content="https://aigeoconseil.com/faq/">
+<meta property="og:image" content="https://aigeoconseil.com/brand/og/aigeo-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AIGEO : votre marque est-elle citée par les IA ?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aigeoconseil.com/brand/og/aigeo-og.jpg">
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/brand/aigeo-logo-noir.svg"></a>
+    <nav>
+      <a href="/#accueil">Accueil</a>
+      <a href="/#offres">Offres</a>
+      <a href="/#methode">Méthode</a>
+      <a href="/#commerces">Commerces</a>
+      <a href="/#blog">Blog</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://espace.aigeoconseil.com">Espace client</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Questions fréquentes</div>
+    <h1>Vos questions, <span class="grad">nos réponses écrites.</span></h1>
+    <p class="chapo">Ce que nous mesurons, ce que coûtent nos offres, comment se passe une commande et ce que nous ne promettons jamais.</p>
+    <nav class="faq-toc" aria-label="Thèmes"><a href="#comprendre">Comprendre</a><a href="#test">Le test gratuit</a><a href="#audit">L'Audit AIGEO</a><a href="#suite">Suivi et corrections</a><a href="#commande">Commande, paiement et données</a></nav>
+  </div>
+
+  <article class="legal faq">
+    <h2 id="comprendre">Comprendre</h2>
+    <details id="ia-visibilite"><summary>Que veut dire « être visible dans les réponses des IA » ?</summary><div class="rep"><p>Quand un acheteur demande conseil à un assistant comme ChatGPT ou Gemini, celui-ci ne renvoie pas une liste de liens : il compose une réponse et nomme quelques entreprises. Être visible, c'est faire partie de ces noms quand la question porte sur ce que vous vendez.</p><p>AIGEO mesure si votre entreprise est citée dans ces réponses, cherche pourquoi elle l'est ou non, et corrige les causes.</p></div></details>
+    <details id="seo"><summary>Est-ce la même chose que le référencement sur Google ?</summary><div class="rep"><p>Non. Le référencement travaille votre position dans une liste de résultats. Dans une réponse d'IA, il n'y a pas de liste : le modèle choisit quelques noms à partir de ce que votre site et le reste du web disent de vous.</p><p>Les deux se complètent, mais un bon référencement ne garantit pas d'être cité. Seule une mesure permet de le savoir. Nous l'expliquons dans l'article <a href="/blog/geo-vs-seo-ce-qui-change/">GEO vs SEO : ce qui change</a>.</p></div></details>
+    <details id="pub"><summary>Achetez-vous de la publicité dans les IA ?</summary><div class="rep"><p>Non. Nous n'achetons aucun espace publicitaire, publicités dans les assistants IA comprises, et nous ne facturons donc pas d'achat média. Notre travail porte sur ce que les IA peuvent lire et citer : vos pages, vos fiches, vos données structurées et les sources tierces qui parlent de vous.</p></div></details>
+    <details id="garantie"><summary>Pouvez-vous garantir que mon entreprise sera citée ?</summary><div class="rep"><p>Non, et personne ne peut le faire honnêtement. Aucune de nos offres ne promet une position, une citation ou une progression dans les réponses des IA.</p><p>Nous mesurons, nous expliquons, nous corrigeons ce qui peut l'être, puis nous reposons les mêmes questions pour vous montrer ce qui a bougé et ce qui n'a pas bougé.</p></div></details>
+    <h2 id="test">Le test gratuit</h2>
+    <details id="test-contenu"><summary>Que montre le test gratuit ?</summary><div class="rep"><p>Le test prépare trois questions réalistes à partir de votre activité, après avoir consulté jusqu'à cinq pages publiques de votre site. Vous confirmez ces situations, puis chacune est posée une fois à Gemini avec recherche web, sans historique de conversation.</p><p>Vous voyez dans combien de situations votre entreprise est citée, quelles autres entreprises le sont, les sources quand la réponse en affiche, et de premières actions lorsque les éléments observés permettent de les justifier. Le test est gratuit et sans obligation d'achat.</p></div></details>
+    <details id="test-limite"><summary>Le test suffit-il pour savoir si je suis absent des IA ?</summary><div class="rep"><p>Non. Trois questions, une seule IA et un seul essai donnent un premier aperçu, pas une mesure. Une réponse d'IA peut varier d'un essai à l'autre et d'un assistant à l'autre.</p><p>Le résultat indique aussi ce que le test ne permet pas de conclure. Pour une mesure qui tient, l'Audit AIGEO pose 15 questions, sur 2 IA, avec 3 essais chacune.</p></div></details>
+    <details id="test-donnees"><summary>Que devient l&#x27;adresse de mon site après le test ?</summary><div class="rep"><p>Les tests aboutis sont conservés 30 jours, ceux en échec 7 jours. L'adresse IP brute n'est pas conservée : une empreinte pseudonymisée sert seulement à limiter les abus. Le détail figure dans les <a href="/mentions-legales/">mentions légales</a>.</p></div></details>
+    <h2 id="audit">L'Audit AIGEO</h2>
+    <details id="audit-contenu"><summary>Que comprend l&#x27;Audit AIGEO à 149 € ?</summary><div class="rep"><p>L'audit mesure 15 situations d'achat propres à votre activité, chacune sur 2 IA (OpenAI et Gemini) avec 3 essais : jusqu'à 90 réponses analysées.</p><p>Vous recevez dans votre espace AIGEO les réponses et les concurrents observés IA par IA, les sources lorsqu'elles sont présentes, un diagnostic et vos actions prioritaires. Le prix est payé une fois, TVA non applicable (article 293 B du CGI) : le montant affiché est le montant dû.</p></div></details>
+    <details id="audit-questions"><summary>Comment sont choisies les 15 questions ?</summary><div class="rep"><p>Nous partons de votre fiche entreprise, que vous confirmez : activité, zone réellement servie, concurrents, variantes de votre nom. Nous construisons ensuite 15 questions d'acheteur, par situations d'achat et dans leurs mots, pas vos mots-clés.</p><p>Vous les validez, avec un aller-retour possible, puis elles sont figées. Rien n'est mesuré avant cette validation.</p></div></details>
+    <details id="audit-ia"><summary>Pourquoi 3 essais par question, et pourquoi chaque IA à part ?</summary><div class="rep"><p>Une IA ne répond pas toujours la même chose à la même question. Trois essais montrent si une citation est régulière ou ponctuelle.</p><p>Chaque IA puise dans ses propres sources et répond à sa manière : additionner leurs résultats mélangerait deux réalités. Nous les présentons donc toujours séparément, jamais en total.</p></div></details>
+    <details id="audit-delai"><summary>Combien de temps faut-il pour recevoir l&#x27;audit ?</summary><div class="rep"><p>L'audit est remis sous 5 jours ouvrés après la validation des questions, dans votre espace AIGEO. Ce délai suppose que vous nous fournissiez les éléments et les accès nécessaires.</p></div></details>
+    <details id="audit-bon"><summary>Et si l&#x27;audit montre que je suis déjà bien cité ?</summary><div class="rep"><p>Nous vous le disons, et nous ne vous proposons pas de suite. L'audit reste dû, le reste ne l'est pas.</p></div></details>
+    <details id="audit-corrections"><summary>L&#x27;audit corrige-t-il les problèmes trouvés ?</summary><div class="rep"><p>Non. L'audit mesure, explique et priorise ; il vous laisse un document exploitable par n'importe qui. Si vous voulez que nous fassions les corrections, c'est l'objet des offres Expert et Pilote, chiffrées au devis avant toute commande.</p><p>Les 149 € de l'audit sont entièrement déduits si vous passez à la Veille, à l'Expert ou au Pilote dans les 30 jours suivant la livraison.</p></div></details>
+    <h2 id="suite">Suivi et corrections</h2>
+    <details id="veille"><summary>À quoi sert la Veille ?</summary><div class="rep"><p>Une mesure seule dit où vous en êtes aujourd'hui ; la Veille dit ce qui change ensuite. Chaque mois, les mêmes 15 questions sont reposées mot pour mot sur les mêmes 2 IA, avec 3 essais.</p><p>L'évolution se lit IA par IA, et un changement n'est présenté que si deux mesures sont réellement comparables. La Veille inclut l'audit initial et coûte 99 € par mois sur 6 mois ou 89 € par mois sur 12 mois. Elle s'ouvre pour l'instant sur demande.</p></div></details>
+    <details id="expert-pilote"><summary>Quelle différence entre Expert et Pilote ?</summary><div class="rep"><p>Expert : nous réalisons les corrections trouvées par l'audit, livrées à date, à partir de 500 € (150 € l'action standard, 225 € l'action complexe, 50 € de plus si nous la publions). Une action est une modification publiée sur un canal : page du site, fiche établissement, données structurées, plateforme tierce ou article.</p><p>Pilote : nous pilotons le sujet avec vous chaque mois, de la mesure à la publication, avec jusqu'à 2 actions standard publiées par mois, audit et Veille inclus, pour 699 € par mois et 3 mois minimum.</p></div></details>
+    <details id="controle"><summary>Comment savez-vous si une correction a eu un effet ?</summary><div class="rep"><p>Chaque action publiée est contrôlée à sa mise en ligne, puis les questions concernées sont remesurées 8 semaines plus tard, dans les mêmes conditions. Vous voyez ce qui a bougé, et ce qui n'a pas bougé : nous vous le disons aussi.</p></div></details>
+    <details id="commerces"><summary>Travaillez-vous avec les commerces et artisans ?</summary><div class="rep"><p>Oui. Nous travaillons à distance avec les marques e-commerce et nous nous déplaçons en Alsace pour les commerces et artisans, sans frais de déplacement. Pour un commerce, un paquet de 5 fiches conseil coûte 750 €, ou 1 000 € si nous les publions. Voir la page <a href="/#commerces">Commerces</a>.</p></div></details>
+    <h2 id="commande">Commande, paiement et données</h2>
+    <details id="commande"><summary>Comment se passe la commande ?</summary><div class="rep"><p>Vous nous écrivez ou vous réservez un échange de 30 minutes, qui n'est pas facturé. Nous confirmons par écrit le périmètre et la date de remise, puis nous vous envoyons le lien de paiement.</p><p>L'audit se règle en ligne par carte ou par prélèvement SEPA, sur une page sécurisée par Stripe ; AIGEO n'a jamais accès à vos coordonnées bancaires complètes. Vous recevez ensuite l'accès à votre espace client.</p></div></details>
+    <details id="engagement"><summary>Y a-t-il un engagement ?</summary><div class="rep"><p>L'audit se commande seul, sans abonnement. La Veille dure 6 ou 12 mois et s'arrête d'elle-même au terme, sans reconduction. Le Pilote demande 3 mois minimum, puis se poursuit au mois. Toutes les conditions sont dans les <a href="/conditions-generales/">conditions générales</a>.</p></div></details>
+    <details id="pro"><summary>Travaillez-vous avec les particuliers ?</summary><div class="rep"><p>Non. Nos prestations s'adressent uniquement aux clients professionnels : entreprises, marques, commerces et artisans.</p></div></details>
+    <details id="confidentialite"><summary>Mes résultats restent-ils confidentiels ?</summary><div class="rep"><p>Oui. Les informations que vous nous transmettez ne servent qu'à votre prestation. Aucun résultat, position ou absence mesuré chez vous n'est communiqué à un tiers ni cité publiquement sans votre accord écrit. Nous ne vous demandons jamais de mot de passe.</p></div></details>
+
+    <h2 id="autre">Une autre question ?</h2>
+    <p>Écrivez-nous ou réservez un échange de 30 minutes : le premier échange n'est pas facturé. Les prix détaillés sont sur la page <a href="/tarifs/">Tarifs</a>.</p>
+    <div class="btns">
+      <a class="cta" href="/#contact">Poser ma question</a>
+      <a class="cta ghost" href="/rendez-vous/">Réserver un échange</a>
+    </div>
+  </article>
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/">Retour à l'accueil</a> · <a href="/conditions-generales/">Conditions générales</a> · <a href="/mentions-legales/">Mentions légales</a> · <a href="/faq/">Questions fréquentes</a>
+  <div class="small" style="margin-top:8px"><a href="/#blog">Blog</a> · <a href="/#commerces">Commerces</a> · <a href="https://espace.aigeoconseil.com">Espace client</a></div></footer>
+</main>
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/brand/aigeo-logo-blanc.svg':'/brand/aigeo-logo-noir.svg';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+
+</body>
+</html>
