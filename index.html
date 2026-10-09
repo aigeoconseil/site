@@ -331,6 +331,9 @@ nav a.on{color:var(--ink);font-weight:600}
 nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
 
 nav a{text-decoration:none}
+#nav a{display:inline-flex;align-items:center;font-size:15px;padding:8px 12px}
+@media(max-width:840px){#nav a{padding:7px 11px;font-size:14.5px}}
+@media(max-width:520px){#nav a{padding:6px 5px;font-size:13px}}
 .espace-link{font-size:14px;color:var(--muted);text-decoration:none;white-space:nowrap;margin-right:6px}
 .espace-link:hover{color:var(--ink)}
 .hero-scan-help{margin-top:10px}
@@ -1182,6 +1185,7 @@ PAGES.forEach(([id,label])=>{
   const b=document.createElement('button');b.textContent=label;b.dataset.id=id;
   b.onclick=()=>go(id);nav.appendChild(b);
 });
+{const f=document.createElement('a');f.href='/faq/';f.textContent='FAQ';nav.insertBefore(f,nav.querySelector('button[data-id="contact"]'));}
 function go(id){
   id=ALIAS[id]||id;
   if(!document.getElementById(id)||!document.getElementById(id).classList.contains('page')) id='accueil';
