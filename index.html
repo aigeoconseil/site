@@ -407,6 +407,7 @@ body{overflow-x:clip}
 section{border-bottom:0;position:relative}
 section:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-9px;width:150px;height:18px;transform:translateX(-50%);background:url(/brand/separateur-metaball.svg) center/contain no-repeat;opacity:.35;pointer-events:none}
 [data-theme="dark"] section:not(:last-child)::after{opacity:.55}
+section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tight)::after{display:none}
 @media (prefers-reduced-motion:reduce){.hero-art img{animation:none}}
 @media (max-width:640px){.hero-art .a1{width:52px;right:52px;top:8px}.hero-art .a2{display:none}.cta-band{padding:24px 20px}.cta-band p{font-size:19px}}
 </style>
@@ -1079,7 +1080,7 @@ section:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-9p
 
 <div class="wrap"><footer>
   <div>© 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>Visibilité des marques dans les réponses génératives · E-commerce à distance, commerces de proximité en Alsace
-    <div class="footer-links"><a class="ilink" href="/tarifs/">Tarifs</a><a class="ilink" href="/faq/">Questions fréquentes</a><a class="ilink" href="https://espace.aigeoconseil.com">Espace client</a><a class="ilink" href="/mentions-legales/">Mentions légales</a><a class="ilink" href="/conditions-generales/">Conditions générales</a></div>
+    <div class="footer-links"><a class="ilink" href="/tarifs/">Tarifs</a><a class="ilink" href="/#commerces" onclick="go('commerces');return false;">Commerces et artisans</a><a class="ilink" href="/faq/">Questions fréquentes</a><a class="ilink" href="https://espace.aigeoconseil.com">Espace client</a><a class="ilink" href="/mentions-legales/">Mentions légales</a><a class="ilink" href="/conditions-generales/">Conditions générales</a></div>
   </div>
   <div class="social" id="social-footer"></div>
 </footer></div>
@@ -1136,7 +1137,9 @@ function submitHeroScan(event){
 const PHOTOS_NB = true;
 
 const SOCIALS = [
-  {name:"LinkedIn",  url:"https://www.linkedin.com/company/agence-aigeo/", icon:'<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/>'}
+  {name:"LinkedIn",  url:"https://www.linkedin.com/company/agence-aigeo/", icon:'<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/>'},
+  {name:"Instagram", url:"https://www.instagram.com/aigeo.conseil/", icon:'<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3"/>'},
+  {name:"TikTok",    url:"https://www.tiktok.com/@aigeo.conseil", icon:'<path d="M16.6 3c.4 2.2 1.8 3.7 4 3.9v3.2c-1.5 0-2.8-.4-4-1.2v6.1c0 3.2-2.6 5.8-5.8 5.8S5 18.2 5 15s2.6-5.8 5.8-5.8c.3 0 .6 0 .9.1v3.3c-.3-.1-.6-.2-.9-.2-1.4 0-2.6 1.2-2.6 2.6s1.2 2.6 2.6 2.6 2.6-1.2 2.6-2.6V3h3.2z"/>'},
 ];
 
 /* ---------------------------------------------------------
@@ -1151,7 +1154,7 @@ const TEMOIGNAGES = [];
 
 const PAGES=[
   ['accueil','Accueil'],['offres','Offres'],['methode','Méthode'],
-  ['commerces','Commerces'],['blog','Blog'],['contact','Contact']
+  ['blog','Blog'],['contact','Contact']
 ];
 const ALIAS={local:'commerces',preuve:'methode',recevez:'offres',apropos:'accueil',veille:'offres',audit:'offres'};
 const TOPICS={audit:"Définir mon Audit AIGEO",veille:"Parler de la Veille",expert:"Expert ou Pilote"};
