@@ -127,26 +127,26 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font
 
 <main class="wrap"><div class="hero"><div class="eyebrow">Méthode AIGEO</div><h1>Recherche et entraînement : deux accès à distinguer</h1><div class="meta">Publié le 9 octobre 2026 · AIGEO</div></div><article><figure><img src="cover_access_v3.png" alt="Deux chemins indépendants partent d’un site : recherche et entraînement. Chaque chemin possède son propre contrôle. Schéma de principe, sans état réel de site." width="1600" height="900" loading="eager"></figure><p>Faut-il bloquer les robots IA sur notre site ? Avant de changer un réglage, précisons l’objectif : quel usage voulons-nous autoriser ou limiter ? La formule « bloquer l’IA » ne donne pas une consigne assez claire à l’équipe technique.</p>
 <p>Cette décision concerne l’exploration des pages de votre site. Elle mérite un échange entre la direction, qui exprime une intention, et la personne qui peut vérifier puis modifier les accès. La première question à poser à votre prestataire est simple : pouvons-nous décrire les usages concernés et les règles actuellement en place ?</p>
-<h2>## Deux usages, deux décisions</h2>
+<h2>Deux usages, deux décisions</h2>
 <p>La documentation OpenAI distingue OAI-SearchBot, destiné à la recherche dans ChatGPT, et GPTBot, qui explore des contenus susceptibles de servir à l’entraînement des modèles. Leurs réglages dans robots.txt sont indépendants : une décision pour l’un n’impose pas la même décision pour l’autre.</p>
 <p>Ce périmètre est celui des robots documentés par OpenAI. Il faut consulter les règles des autres fournisseurs avant d’étendre cette distinction. Une autorisation d’accès ne garantit pas qu’une page sera retenue dans une réponse, citée ou recommandée.</p>
-<h2>## Écrire la décision avant le réglage</h2>
+<h2>Écrire la décision avant le réglage</h2>
 <p>Notre méthode AIGEO consiste à préparer une fiche courte : fournisseur, usage, règle actuelle à confirmer, décision souhaitée, responsable et date. Ces champs évitent de confondre trois étapes : ce que l’on veut, ce qui est configuré et ce qui a été vérifié.</p>
 <p>Le fournisseur et l’usage précisent le périmètre. La règle actuelle décrit un état à contrôler. La décision souhaitée exprime l’arbitrage de l’entreprise. Le responsable et la date permettent de retrouver qui doit intervenir et quand la situation a été examinée. Si un champ manque, mieux vaut le laisser inconnu que déduire un état à partir d’une intention.</p>
-<h2>## Une situation fictive pour clarifier</h2>
+<h2>Une situation fictive pour clarifier</h2>
 <p>Imaginons une agence de conseil : cet exemple est fictif. Son dirigeant souhaite limiter l’exploration de ses pages pour l’entraînement, tout en examinant séparément leur accès pour la recherche. L’équipe technique prépare les règles correspondant à cette volonté.</p>
 <p>À ce stade, elle n’annonce ni réglage appliqué ni résultat de visibilité. Elle identifie les robots concernés, documente l’existant et propose le changement à effectuer. Le dirigeant peut alors relire une décision précise, au lieu de valider une consigne générale sur « les IA ».</p>
 <p>On ne sait pas si la marque apparaîtra dans une réponse. Cet exemple illustre une préparation ; il ne raconte pas un test réalisé.</p><figure><img src="explanation_access_v3.png" alt="Distinguer les décisions pour OAI-SearchBot et GPTBot, vérifier leur application, puis observer séparément la visibilité. Méthode AIGEO sans résultat annoncé." width="1600" height="1100" loading="lazy"></figure>
-<h2>## Vérifier ce qui est appliqué</h2>
+<h2>Vérifier ce qui est appliqué</h2>
 <p>Conservez la configuration de départ et une trace de chaque modification. Demandez ensuite à l’équipe technique de contrôler les règles réellement appliquées, ainsi que les restrictions éventuelles de l’hébergement. Cette vérification doit porter sur la situation réelle du site.</p>
 <p>Une fiche de décision prouve un arbitrage. Une configuration sauvegardée décrit un réglage. Un contrôle documenté apporte une observation sur son application. Ces éléments répondent à des questions différentes ; conserver chacun permet de reprendre le dossier sans reconstruire son historique.</p>
 <p>Le présent article ne réalise aucun test ni scan. Le contrôle reste à effectuer par l’équipe concernée ; nous n’en annonçons pas le résultat.</p>
-<h2>## Garder la visibilité dans un relevé séparé</h2>
+<h2>Garder la visibilité dans un relevé séparé</h2>
 <p>Pour suivre la présence de l’entreprise dans des réponses IA, conservez un relevé distinct des changements techniques. Notez la question posée, l’outil consulté, le contexte, la date réelle du relevé et la réponse accessible. Sans observation, ces informations restent inconnues.</p>
 <p>Une autorisation ne confirme ni le passage d’un robot ni une citation. Une différence entre deux réponses ne suffit pas non plus à attribuer un effet au réglage. Gardez les éléments nécessaires à la comparaison, puis indiquez ce qui est effectivement constaté et ce qui reste à vérifier.</p>
 <p>Cette séparation permet à la direction de suivre les décisions et les observations sans annoncer un progrès qui n’a pas encore été établi.</p>
 <p>Demandez un état des accès par usage, daté et vérifié. Pour définir ensuite le périmètre d’un relevé de visibilité IA, retrouvez AIGEO sur <a href="https://aigeoconseil.com/" target="_blank" rel="noopener noreferrer">aigeoconseil.com</a>.</p>
-<h2>## Source</h2>
+<h2>Source</h2>
 <p><a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener noreferrer">OpenAI — Présentation des robots d’exploration</a>, consultée le 8 octobre 2026. La fiche de décision et les contrôles proposés sont une méthode AIGEO.</p><div class="srcs"><h2>Sources consultées</h2><ul><li><a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener noreferrer">OpenAI — Présentation des robots d’exploration</a> · vérifiée le 2026-10-08T10:56:29.075555+00:00</li></ul></div></article>
 
   <footer>
