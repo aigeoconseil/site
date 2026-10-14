@@ -425,6 +425,7 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
 <meta name="twitter:image" content="https://aigeoconseil.com/brand/og/aigeo-og.jpg">
 <link rel="stylesheet" href="/brand/motion.css">
 <script src="/brand/motion.js" defer></script>
+<script src="/reglages-audit.js" defer></script>
 </head>
 <body>
 <header>
@@ -563,8 +564,8 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
         <div class="card">
           <div class="num">2</div>
           <h3>L'Audit AIGEO, puis la Veille</h3>
-          <p class="small">Analyse du site, panel de questions cadré avec vous, réponses et concurrents observés par moteur, sources disponibles, diagnostic étayé et plan d'action. Puis, sur demande, la Veille pour remesurer les mêmes situations.</p>
-          <p class="small mb0"><b>Audit 149 €. Veille dès 89 € par mois, sur demande.</b></p>
+          <p class="small">Analyse du site, panel de questions cadré avec vous, réponses et concurrents observés, sources disponibles, diagnostic étayé et plan d'action. Puis, quand elle ouvrira, la Veille pour remesurer les mêmes situations.</p>
+          <p class="small mb0"><b>Audit 149 €. Veille en préparation.</b></p>
         </div>
         <div class="card">
           <div class="num">3</div>
@@ -702,7 +703,7 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
   <div class="wrap hero short">
     <div class="eyebrow">Offres</div>
     <h1>Un audit, un suivi,<br>et <span class="grad">du fait pour vous.</span></h1>
-    <p class="lead" style="margin-top:24px">Chaque offre a un prix affiché. L'audit se définit avec vous avant tout paiement. La Veille s'ouvre sur demande. Expert et Pilote se valident au devis, avant toute commande.</p>
+    <p class="lead" style="margin-top:24px">Chaque offre a un prix affiché. L'audit se définit avec vous avant tout paiement. La Veille est en préparation. Expert et Pilote se valident au devis, avant toute commande.</p>
     <p class="small" style="margin-top:18px">Avant d'engager quoi que ce soit, le <b>test est gratuit</b> : trois situations adaptées à votre activité, posées à Gemini, résultat en ligne.</p>
     <div class="btns" style="margin-top:24px"><a class="cta" href="/tarifs/">Voir la grille détaillée</a><a class="cta ghost" href="/rendez-vous/">Réserver un échange de 30 minutes</a></div>
   </div>
@@ -716,47 +717,37 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
           <h3>L'Audit AIGEO</h3>
           <div class="price"><b>149 €</b><span class="small">paiement unique</span></div>
           <div class="grow">
-            <p class="small">15 situations définies pour votre activité, chacune mesurée sur 2 IA avec 3 répétitions : jusqu'à 90 réponses analysées, puis un diagnostic et vos actions prioritaires dans votre espace AIGEO.</p>
+            <p class="small">20 questions d'acheteur propres à votre activité, posées à OpenAI (l'éditeur de ChatGPT) avec recherche web, jusqu'à 2 fois chacune, puis un diagnostic et vos actions prioritaires dans votre espace AIGEO. Le nombre de réponses exploitables n'est pas garanti. Gemini est en préparation.</p>
             <ul class="check">
               <li>Votre fiche entreprise confirmée : activité, zone réellement servie, concurrents, variantes de votre nom</li>
-              <li>15 questions d'acheteur construites par situations d'achat, validées puis figées avant la mesure</li>
-              <li>OpenAI et Gemini mesurés chacun à part, jamais additionnés, 3 essais par question</li>
-              <li>Les sources, lorsqu'elles sont présentes dans la mesure</li>
+              <li>20 questions d'acheteur construites par situations d'achat, validées puis figées avant la mesure</li>
+              <li>OpenAI (l'éditeur de ChatGPT), avec recherche web, 2 essais au plus par question ; Gemini en préparation</li>
+              <li>Les sources citées par OpenAI, lorsqu'elles sont présentes dans la mesure</li>
               <li>Un diagnostic et vos actions prioritaires</li>
-              <li>Remise sous 5 jours ouvrés, dans votre espace AIGEO</li>
+              <li>Résultats sous 5 jours ouvrés après le paiement, délai suspendu tant que vos questions ne sont pas confirmées, dans votre espace AIGEO</li>
             </ul>
-            <p class="tiny" style="margin-top:14px">149 € entièrement déduits si vous passez à la Veille, à l'Expert ou au Pilote dans les 30 jours suivant la livraison.</p>
+            <p class="tiny" style="margin-top:14px">149 € déduits de la Veille si vous y souscrivez dans les 30 jours suivant votre Audit, ou dans les 30 jours suivant l'ouverture de la Veille si elle ouvre après. 149 € déduits aussi de l'Expert ou du Pilote si vous les commandez dans les 30 jours suivant votre Audit. Une seule déduction par Audit.</p>
           </div>
-          <div class="btns" style="margin-top:24px"><button class="cta full" type="button" data-topic="audit" onclick="go('contact')">Définir mon audit</button></div>
-          <p class="tiny" style="margin-top:12px">Nous confirmons par écrit le périmètre et la date de remise, puis nous vous envoyons le lien de paiement.</p>
+          <div class="btns" style="margin-top:24px"><button class="cta full" type="button" data-topic="audit" data-audit-cta onclick="go('contact')">Définir mon audit</button></div>
+          <p class="tiny" style="margin-top:12px" data-audit-parcours="ferme">Écrivez-nous : nous ouvrons avec vous votre compte et votre projet dans l'espace client. Aucun paiement n'est demandé avant.</p>
+          <p class="tiny" style="margin-top:12px" data-audit-parcours="ouvert" hidden>Vous créez votre compte et votre projet dans l'espace client, puis vous réglez en ligne, par carte. Aucun paiement n'est demandé avant.</p>
         </div>
 
         <div class="plan">
           <span class="badge soft">Pour suivre</span>
-          <h3>Veille AIGEO, sur demande</h3>
-          <div class="price"><b>dès 89 €</b><span class="small">par mois</span></div>
+          <h3>Veille AIGEO</h3>
+          <div class="price"><b>En préparation</b></div>
           <div class="grow">
-            <p class="small">Une mesure seule vous dit où vous êtes aujourd'hui. La Veille vous permet de savoir ce qui change ensuite.</p>
+            <p class="small">Une mesure seule vous dit où vous êtes aujourd'hui. La Veille vous permettra de savoir ce qui change ensuite.</p>
             <ul class="check">
-              <li>L'audit initial inclus</li>
-              <li>Chaque mois, les mêmes 15 questions reposées mot pour mot sur les mêmes 2 IA, avec 3 essais</li>
+              <li>Chaque mois, les mêmes 20 questions reposées mot pour mot aux mêmes IA que l'Audit, 2 essais au plus par question</li>
               <li>L'évolution IA par IA, jamais en total ; un changement n'est présenté que si deux mesures sont comparables</li>
-              <li>Les actions du mois et des alertes (un concurrent qui apparaît, une IA qui change de version)</li>
               <li>L'historique et les preuves dans votre espace AIGEO</li>
             </ul>
-            <div class="tblwrap" style="margin-top:18px">
-              <table class="tranches">
-                <thead><tr><th>Durée</th><th>Par mois</th><th>Total</th></tr></thead>
-                <tbody>
-                  <tr><td>6 mois</td><td>99 €</td><td>594 €</td></tr>
-                  <tr><td>12 mois</td><td>89 €</td><td>1 068 €</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="tiny" style="margin-top:14px">En une fois ou en mensualités, même total. Arrêt automatique au terme, sans reconduction.</p>
+            <p class="tiny" style="margin-top:14px">149 € déduits de la Veille si vous y souscrivez dans les 30 jours suivant votre Audit, ou dans les 30 jours suivant l'ouverture de la Veille si elle ouvre après.</p>
           </div>
-          <div class="btns" style="margin-top:24px"><button class="cta full ghost" type="button" data-topic="veille" onclick="go('contact')">Nous contacter</button></div>
-          <p class="tiny" style="margin-top:12px">Pour l'instant, la Veille s'ouvre avec nous, sans paiement en ligne.</p>
+          <div class="btns" style="margin-top:24px"><button class="cta full ghost" type="button" data-topic="veille" onclick="go('contact')">Être prévenu de l'ouverture</button></div>
+          <p class="tiny" style="margin-top:12px">La Veille n'est pas encore ouverte à la souscription : ni prix, ni commande pour l'instant.</p>
         </div>
 
       </div>
@@ -816,7 +807,7 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
     <div class="wrap grid g3 start">
       <div>
         <h3>Paiement</h3>
-        <p class="small mb0">L'audit se règle en ligne après confirmation écrite du périmètre, par carte ou prélèvement SEPA, via Stripe. La Veille se règle en une fois ou en mensualités. Expert : acompte de 50 %, solde à la livraison. Pilote : chaque mois. TVA non applicable, article 293 B du code général des impôts : le montant affiché est le montant dû.</p>
+        <p class="small mb0"><span data-audit-parcours="ferme">L'audit se règle par carte, une fois votre compte et votre projet créés, jamais avant.</span><span data-audit-parcours="ouvert" hidden>L'audit se règle en ligne par carte (y compris Apple Pay, Google Pay ou Link), via Stripe, une fois votre compte et votre projet créés.</span> Expert : acompte de 50 %, solde à la livraison. Pilote : chaque mois. TVA non applicable, article 293 B du code général des impôts : le montant affiché est le montant dû.</p>
       </div>
       <div>
         <h3>Ce qui n'est jamais facturé</h3>
@@ -824,7 +815,7 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
       </div>
       <div>
         <h3>Si le constat est bon</h3>
-        <p class="small mb0">Si l'audit montre que vous êtes déjà correctement cité, nous vous le disons et nous ne vous proposons pas de suite. L'audit reste dû, le reste ne l'est pas.</p>
+        <p class="small mb0">Si l'audit montre que vous êtes déjà correctement cité, nous vous le disons et nous ne vous proposons pas de suite. Le prix de l'Audit couvre ce constat, rien de plus ne vous sera facturé.</p>
       </div>
     </div>
     <div class="wrap"><p class="tiny" style="margin-top:18px">Aucune offre ne promet une position, une citation ou une progression dans les réponses des assistants IA. Toutes les conditions : <a class="ilink" href="/tarifs/">tarifs</a> et <a class="ilink" href="/conditions-generales/">conditions générales</a>. Une question ? Voir les <a class="ilink" href="/faq/">questions fréquentes</a>.</p></div>
@@ -946,11 +937,11 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
     <div class="wrap grid g3 start">
       <div>
         <h3>Le prix</h3>
-        <p class="small mb0">L'audit et la Veille ont un prix affiché, voir les <a class="ilink" href="/tarifs/">tarifs</a>. Pour un commerce, un paquet de 5 fiches conseil coûte 750 €, 1 000 € si nous les publions. Le reste se chiffre au cadrage, avant toute commande. TVA non applicable, article 293 B du code général des impôts : le montant annoncé est le montant dû.</p>
+        <p class="small mb0">L'audit a un prix affiché, voir les <a class="ilink" href="/tarifs/">tarifs</a>. Pour un commerce, un paquet de 5 fiches conseil coûte 750 €, 1 000 € si nous les publions. Le reste se chiffre au cadrage, avant toute commande. TVA non applicable, article 293 B du code général des impôts : le montant annoncé est le montant dû.</p>
       </div>
       <div>
         <h3>Sans engagement</h3>
-        <p class="small mb0">L'audit se commande seul, sans abonnement. La Veille se prend pour 6 ou 12 mois et s'arrête d'elle-même au terme, sans reconduction.</p>
+        <p class="small mb0">L'audit se commande seul, sans abonnement. La Veille, en préparation, n'est pas encore proposée.</p>
       </div>
       <div>
         <h3>Si vous sortez déjà</h3>
