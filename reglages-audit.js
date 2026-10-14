@@ -11,7 +11,7 @@
    Après tout changement, régénérer la FAQ (generer-faq.py lit
    cette valeur) pour que son texte et son JSON-LD suivent.
    ========================================================= */
-var AIGEO_AUDIT_ACHAT_OUVERT = false;
+var AIGEO_AUDIT_ACHAT_OUVERT = true;
 var AIGEO_AUDIT_ACHAT_URL = 'https://espace.aigeoconseil.com/offre-audit149';
 
 (function () {
