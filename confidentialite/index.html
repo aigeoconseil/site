@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Politique de confidentialité · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Politique de confidentialité d'AIGEO : données traitées pour le site, le scan gratuit, le contact, l'espace client et l'Audit, durées, fournisseurs d'IA et vos droits.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aigeoconseil.com/confidentialite/">
+<style>
+@font-face{font-family:"Space Grotesk";src:url("/fonts/space-grotesk-var.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url("/fonts/ibm-plex-sans-var.woff2") format("woff2");font-weight:100 700;font-stretch:85% 100%;font-style:normal;font-display:swap}
+:root{
+  --ink:#121216; --paper:#F5F5F7; --muted:#6B6B73; --line:#E4E2DC;
+  --accent:#6C10BF; --accent2:#D20DAD; --surface:#FFFFFF;
+  --g1:#6C10BF; --g2:#990DD2; --g3:#D20DAD;
+  --font-title:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font-body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#C77DFF; --accent2:#E44FC6; --surface:#1A1A21;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+h1,h2,h3,h4,.price b,.stat b{font-family:var(--font-title)}
+[data-theme="dark"] .grad{background-image:linear-gradient(90deg,#B57CF2,#C77DFF,#E44FC6)}
+
+a{color:inherit}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:46px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:34px 0 8px;scroll-margin-top:92px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block}
+.bar>a:first-child{margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.meta{font-size:14px;color:var(--muted);margin-top:22px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+article{padding-bottom:20px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin-bottom:10px}
+figure{margin:38px 0}
+figure img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+.faq{border-top:1px solid var(--line);margin-top:14px;padding-top:6px}
+.faq .q{font-weight:640;margin:26px 0 6px}
+.end{margin:52px 0 20px;padding:30px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.end h3{margin:0 0 10px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.srcs{margin-top:48px;padding-top:26px;border-top:1px solid var(--line)}
+.srcs ol{padding-left:20px;margin:0}
+.srcs li{margin-bottom:12px;font-size:14px;color:var(--muted)}
+.srcs a{color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:840px){
+  .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
+  .logo{height:22px}
+  nav{width:100%;order:3;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
+  .themebtn{margin-left:0}
+}
+@media(max-width:640px){ .hero{padding:40px 0 4px} .end{padding:22px} }
+@media(max-width:520px){nav a{padding:6px 5px;font-size:13px}}
+</style><style>
+.wrap{max-width:720px}
+.legal h2{font-size:clamp(20px,2.4vw,25px);margin:44px 0 14px}
+.legal h3{margin:26px 0 6px}
+.legal p{font-size:16px}
+dl.idcard{margin:0;padding:22px 24px;border:1px solid var(--line);border-radius:14px;background:var(--surface);display:grid;grid-template-columns:minmax(150px,34%) 1fr;gap:10px 20px;font-size:15.5px}
+dl.idcard dt{color:var(--muted);font-size:13.5px;letter-spacing:.01em;padding-top:2px}
+dl.idcard dd{margin:0}
+.todo{color:var(--accent2);font-weight:600}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+@media(max-width:600px){dl.idcard{grid-template-columns:1fr;gap:2px 0}dl.idcard dd{margin-bottom:12px}}
+</style>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIGEO">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Politique de confidentialité · AIGEO">
+<meta property="og:description" content="Politique de confidentialité d'AIGEO : données traitées pour le site, le scan gratuit, le contact, l'espace client et l'Audit, durées, fournisseurs d'IA et vos droits.">
+<meta property="og:url" content="https://aigeoconseil.com/confidentialite/">
+<meta property="og:image" content="https://aigeoconseil.com/brand/og/aigeo-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AIGEO : votre marque est-elle citée par les IA ?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aigeoconseil.com/brand/og/aigeo-og.jpg">
+<link rel="stylesheet" href="/brand/motion.css">
+<script src="/brand/motion.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/brand/aigeo-logo-noir.svg"></a>
+    <nav>
+      <a href="/#accueil">Accueil</a>
+      <a href="/#offres">Offres</a>
+      <a href="/#methode">Méthode</a>
+      <a href="/#blog">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://espace.aigeoconseil.com">Espace client</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Informations légales</div>
+    <h1>Politique de <span class="grad">confidentialité.</span></h1>
+    <div class="meta">Site aigeoconseil.com, scan gratuit et espace client · Dernière mise à jour le 14 octobre 2026</div>
+  </div>
+
+  <article class="legal">
+    <p class="chapo">Cette page explique quelles données personnelles AIGEO traite quand vous visitez aigeoconseil.com, lancez le scan gratuit, nous écrivez, réservez un rendez-vous, créez un compte ou commandez un Audit : pourquoi, sur quelle base, combien de temps, avec qui, et comment exercer vos droits.</p>
+
+    <h2 id="responsable">1. Qui est responsable</h2>
+    <dl class="idcard">
+      <dt>Responsable du traitement</dt><dd>Georges Hartmann, entrepreneur individuel, nom commercial Georges ADS, marque AIGEO</dd>
+      <dt>SIREN</dt><dd>103 768 628</dd>
+      <dt>Adresse</dt><dd>17 rue du Canonnier Corre, 67310 Wasselonne, France</dd>
+      <dt>Contact</dt><dd><a href="mailto:contact@aigeoconseil.com">contact@aigeoconseil.com</a></dd>
+    </dl>
+    <p>AIGEO est une marque, pas une société distincte. Seuls Georges Hartmann et Romain Boos ont accès aux données ; chaque consultation de votre espace client par AIGEO est journalisée.</p>
+    <p>Lorsque vous enregistrez dans votre espace client des informations concernant d'autres personnes (vos collaborateurs invités, par exemple), AIGEO agit pour le compte de votre entreprise, dans les conditions de l'<a href="/conditions-generales/espace/#accord-de-traitement">accord de traitement des données</a> annexé aux conditions d'utilisation de l'espace client.</p>
+
+    <h2 id="traitements">2. Ce que nous traitons, et combien de temps</h2>
+
+    <h3 id="visite">Visite du site</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>Données techniques de connexion (adresse IP, page demandée, date, navigateur), reçues par l'hébergeur du site, Vercel. Le site est un ensemble de pages statiques : il ne dépose aucun cookie publicitaire ni de mesure d'audience, et n'utilise aucun outil d'analyse comportementale.</dd>
+      <dt>Finalité</dt><dd>Servir les pages et protéger le site</dd>
+      <dt>Base légale</dt><dd>Intérêt légitime à fournir un site sûr, article 6.1.f du RGPD</dd>
+      <dt>Durée</dt><dd>Selon la politique de Vercel pour ses journaux techniques ; AIGEO n'exploite pas ces données</dd>
+    </dl>
+
+    <h3 id="scan">Scan gratuit</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>L'adresse du site analysé, le contenu public extrait de ce site, le profil commercial compris ou corrigé, une précision éventuelle (activité, offre, zone), une question personnalisée facultative, les questions posées, les réponses obtenues, les entreprises et sources citées. Aucun nom ni email ne vous est demandé. Votre adresse IP n'est pas conservée en clair : seule une empreinte irréversible sert à limiter les abus et à appliquer les quotas.</dd>
+      <dt>Finalité</dt><dd>Produire l'aperçu demandé, éviter les abus</dd>
+      <dt>Base légale</dt><dd>Intérêt légitime à répondre à votre demande et à protéger le service, article 6.1.f du RGPD</dd>
+      <dt>Durée</dt><dd>Scan abouti : 30 jours. Scan en échec : 7 jours. Cache technique évitant les traitements identiques répétés : 24 heures. Empreinte de limitation des abus : effacée après 8 jours sans activité. Suppression automatique ensuite.</dd>
+    </dl>
+    <p>Les pages de résultats ne sont pas indexées par les moteurs de recherche. Le scan interroge Google Gemini : voir la section 3.</p>
+
+    <h3 id="contact">Message par le formulaire ou par email</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>Les informations que vous choisissez de nous communiquer, généralement votre nom, votre adresse email, le nom de votre marque, votre secteur et votre message. Le formulaire transmet votre message à contact@aigeoconseil.com par une fonction du site exécutée chez Vercel et par le service d'envoi Brevo ; le site n'en garde aucune copie. Pour limiter les envois abusifs, la fonction garde votre adresse IP en mémoire une heure au plus, sans l'enregistrer.</dd>
+      <dt>Finalité</dt><dd>Vous répondre et préparer une éventuelle prestation</dd>
+      <dt>Base légale</dt><dd>Mesures précontractuelles prises à votre demande, article 6.1.b du RGPD ; intérêt légitime à répondre à vos demandes, article 6.1.f</dd>
+      <dt>Durée</dt><dd>Le temps de l'échange ; en cas de relation commerciale, pendant cette relation, puis pendant les durées légales applicables aux documents comptables</dd>
+    </dl>
+
+    <h3 id="rendez-vous">Prise de rendez-vous</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>Celles que demande le formulaire de réservation de Calendly : votre nom, votre adresse email, le créneau choisi et, le cas échéant, l'adresse de votre site, la zone que vous servez et la question que vos clients vous posent le plus souvent. Ce site n'intègre aucun module Calendly : il affiche un simple lien.</dd>
+      <dt>Finalité</dt><dd>Organiser le rendez-vous, le préparer et vous répondre</dd>
+      <dt>Base légale</dt><dd>Mesures précontractuelles prises à votre demande, article 6.1.b du RGPD</dd>
+      <dt>Durée</dt><dd>12 mois</dd>
+    </dl>
+    <p>Les cookies et données de navigation que Calendly collecte sur son propre site relèvent de sa politique de confidentialité. Vous pouvez aussi convenir d'un rendez-vous en écrivant à contact@aigeoconseil.com.</p>
+
+    <h3 id="compte">Compte et projet dans l'espace client</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>Nom, adresse email professionnelle et rôle de chaque utilisateur ; informations sur l'entreprise étudiée (site, offre, clientèle, marché servi, objectif) ; questions du panel que vous confirmez</dd>
+      <dt>Finalité</dt><dd>Préparer l'Audit et ouvrir l'espace client</dd>
+      <dt>Base légale</dt><dd>Mesures précontractuelles et exécution du contrat, article 6.1.b du RGPD</dd>
+      <dt>Durée</dt><dd>Compte et projet créés sans commande : 30 jours après la création, puis suppression automatique ; un email de rappel est envoyé 7 jours avant. Après une commande : voir « Espace client ».</dd>
+    </dl>
+
+    <h3 id="paiement">Commande et paiement</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>Raison sociale, adresse de facturation, adresse email, le cas échéant numéro de TVA, montant, état du paiement et historique de commande. Les données de carte sont saisies chez Stripe : AIGEO n'a accès ni au numéro complet de carte ni aux coordonnées bancaires complètes.</dd>
+      <dt>Finalité</dt><dd>Encaisser, facturer, rembourser</dd>
+      <dt>Base légale</dt><dd>Exécution du contrat, article 6.1.b du RGPD ; obligations comptables, article 6.1.c</dd>
+      <dt>Durée</dt><dd>Documents de facturation : 10 ans (article L123-22 du code de commerce)</dd>
+    </dl>
+    <p>Stripe traite les données de paiement en qualité de responsable de traitement distinct ; sa propre politique de confidentialité s'applique.</p>
+
+    <h3 id="espace-client">Espace client</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>Comptes des utilisateurs, traces de connexion (date, navigateur), livrables, décisions, actions, commentaires, journal des décisions, emails de service (lien de connexion, invitation, avis de résultats, rappel avant suppression)</dd>
+      <dt>Finalité</dt><dd>Restituer l'Audit, sécuriser l'espace, prouver les décisions prises</dd>
+      <dt>Base légale</dt><dd>Exécution du contrat, article 6.1.b du RGPD ; intérêt légitime à sécuriser l'espace et à conserver la preuve des décisions, article 6.1.f</dd>
+      <dt>Durée</dt><dd>Contenus de l'espace : durée des prestations, puis trois mois pour l'export, puis suppression. Comptes : jusqu'au retrait de l'accès ou la fin des prestations, puis trois mois. Traces de connexion : douze mois. File des emails de service : trois mois après l'envoi. Journal des décisions, pseudonymisé et sans texte libre : cinq ans après la fin des prestations, à titre de preuve (article L110-4 du code de commerce).</dd>
+    </dl>
+    <p>Le serveur de l'espace client et du scan gratuit ne tient pas de journal des visites : aucune adresse IP de visiteur n'y est enregistrée en clair. Les sauvegardes sont des copies chiffrées, effacées automatiquement après environ 40 jours.</p>
+
+    <h3 id="preference">Préférence d'affichage</h3>
+    <p>La seule information enregistrée dans votre navigateur par ce site est votre préférence de thème, clair ou sombre. Elle ne quitte jamais votre navigateur, relève des préférences strictement nécessaires au service et ne demande pas de consentement. Vous pouvez la supprimer en effaçant les données de site de votre navigateur.</p>
+
+    <p>Nous ne vendons aucune donnée et ne prenons aucune décision automatisée produisant des effets juridiques à votre égard.</p>
+
+    <h2 id="ia">3. Ce qui part chez les fournisseurs d'IA</h2>
+    <p>Nous n'envoyons aux fournisseurs d'IA ni votre nom, ni votre adresse email, ni aucune autre donnée de votre compte. Ils reçoivent des questions et des informations sur l'entreprise étudiée, qui peuvent contenir son nom. Les questions que vous confirmez ne doivent pas contenir de données personnelles.</p>
+    <dl class="idcard">
+      <dt>Audit AIGEO</dt><dd>Les questions de votre panel, telles que vous les avez confirmées, sont posées à OpenAI avec recherche web, sous l'avenant de traitement conclu avec OpenAI Ireland Ltd. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Gemini n'est pas interrogé dans l'Audit.</dd>
+      <dt>Scan gratuit</dt><dd>Les informations du scan (site analysé, profil, questions) sont envoyées à Google Gemini avec recherche Google, sur l'offre payante de l'API, la seule permise en Europe. Google n'utilise pas ces requêtes pour améliorer ses produits et les journalise pour une durée limitée afin de détecter les abus. Pour la recherche Google, il conserve les requêtes, les informations fournies et les réponses pendant 30 jours, pour produire les résultats et pour le débogage de ce service.</dd>
+      <dt>Transferts</dt><dd>Ces fournisseurs peuvent traiter les données hors de l'Union européenne. Les transferts sont encadrés par les clauses contractuelles types de la Commission européenne ou par le cadre de protection des données UE-États-Unis.</dd>
+    </dl>
+
+    <h2 id="destinataires">4. Qui reçoit vos données</h2>
+    <dl class="idcard">
+      <dt>OVHcloud</dt><dd>Serveur et base de données de l'espace client et du scan (France, Gravelines) ; copie chiffrée des sauvegardes (France, Strasbourg)</dd>
+      <dt>Vercel</dt><dd>Hébergement du site aigeoconseil.com et de son formulaire de contact (États-Unis et réseau mondial ; certifié au cadre de protection des données UE-États-Unis)</dd>
+      <dt>Brevo (Sendinblue SAS)</dt><dd>Envoi des emails de service et des messages du formulaire (France)</dd>
+      <dt>Google Workspace</dt><dd>Messagerie de contact@aigeoconseil.com (Union européenne ; accès possible depuis les États-Unis, encadré par le cadre de protection des données UE-États-Unis ou les clauses contractuelles types)</dd>
+      <dt>Calendly LLC</dt><dd>Prise de rendez-vous (États-Unis ; auto-certifié au cadre de protection des données UE-États-Unis, à défaut clauses contractuelles types)</dd>
+      <dt>Stripe</dt><dd>Paiement, en qualité de responsable de traitement distinct</dd>
+      <dt>OpenAI, Google</dt><dd>Voir la section 3</dd>
+    </dl>
+
+    <h2 id="securite">5. Sécurité</h2>
+    <p>Connexion à l'espace client sans mot de passe, par lien personnel à usage unique valable quinze minutes ; sessions de douze heures ; cloisonnement strict entre clients ; échanges chiffrés (HTTPS) ; sauvegardes chiffrées hors du serveur principal ; journal des décisions qui rend détectable toute modification. Le détail figure à l'annexe 2 de l'<a href="/conditions-generales/espace/#accord-de-traitement">accord de traitement des données</a>.</p>
+
+    <h2 id="droits">6. Vos droits</h2>
+    <p>Vous pouvez demander l'accès à vos données, leur rectification, leur effacement, la limitation de leur traitement ou leur portabilité, et vous opposer à un traitement fondé sur notre intérêt légitime. Écrivez à <a href="mailto:contact@aigeoconseil.com">contact@aigeoconseil.com</a> ; nous répondons dans un délai d'un mois au plus. Vous pouvez aussi exporter vous-même vos décisions et votre suivi depuis l'espace client.</p>
+    <p>Pour les données que votre entreprise a enregistrées dans l'espace client, adressez-vous en priorité à l'entreprise qui vous a invité ; AIGEO lui transmet toute demande reçue directement.</p>
+    <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>).</p>
+
+    <h2 id="modifications">7. Modifications</h2>
+    <p>Nous mettons cette page à jour si nos traitements changent, avec sa date en tête. Un changement de sous-traitant pour l'espace client est annoncé 30 jours à l'avance aux clients concernés.</p>
+  </article>
+
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/">Retour à l'accueil</a> · <a href="/conditions-generales/">Conditions générales</a> · <a href="/mentions-legales/">Mentions légales</a>
+  <div class="small" style="margin-top:8px"><a href="/#blog">Blog</a> · <a href="/#commerces">Commerces</a> · <a href="https://espace.aigeoconseil.com">Espace client</a> · <a href="https://www.instagram.com/aigeo.conseil/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aigeo.conseil" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.linkedin.com/company/agence-aigeo/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+</main>
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/brand/aigeo-logo-blanc.svg':'/brand/aigeo-logo-noir.svg';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+</body>
+</html>
