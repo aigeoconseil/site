@@ -172,9 +172,9 @@ dl.idcard dd{margin:0}
       <dt>Données</dt><dd>L'adresse du site analysé, le contenu public extrait de ce site, le profil commercial compris ou corrigé, une précision éventuelle (activité, offre, zone), une question personnalisée facultative, les questions posées, les réponses obtenues, les entreprises et sources citées. Aucun nom ni email ne vous est demandé. Votre adresse IP n'est pas conservée en clair : seule une empreinte irréversible sert à limiter les abus et à appliquer les quotas.</dd>
       <dt>Finalité</dt><dd>Produire l'aperçu demandé, éviter les abus</dd>
       <dt>Base légale</dt><dd>Intérêt légitime à répondre à votre demande et à protéger le service, article 6.1.f du RGPD</dd>
-      <dt>Durée</dt><dd>Scan abouti : 30 jours. Scan en échec : 7 jours. Cache technique évitant les traitements identiques répétés : 24 heures. Empreinte de limitation des abus : effacée après 8 jours sans activité. Suppression automatique ensuite.</dd>
+      <dt>Durée</dt><dd>Scan abouti : 30 jours. Scan en échec : 7 jours. Réponses brutes obtenues auprès d'OpenAI, enregistrées sur notre serveur : 30 jours. Cache technique évitant les traitements identiques répétés : 24 heures. Empreinte de limitation des abus : effacée après 8 jours sans activité. Suppression automatique ensuite.</dd>
     </dl>
-    <p>Les pages de résultats ne sont pas indexées par les moteurs de recherche. Le scan interroge Google Gemini : voir la section 3.</p>
+    <p>Les pages de résultats ne sont pas indexées par les moteurs de recherche. Le scan interroge OpenAI : voir la section 3.</p>
 
     <h3 id="contact">Message par le formulaire ou par email</h3>
     <dl class="idcard">
@@ -228,7 +228,7 @@ dl.idcard dd{margin:0}
     <p>Nous n'envoyons aux fournisseurs d'IA ni votre nom, ni votre adresse email, ni aucune autre donnée de votre compte. Ils reçoivent des questions et des informations sur l'entreprise étudiée, qui peuvent contenir son nom. Les questions que vous confirmez ne doivent pas contenir de données personnelles.</p>
     <dl class="idcard">
       <dt>Audit AIGEO</dt><dd>Les questions de votre panel, telles que vous les avez confirmées, sont posées à OpenAI avec recherche web, sous l'avenant de traitement conclu avec OpenAI Ireland Ltd. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Gemini n'est pas interrogé dans l'Audit.</dd>
-      <dt>Scan gratuit</dt><dd>Les informations du scan (site analysé, profil, questions) sont envoyées à Google Gemini avec recherche Google, sur l'offre payante de l'API, la seule permise en Europe. Google n'utilise pas ces requêtes pour améliorer ses produits et les journalise pour une durée limitée afin de détecter les abus. Pour la recherche Google, il conserve les requêtes, les informations fournies et les réponses pendant 30 jours, pour produire les résultats et pour le débogage de ce service.</dd>
+      <dt>Scan gratuit</dt><dd>Les informations du scan (site analysé, profil, questions) sont envoyées à OpenAI (l'éditeur de ChatGPT), avec recherche web, sous le même avenant de traitement que l'Audit. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Les réponses obtenues sont enregistrées sur notre serveur et conservées 30 jours.</dd>
       <dt>Transferts</dt><dd>Ces fournisseurs peuvent traiter les données hors de l'Union européenne. Les transferts sont encadrés par les clauses contractuelles types de la Commission européenne ou par le cadre de protection des données UE-États-Unis.</dd>
     </dl>
 
@@ -240,7 +240,7 @@ dl.idcard dd{margin:0}
       <dt>Google Workspace</dt><dd>Messagerie de contact@aigeoconseil.com (Union européenne ; accès possible depuis les États-Unis, encadré par le cadre de protection des données UE-États-Unis ou les clauses contractuelles types)</dd>
       <dt>Calendly LLC</dt><dd>Prise de rendez-vous (États-Unis ; auto-certifié au cadre de protection des données UE-États-Unis, à défaut clauses contractuelles types)</dd>
       <dt>Stripe</dt><dd>Paiement, en qualité de responsable de traitement distinct</dd>
-      <dt>OpenAI, Google</dt><dd>Voir la section 3</dd>
+      <dt>OpenAI (OpenAI Ireland Ltd)</dt><dd>Voir la section 3</dd>
     </dl>
 
     <h2 id="securite">5. Sécurité</h2>
