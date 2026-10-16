@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Partez des questions de vos clients, pas de votre nom · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Une présentation de marque et une recherche de prestataire répondent à deux besoins différents. Apprenez à partir d’une vraie question de client.">
+<link rel="canonical" href="https://aigeoconseil.com/blog/client-cherche-solution-avant-votre-nom/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Votre client cherche une solution avant de chercher votre nom">
+<meta property="og:description" content="Une présentation de marque et une recherche de prestataire répondent à deux besoins différents. Apprenez à partir d’une vraie question de client.">
+<meta property="og:url" content="https://aigeoconseil.com/blog/client-cherche-solution-avant-votre-nom/">
+<meta property="og:site_name" content="AIGEO">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:"Space Grotesk";src:url("/fonts/space-grotesk-var.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url("/fonts/ibm-plex-sans-var.woff2") format("woff2");font-weight:100 700;font-stretch:85% 100%;font-style:normal;font-display:swap}
+:root{
+  --ink:#121216; --paper:#F5F5F7; --muted:#6B6B73; --line:#E4E2DC;
+  --accent:#6C10BF; --accent2:#D20DAD; --surface:#FFFFFF;
+  --g1:#6C10BF; --g2:#990DD2; --g3:#D20DAD;
+  --font-title:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font-body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#C77DFF; --accent2:#E44FC6; --surface:#1A1A21;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+h1,h2,h3,h4,.price b,.stat b{font-family:var(--font-title)}
+[data-theme="dark"] .grad{background-image:linear-gradient(90deg,#B57CF2,#C77DFF,#E44FC6)}
+
+a{color:inherit}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:46px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:34px 0 8px;scroll-margin-top:92px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block}
+.bar>a:first-child{margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.meta{font-size:14px;color:var(--muted);margin-top:22px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+article{padding-bottom:20px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin-bottom:10px}
+figure{margin:38px 0}
+figure img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+.faq{border-top:1px solid var(--line);margin-top:14px;padding-top:6px}
+.faq .q{font-weight:640;margin:26px 0 6px}
+.end{margin:52px 0 20px;padding:30px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.end h3{margin:0 0 10px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.srcs{margin-top:48px;padding-top:26px;border-top:1px solid var(--line)}
+.srcs ol{padding-left:20px;margin:0}
+.srcs li{margin-bottom:12px;font-size:14px;color:var(--muted)}
+.srcs a{color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:840px){
+  .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
+  .logo{height:22px}
+  nav{width:100%;order:3;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
+  .themebtn{margin-left:0}
+}
+@media(max-width:640px){ .hero{padding:40px 0 4px} .end{padding:22px} }
+@media(max-width:520px){nav a{padding:6px 5px;font-size:13px}}
+</style>
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AIGEO : votre marque est-elle citée par les IA ?">
+<meta name="twitter:image" content="https://aigeoconseil.com/blog/client-cherche-solution-avant-votre-nom/cover.png">
+<link rel="stylesheet" href="/brand/motion.css">
+<script src="/brand/motion.js" defer></script>
+<meta property="og:image" content="https://aigeoconseil.com/blog/client-cherche-solution-avant-votre-nom/cover.png"><meta name="aigeo-content-id" content="AGC-9d320fd5-a800-54e5-abae-3ede15043fec"><meta name="aigeo-content-digest" content="4c5fe68e87fe781ed779ebd685600012df4cfb5c107ae6136ba658915d3a5e63"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Votre client cherche une solution avant de chercher votre nom","description":"Une présentation de marque et une recherche de prestataire répondent à deux besoins différents. Apprenez à partir d’une vraie question de client.","image":"https://aigeoconseil.com/blog/client-cherche-solution-avant-votre-nom/cover.png","datePublished":"2026-10-16T07:01:42.954Z","dateModified":"2026-10-16T07:01:42.954Z","author":{"@type":"Organization","name":"AIGEO","url":"https://aigeoconseil.com/"},"publisher":{"@type":"Organization","name":"AIGEO","url":"https://aigeoconseil.com/"},"mainEntityOfPage":"https://aigeoconseil.com/blog/client-cherche-solution-avant-votre-nom/"}</script><style>article figure{margin:30px 0}article figure img{width:100%;height:auto;border-radius:12px}article p+p{margin-top:1.1em}</style></head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/brand/aigeo-logo-noir.svg"></a>
+    <nav>
+      <a href="/#accueil">Accueil</a>
+      <a href="/#offres">Offres</a>
+      <a href="/#methode">Méthode</a>
+      <a href="/#blog">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://espace.aigeoconseil.com">Espace client</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap"><div class="hero"><div class="eyebrow">Méthode AIGEO</div><h1>Votre client cherche une solution avant de chercher votre nom</h1><div class="meta">Publié le 16 octobre 2026 · AIGEO</div></div><article><figure><img src="cover.png" alt="Il cherche une solution. Pas forcément votre nom. Couverture AIGEO accompagnée d’une illustration fictive du sujet." width="1800" height="1000" loading="eager"></figure><h2>Le besoin vient avant la marque</h2>
+<p>Vous connaissez votre entreprise, vos services et votre vocabulaire. Votre futur client, lui, commence souvent par un problème à résoudre. Il veut ouvrir une boutique en ligne, rénover une salle de bains ou trouver un accompagnement adapté. Il peut chercher une entreprise sans connaître la vôtre. Pour préparer vos contenus, ce décalage est utile à garder en tête. Une publication qui décrit seulement votre activité ne répond pas toujours à la question qui occupe le client. Il faut aussi montrer à quel besoin cette activité répond.</p>
+<h2>Deux demandes différentes</h2>
+<p>Prenons deux exemples fictifs. « Présente l’entreprise X » donne déjà le nom à l’outil. « Quel prestataire peut créer une boutique en ligne pour mon commerce ? » décrit un besoin sans nommer de marque. Les deux demandes peuvent être utiles, mais elles ne prouvent pas la même chose. Une bonne présentation après avoir fourni votre nom ne signifie pas que votre entreprise serait proposée dans une recherche de prestataire. Chez AIGEO, nous gardons cette distinction lorsque nous examinons les réponses et préparons les prochaines actions.</p>
+<h2>Retrouver les mots de vos clients</h2>
+<p>Commencez par les questions que vous entendez réellement dans vos échanges. Qu’est-ce qui est compris dans le prix ? Travaillez-vous dans ma ville ? Pouvez-vous accompagner une entreprise de notre taille ? Ne transformez pas immédiatement ces phrases en slogans. Elles indiquent ce que les personnes cherchent à comprendre. Vous pouvez les conserver dans une courte liste, avec le service concerné. Si une question est inventée pour un exercice, indiquez-le. Nous ne présentons pas un exemple imaginé comme un témoignage ou une demande reçue.</p><figure><img src="explanation.png" alt="AIGEO · QUESTIONS CLIENTS · Il cherche une solution. · Pas forcément votre nom. · question.example · illustration · Présente l’entreprise X. · Le nom est déjà donné. · question.example · illustration · Qui peut créer ma boutique en ligne · Le client cherche un prestataire. · aigeoconseil.com · Exemple fictif · Aucune recommandation garantie. Illustration pédagogique réutilisée, même fichier et même empreinte." width="1080" height="1350" loading="lazy"></figure>
+<h2>Faire le lien avec une page</h2>
+<p>Pour chaque question, retrouvez la page qui devrait y répondre. La personne peut-elle comprendre le service, le public concerné et les conditions importantes ? L’information est-elle visible dans le texte, ou seulement suggérée par une image ? Google recommande de rendre les informations importantes disponibles en texte pour ses fonctionnalités de recherche avec IA. La vérification reste aussi utile pour un lecteur humain. Nous conseillons de commencer par une page liée à une question précise, plutôt que de modifier tout le site en même temps.</p>
+<h2>Écrire un contenu plus simple</h2>
+<p>Un bon post peut suivre une progression très courte : le problème du client, un exemple et une action. Par exemple, un artisan pourrait expliquer ce qui distingue une rénovation classique d’un projet avec des besoins d’accessibilité, si cela correspond réellement à son offre. Il préciserait ce qu’il peut faire et ce qui doit être confirmé. Cette structure aide à comprendre le service sans connaître le jargon de l’entreprise. Elle ne demande pas de multiplier les promesses. Elle demande surtout de répondre clairement à la question posée.</p>
+<h2>Une première étape cette semaine</h2>
+<p>Choisissez une question réelle, puis relisez la page qui doit y répondre. Si une information manque, faites-la confirmer avant de l’ajouter. Si elle existe mais reste difficile à trouver, rendez-la plus visible et plus compréhensible. Chez AIGEO, nous utilisons cette démarche pour partir d’un besoin concret. Une correction de page ne suffit pas à garantir une recommandation dans une IA. Elle constitue cependant un travail vérifiable. Pour un premier aperçu sur Gemini, le test gratuit AIGEO est accessible sur https://app.aigeoconseil.com/scan à partir de l’adresse de votre site.</p><div class="srcs"><h2>Sources consultées</h2><ul><li><a href="https://help.openai.com/en/articles/9237897-searching-the-web-with-chatgpt" target="_blank" rel="noopener noreferrer">OpenAI — Searching the web with ChatGPT</a> · vérifiée le 2026-10-10T21:18:23.401073+00:00</li><li><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google Search Central — AI features and your website</a> · vérifiée le 2026-10-10T21:18:23.401073+00:00</li></ul></div></article>
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/#blog">Retour au blog</a> · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a>
+  <div class="small" style="margin-top:8px"><a href="/#blog">Blog</a> · <a href="/#commerces">Commerces</a> · <a href="https://espace.aigeoconseil.com">Espace client</a> · <a href="https://www.instagram.com/aigeo.conseil/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aigeo.conseil" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.linkedin.com/company/agence-aigeo/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+</main>
+
+
+
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/brand/aigeo-logo-blanc.svg':'/brand/aigeo-logo-noir.svg';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+</body>
+</html>
