@@ -141,11 +141,11 @@ dl.idcard dd{margin:0}
   <div class="hero">
     <div class="eyebrow">Informations légales</div>
     <h1>Politique de <span class="grad">confidentialité.</span></h1>
-    <div class="meta">Site aigeoconseil.com, scan gratuit et espace client · Dernière mise à jour le 14 octobre 2026</div>
+    <div class="meta">Site aigeoconseil.com, scan gratuit, espace client et Veille · Dernière mise à jour le 23 octobre 2026</div>
   </div>
 
   <article class="legal">
-    <p class="chapo">Cette page explique quelles données personnelles AIGEO traite quand vous visitez aigeoconseil.com, lancez le scan gratuit, nous écrivez, réservez un rendez-vous, créez un compte ou commandez un Audit : pourquoi, sur quelle base, combien de temps, avec qui, et comment exercer vos droits.</p>
+    <p class="chapo">Cette page explique quelles données personnelles AIGEO traite quand vous visitez aigeoconseil.com, lancez le scan gratuit, nous écrivez, réservez un rendez-vous, créez un compte, commandez un Audit ou souscrivez la Veille : pourquoi, sur quelle base, combien de temps, avec qui, et comment exercer vos droits.</p>
 
     <h2 id="responsable">1. Qui est responsable</h2>
     <dl class="idcard">
@@ -203,12 +203,20 @@ dl.idcard dd{margin:0}
 
     <h3 id="paiement">Commande et paiement</h3>
     <dl class="idcard">
-      <dt>Données</dt><dd>Raison sociale, adresse de facturation, adresse email, le cas échéant numéro de TVA, montant, état du paiement et historique de commande. Les données de carte sont saisies chez Stripe : AIGEO n'a accès ni au numéro complet de carte ni aux coordonnées bancaires complètes.</dd>
+      <dt>Données</dt><dd>Raison sociale, adresse de facturation, adresse email, le cas échéant numéro de TVA, montant, état du paiement et historique de commande ; pour la Veille, l'abonnement choisi et l'état de chaque mensualité. Les données de carte sont saisies chez Stripe : AIGEO n'a accès ni au numéro complet de carte ni aux coordonnées bancaires complètes.</dd>
       <dt>Finalité</dt><dd>Encaisser, facturer, rembourser</dd>
       <dt>Base légale</dt><dd>Exécution du contrat, article 6.1.b du RGPD ; obligations comptables, article 6.1.c</dd>
       <dt>Durée</dt><dd>Documents de facturation : 10 ans (article L123-22 du code de commerce)</dd>
     </dl>
     <p>Stripe traite les données de paiement en qualité de responsable de traitement distinct ; sa propre politique de confidentialité s'applique.</p>
+
+    <h3 id="veille">Veille</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>Votre profil d'entreprise validé, les questions figées de votre plan de mesure, le lieu de mesure (une ville), les réponses obtenues chaque mois, les sources et entreprises citées, et la comparaison d'un mois sur l'autre. Les questions portent sur votre activité et peuvent contenir le nom de votre entreprise ; elles ne contiennent ni votre nom ni votre adresse email.</dd>
+      <dt>Finalité</dt><dd>Mesurer chaque mois les mêmes questions et vous présenter leur évolution dans l'espace client</dd>
+      <dt>Base légale</dt><dd>Exécution du contrat, article 6.1.b du RGPD</dd>
+      <dt>Durée</dt><dd>Pendant l'abonnement, puis trois mois après la fin de toutes vos prestations, puis suppression (article 4 quater des conditions générales de vente et article 11 des conditions d'utilisation de l'espace client). Le journal des décisions, pseudonymisé et sans texte libre, suit la durée indiquée pour l'espace client.</dd>
+    </dl>
 
     <h3 id="espace-client">Espace client</h3>
     <dl class="idcard">
@@ -228,6 +236,7 @@ dl.idcard dd{margin:0}
     <p>Nous n'envoyons aux fournisseurs d'IA ni votre nom, ni votre adresse email, ni aucune autre donnée de votre compte. Ils reçoivent des questions et des informations sur l'entreprise étudiée, qui peuvent contenir son nom. Les questions que vous confirmez ne doivent pas contenir de données personnelles.</p>
     <dl class="idcard">
       <dt>Audit AIGEO</dt><dd>Les questions de votre panel, telles que vous les avez confirmées, sont posées à OpenAI avec recherche web, sous l'avenant de traitement conclu avec OpenAI Ireland Ltd. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Gemini n'est pas interrogé dans l'Audit.</dd>
+      <dt>Veille AIGEO</dt><dd>Chaque mois, les questions figées de votre plan sont posées mot pour mot à OpenAI (l'éditeur de ChatGPT), avec recherche web, avec un lieu approximatif (une ville) pour que les réponses restent comparables, sous le même avenant de traitement que l'Audit. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Gemini n'est pas interrogé dans la Veille.</dd>
       <dt>Scan gratuit</dt><dd>Les informations du scan (site analysé, profil, questions) sont envoyées à OpenAI (l'éditeur de ChatGPT), avec recherche web, sous le même avenant de traitement que l'Audit. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Les réponses obtenues sont enregistrées sur notre serveur et conservées 30 jours.</dd>
       <dt>Transferts</dt><dd>Ces fournisseurs peuvent traiter les données hors de l'Union européenne. Les transferts sont encadrés par les clauses contractuelles types de la Commission européenne ou par le cadre de protection des données UE-États-Unis.</dd>
     </dl>
