@@ -1087,6 +1087,7 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
   </div>
   <div class="social" id="social-footer"></div>
 </footer></div>
+<script src="/campaign-links.js"></script>
 <script>
 /* =========================================================
    RÉGLAGES : tout ce qui se modifie sans toucher au reste.
@@ -1111,7 +1112,7 @@ function heroScanDestination(rawValue){
   website.hash='';
   const destination=new URL(FREE_SCAN_URL);
   destination.searchParams.set('url',website.toString());
-  return destination.toString();
+  return window.aigeoCampaignDestination(destination.toString());
 }
 
 function clearHeroScanError(){
