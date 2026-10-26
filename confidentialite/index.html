@@ -141,7 +141,7 @@ dl.idcard dd{margin:0}
   <div class="hero">
     <div class="eyebrow">Informations légales</div>
     <h1>Politique de <span class="grad">confidentialité.</span></h1>
-    <div class="meta">Site aigeoconseil.com, scan gratuit, espace client et Veille · Dernière mise à jour le 23 octobre 2026</div>
+    <div class="meta">Site aigeoconseil.com, scan gratuit, espace client et Veille · Dernière mise à jour le 26 octobre 2026</div>
   </div>
 
   <article class="legal">
@@ -169,12 +169,21 @@ dl.idcard dd{margin:0}
 
     <h3 id="scan">Scan gratuit</h3>
     <dl class="idcard">
-      <dt>Données</dt><dd>L'adresse du site analysé, le contenu public extrait de ce site, le profil commercial compris ou corrigé, une précision éventuelle (activité, offre, zone), une question personnalisée facultative, les questions posées, les réponses obtenues, les entreprises et sources citées. Aucun nom ni email ne vous est demandé. Votre adresse IP n'est pas conservée en clair : seule une empreinte irréversible sert à limiter les abus et à appliquer les quotas.</dd>
+      <dt>Données</dt><dd>L'adresse du site analysé, le contenu public extrait de ce site, le profil commercial compris ou corrigé, une précision éventuelle (activité, offre, zone), une question personnalisée facultative, les questions posées, les réponses obtenues, les entreprises et sources citées, le résultat de la lecture de votre site par IA. Aucun nom ne vous est demandé ; votre adresse email est facultative (voir ci-dessous). Votre adresse IP n'est pas conservée en clair : seule une empreinte irréversible sert à limiter les abus et à appliquer les quotas.</dd>
       <dt>Finalité</dt><dd>Produire l'aperçu demandé, éviter les abus</dd>
       <dt>Base légale</dt><dd>Intérêt légitime à répondre à votre demande et à protéger le service, article 6.1.f du RGPD</dd>
       <dt>Durée</dt><dd>Scan abouti : 30 jours. Scan en échec : 7 jours. Réponses brutes obtenues auprès d'OpenAI, enregistrées sur notre serveur : 30 jours. Cache technique évitant les traitements identiques répétés : 24 heures. Empreinte de limitation des abus : effacée après 8 jours sans activité. Suppression automatique ensuite.</dd>
     </dl>
     <p>Les pages de résultats ne sont pas indexées par les moteurs de recherche. Le scan interroge OpenAI : voir la section 3.</p>
+
+    <h3 id="scan-email">Email du résultat du scan gratuit</h3>
+    <dl class="idcard">
+      <dt>Données</dt><dd>Votre adresse email, si vous choisissez de la laisser au résultat du scan, et les cases que vous cochez. C'est facultatif : le scan fonctionne sans.</dd>
+      <dt>Finalité</dt><dd>Si vous cochez « Recevoir le résultat par email » : vous envoyer ce résultat, depuis espace@aigeoconseil.com. Si vous cochez « Accepter d'être recontacté par AIGEO au sujet de ce résultat » : vous recontacter à ce sujet.</dd>
+      <dt>Base légale</dt><dd>Envoi du résultat : votre demande, article 6.1.b du RGPD. Recontact : votre consentement, article 6.1.a du RGPD, que vous pouvez retirer à tout moment.</dd>
+      <dt>Durée</dt><dd>Sans la seconde case : votre adresse est supprimée avec le scan, au plus tard 30 jours après. Avec elle : trois ans après votre dernier contact, puis suppression.</dd>
+    </dl>
+    <p>Vous pouvez à tout moment retirer votre accord et faire supprimer votre adresse en écrivant à contact@aigeoconseil.com ou en répondant à l'email reçu. Votre adresse email n'est jamais transmise aux fournisseurs d'IA.</p>
 
     <h3 id="contact">Message par le formulaire ou par email</h3>
     <dl class="idcard">
@@ -237,7 +246,7 @@ dl.idcard dd{margin:0}
     <dl class="idcard">
       <dt>Audit AIGEO</dt><dd>Les questions de votre panel, telles que vous les avez confirmées, sont posées à OpenAI avec recherche web, sous l'avenant de traitement conclu avec OpenAI Ireland Ltd. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Gemini n'est pas interrogé dans l'Audit.</dd>
       <dt>Veille AIGEO</dt><dd>Chaque mois, les questions figées de votre plan sont posées mot pour mot à OpenAI (l'éditeur de ChatGPT), avec recherche web, avec un lieu approximatif (une ville) pour que les réponses restent comparables, sous le même avenant de traitement que l'Audit. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Gemini n'est pas interrogé dans la Veille.</dd>
-      <dt>Scan gratuit</dt><dd>Les informations du scan (site analysé, profil, questions) sont envoyées à OpenAI (l'éditeur de ChatGPT), avec recherche web, sous le même avenant de traitement que l'Audit. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Les réponses obtenues sont enregistrées sur notre serveur et conservées 30 jours.</dd>
+      <dt>Scan gratuit</dt><dd>Pour préparer les questions, le contenu public des pages de votre site lues par le scan (titres, descriptions, menus et premiers textes) est d'abord envoyé à OpenAI, sans recherche web, pour comprendre votre activité ; il ne contient aucune information saisie par vous. Le résultat de cette lecture est conservé avec le scan, puis supprimé avec lui. Les informations du scan (site analysé, profil, questions) sont ensuite envoyées à OpenAI (l'éditeur de ChatGPT), avec recherche web, sous le même avenant de traitement que l'Audit. Nous demandons à OpenAI de ne pas conserver l'état des échanges ; les données transmises par l'API ne servent pas à entraîner ses modèles, et OpenAI peut les conserver jusqu'à 30 jours pour détecter les abus. Les réponses obtenues sont enregistrées sur notre serveur et conservées 30 jours.</dd>
       <dt>Transferts</dt><dd>Ces fournisseurs peuvent traiter les données hors de l'Union européenne. Les transferts sont encadrés par les clauses contractuelles types de la Commission européenne ou par le cadre de protection des données UE-États-Unis.</dd>
     </dl>
 
@@ -245,7 +254,7 @@ dl.idcard dd{margin:0}
     <dl class="idcard">
       <dt>OVHcloud</dt><dd>Serveur et base de données de l'espace client et du scan (France, Gravelines) ; copie chiffrée des sauvegardes (France, Strasbourg)</dd>
       <dt>Vercel</dt><dd>Hébergement du site aigeoconseil.com et de son formulaire de contact (États-Unis et réseau mondial ; certifié au cadre de protection des données UE-États-Unis)</dd>
-      <dt>Brevo (Sendinblue SAS)</dt><dd>Envoi des emails de service et des messages du formulaire (France)</dd>
+      <dt>Brevo (Sendinblue SAS)</dt><dd>Envoi des emails de service, du résultat du scan gratuit et des messages du formulaire (France)</dd>
       <dt>Google Workspace</dt><dd>Messagerie de contact@aigeoconseil.com (Union européenne ; accès possible depuis les États-Unis, encadré par le cadre de protection des données UE-États-Unis ou les clauses contractuelles types)</dd>
       <dt>Calendly LLC</dt><dd>Prise de rendez-vous (États-Unis ; auto-certifié au cadre de protection des données UE-États-Unis, à défaut clauses contractuelles types)</dd>
       <dt>Stripe</dt><dd>Paiement, en qualité de responsable de traitement distinct</dd>
