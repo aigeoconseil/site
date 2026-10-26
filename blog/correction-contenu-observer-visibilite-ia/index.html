@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Après une correction, comment suivre la visibilité IA ? · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Après une correction du site, conservez les changements et des relevés comparables pour interpréter la visibilité IA sans promettre un effet garanti.">
+<link rel="canonical" href="https://aigeoconseil.com/blog/correction-contenu-observer-visibilite-ia/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Après une correction, conservez ce qui a vraiment changé">
+<meta property="og:description" content="Après une correction du site, conservez les changements et des relevés comparables pour interpréter la visibilité IA sans promettre un effet garanti.">
+<meta property="og:url" content="https://aigeoconseil.com/blog/correction-contenu-observer-visibilite-ia/">
+<meta property="og:site_name" content="AIGEO">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:"Space Grotesk";src:url("/fonts/space-grotesk-var.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url("/fonts/ibm-plex-sans-var.woff2") format("woff2");font-weight:100 700;font-stretch:85% 100%;font-style:normal;font-display:swap}
+:root{
+  --ink:#121216; --paper:#F5F5F7; --muted:#6B6B73; --line:#E4E2DC;
+  --accent:#6C10BF; --accent2:#D20DAD; --surface:#FFFFFF;
+  --g1:#6C10BF; --g2:#990DD2; --g3:#D20DAD;
+  --font-title:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font-body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#C77DFF; --accent2:#E44FC6; --surface:#1A1A21;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+h1,h2,h3,h4,.price b,.stat b{font-family:var(--font-title)}
+[data-theme="dark"] .grad{background-image:linear-gradient(90deg,#B57CF2,#C77DFF,#E44FC6)}
+
+a{color:inherit}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:46px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:34px 0 8px;scroll-margin-top:92px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block}
+.bar>a:first-child{margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.meta{font-size:14px;color:var(--muted);margin-top:22px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+article{padding-bottom:20px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin-bottom:10px}
+figure{margin:38px 0}
+figure img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+.faq{border-top:1px solid var(--line);margin-top:14px;padding-top:6px}
+.faq .q{font-weight:640;margin:26px 0 6px}
+.end{margin:52px 0 20px;padding:30px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.end h3{margin:0 0 10px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.srcs{margin-top:48px;padding-top:26px;border-top:1px solid var(--line)}
+.srcs ol{padding-left:20px;margin:0}
+.srcs li{margin-bottom:12px;font-size:14px;color:var(--muted)}
+.srcs a{color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:840px){
+  .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
+  .logo{height:22px}
+  nav{width:100%;order:3;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
+  .themebtn{margin-left:0}
+}
+@media(max-width:640px){ .hero{padding:40px 0 4px} .end{padding:22px} }
+@media(max-width:520px){nav a{padding:6px 5px;font-size:13px}}
+</style>
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AIGEO : votre marque est-elle citée par les IA ?">
+<meta name="twitter:image" content="https://aigeoconseil.com/blog/correction-contenu-observer-visibilite-ia/b53c3d038eb25c16f71a6c33321bac13847f94619357b3eb9d89bafc0b610deb.png">
+<link rel="stylesheet" href="/brand/motion.css">
+<script src="/brand/motion.js" defer></script>
+<meta property="og:image" content="https://aigeoconseil.com/blog/correction-contenu-observer-visibilite-ia/b53c3d038eb25c16f71a6c33321bac13847f94619357b3eb9d89bafc0b610deb.png"><meta name="aigeo-content-id" content="AGC-f334c615-a472-5e95-bfae-08c0d86a9380"><meta name="aigeo-content-digest" content="8a1f4e166d281b59396b8010109e6cf23988836f50a9c64b97ab363104d733f7"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Après une correction, conservez ce qui a vraiment changé","description":"Après une correction du site, conservez les changements et des relevés comparables pour interpréter la visibilité IA sans promettre un effet garanti.","image":"https://aigeoconseil.com/blog/correction-contenu-observer-visibilite-ia/b53c3d038eb25c16f71a6c33321bac13847f94619357b3eb9d89bafc0b610deb.png","datePublished":"2026-10-26T08:01:17.627Z","dateModified":"2026-10-26T08:01:17.627Z","author":{"@type":"Organization","name":"AIGEO","url":"https://aigeoconseil.com/"},"publisher":{"@type":"Organization","name":"AIGEO","url":"https://aigeoconseil.com/"},"mainEntityOfPage":"https://aigeoconseil.com/blog/correction-contenu-observer-visibilite-ia/"}</script><style>article figure{margin:30px 0}article figure img{width:100%;height:auto;border-radius:12px}article p+p{margin-top:1.1em}</style></head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/brand/aigeo-logo-noir.svg"></a>
+    <nav>
+      <a href="/#accueil">Accueil</a>
+      <a href="/#offres">Offres</a>
+      <a href="/#methode">Méthode</a>
+      <a href="/#blog">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://espace.aigeoconseil.com">Espace client</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap"><div class="hero"><div class="eyebrow">Méthode AIGEO</div><h1>Après une correction, conservez ce qui a vraiment changé</h1><div class="meta">Publié le 26 octobre 2026 · AIGEO</div></div><article><figure><img src="b53c3d038eb25c16f71a6c33321bac13847f94619357b3eb9d89bafc0b610deb.png" alt="Deux états d’une page fictive clarifient la zone de service ; la correction est documentée et son effet reste à observer." width="1600" height="900" loading="eager"></figure><p>Vous avez clarifié une offre, corrigé une information ou réécrit une page importante. Le changement est livré et mérite d’être enregistré. Il reste ensuite à examiner ce que l’on peut observer, sans présenter la correction comme un résultat de visibilité déjà acquis.</p>
+<p>Une méthode simple consiste à conserver un journal des interventions et des relevés dont les conditions sont comparables. Elle aide à comprendre une évolution, à repérer les inconnues et à choisir la prochaine action.</p>
+<h2>Enregistrer la correction</h2>
+<p>Dans le journal proposé par AIGEO, chaque intervention indique la page concernée, le fait modifié, la version précédente, la date et la personne responsable. Ajoutez le motif du changement : contradiction corrigée, offre précisée ou information rendue plus explicite.</p>
+<p>Cette trace doit rester assez courte pour être tenue à jour. Son utilité est de permettre à une autre personne de comprendre ce qui a été fait, sans parcourir tout l’historique des échanges.</p>
+<p>Si plusieurs pages changent en même temps, conservez leur liste. Une observation ultérieure ne pourra pas être reliée automatiquement à une seule modification.</p>
+<h2>Préparer un point de départ</h2>
+<p>Lorsque vous disposez d’un relevé antérieur, gardez la demande, l’environnement utilisé, la date et la réponse complète. Une capture isolée sans contexte est difficile à comparer à un nouveau relevé.</p>
+<p>Si aucun point de départ n’existe, dites-le. Vous pourrez observer l’état suivant la correction, mais pas reconstituer honnêtement un avant que vous n’avez pas conservé.</p>
+<p>Le protocole peut également préciser les limites de l’accès disponible. Une mesure réalisée dans un environnement ne décrit pas nécessairement toutes les interfaces d’un même fournisseur.</p>
+<h2>Attendre une observation exploitable</h2>
+<p>Pour Google Search, la documentation indique que les délais de réexploration peuvent varier ; l’affichage du contenu n’est pas garanti. Cette limite porte sur Google et ne fixe pas un délai universel pour les autres services.</p>
+<p>Évitez donc de choisir une échéance uniquement pour pouvoir annoncer un résultat rapidement. Préparez le prochain relevé en fonction du contexte, puis documentez ce qui est accessible à cette date.</p>
+<p>Un état « encore non vérifié » est une information de suivi. Il permet de distinguer une intervention terminée d’un contrôle qui reste à effectuer.</p><figure><img src="841e19aa4b2bbdb17fc8805c10bc0977d636dd64d33836f9ce3e657a5b401b9b.png" alt="Deux états d’une page fictive clarifient la zone de service ; la correction est documentée et son effet reste à observer." width="1500" height="1000" loading="lazy"></figure>
+<h2>Exemple illustratif</h2>
+<p>Une entreprise fictive corrige sa zone de service sur une page. Elle conserve le texte précédent, la nouvelle version et la date. Lors d’un relevé ultérieur, une réponse présente une formulation différente.</p>
+<p>L’équipe peut constater cette différence. Elle ne peut pas attribuer automatiquement tout le changement à la page corrigée : d’autres contenus ou conditions ont pu évoluer entre les observations. L’exemple décrit une manière de raisonner, sans résultat client ni mesure de moteur inventés.</p>
+<h2>Comparer sans effacer les limites</h2>
+<p>Votre compte rendu peut distinguer trois colonnes : changement livré, différence observée et conclusion permise. Cette dernière reste proportionnée aux preuves disponibles.</p>
+<p>Si une différence est visible mais que son origine reste incertaine, conservez les deux informations. Elles peuvent justifier un nouveau relevé ou une vérification supplémentaire sans devenir une promesse commerciale.</p>
+<p>La comparaison doit également garder les autres interventions connues dans la période. Ce journal de contexte aide à éviter les explications trop simples.</p>
+<h2>Décider de la suite</h2>
+<p>À la fin du contrôle, choisissez une action précise : maintenir la correction, compléter une information, vérifier un autre support ou continuer l’observation. Une décision opérationnelle est plus utile qu’un verdict global sur « l’optimisation IA ».</p>
+<p>Commencez par une page et une correction documentée. Vous pourrez élargir le suivi à mesure que votre équipe apprend à conserver des observations exploitables.</p>
+<p>Pour préparer le périmètre d’un relevé de visibilité IA, retrouvez AIGEO sur <a href="https://aigeoconseil.com/" target="_blank" rel="noopener noreferrer">aigeoconseil.com</a>.</p>
+<h2>Source</h2>
+<p><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google Search Central — Fonctionnalités IA et votre site</a>, consultée le 3 octobre 2026. Le journal et la grille de comparaison sont une méthode AIGEO.</p><div class="srcs"><h2>Sources consultées</h2><ul><li><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google Search Central — Fonctionnalités IA et votre site</a> · vérifiée le 2026-10-12T12:25:35.740Z</li></ul></div></article>
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/#blog">Retour au blog</a> · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a>
+  <div class="small" style="margin-top:8px"><a href="/#blog">Blog</a> · <a href="/#commerces">Commerces</a> · <a href="https://espace.aigeoconseil.com">Espace client</a> · <a href="https://www.instagram.com/aigeo.conseil/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aigeo.conseil" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.linkedin.com/company/agence-aigeo/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+</main>
+
+
+
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/brand/aigeo-logo-blanc.svg':'/brand/aigeo-logo-noir.svg';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+</body>
+</html>
