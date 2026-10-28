@@ -1,53 +1,96 @@
-# aigeoconseil.com
+# aigeoconseil.com : règles d'exploration
+#
+# Décision AIGEO : le site est ouvert aux moteurs de recherche et aux assistants IA,
+# pour la recherche comme pour l'entraînement. Seules les pages de signature e-mail
+# (/signature/) sont exclues, pour tous les robots.
+#
+# Un robot nommé ci-dessous suit uniquement son propre groupe et ignore le groupe « * » :
+# chaque groupe répète donc l'exclusion de /signature/.
+#
+# Usage de chaque robot, d'après la documentation de son éditeur :
+#   recherche  = indexation pour les réponses avec recherche
+#   à la demande = page ouverte pendant la réponse à un utilisateur
+#   entraînement = collecte pouvant servir à entraîner des modèles
+#
+# Dernière revue : 28 octobre 2026.
 
 User-agent: *
 Allow: /
 Disallow: /signature/
 
-# Moteurs et assistants IA : accès explicitement ouvert.
-User-agent: GPTBot
-Allow: /
-
+# OpenAI : recherche dans ChatGPT
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /signature/
 
+# OpenAI : à la demande
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /signature/
 
-User-agent: ClaudeBot
+# OpenAI : entraînement
+User-agent: GPTBot
 Allow: /
+Disallow: /signature/
 
-User-agent: Claude-User
-Allow: /
-
+# Anthropic : recherche dans Claude
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /signature/
 
+# Anthropic : à la demande
+User-agent: Claude-User
+Allow: /
+Disallow: /signature/
+
+# Anthropic : entraînement
+User-agent: ClaudeBot
+Allow: /
+Disallow: /signature/
+
+# Perplexity : recherche
 User-agent: PerplexityBot
 Allow: /
+Disallow: /signature/
 
+# Perplexity : à la demande
 User-agent: Perplexity-User
 Allow: /
+Disallow: /signature/
 
+# Google : usage des contenus par Gemini et pour l'entraînement (sans effet sur Google Search)
 User-agent: Google-Extended
 Allow: /
+Disallow: /signature/
 
+# Apple : recherche (Siri, Spotlight)
 User-agent: Applebot
 Allow: /
+Disallow: /signature/
 
+# Apple : entraînement
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /signature/
 
+# Microsoft : recherche Bing, utilisée aussi par Copilot
 User-agent: Bingbot
 Allow: /
+Disallow: /signature/
 
+# Amazon
 User-agent: Amazonbot
 Allow: /
+Disallow: /signature/
 
+# Meta : produits IA et entraînement
 User-agent: meta-externalagent
 Allow: /
+Disallow: /signature/
 
+# Mistral : à la demande (Le Chat)
 User-agent: MistralAI-User
 Allow: /
+Disallow: /signature/
 
 Sitemap: https://aigeoconseil.com/sitemap.xml

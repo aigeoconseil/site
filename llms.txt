@@ -1,0 +1,45 @@
+# AIGEO
+
+> AIGEO mesure si votre marque est citée quand un acheteur demande conseil à une IA, et vous dit quoi corriger. Test gratuit, audit à prix affiché, veille.
+
+- Éditeur : Georges Hartmann, entrepreneur individuel, nom commercial Georges ADS, marque AIGEO, SIREN 103 768 628, Wasselonne (67310). Contact : contact@aigeoconseil.com.
+- Cofondateurs : Georges Hartmann et Romain Boos.
+- Clients professionnels uniquement.
+- IA mesurée : OpenAI (l'éditeur de ChatGPT), avec recherche web. Gemini est en préparation.
+- Ce qu'aucune offre ne promet : aucune position, aucune citation, aucune progression dans les réponses des assistants IA.
+- Liste complète des pages : https://aigeoconseil.com/sitemap.xml
+
+## Offres
+
+- [Test gratuit](https://app.aigeoconseil.com/scan): Trois situations adaptées à votre activité, une seule IA (OpenAI, l'éditeur de ChatGPT) et un résultat immédiat après traitement. Gratuit, sans obligation d'achat.
+- [Audit AIGEO, 149 €](https://aigeoconseil.com/tarifs/#audit): 20 questions d'acheteur propres à votre activité, posées à OpenAI (l'éditeur de ChatGPT) avec recherche web, jusqu'à 2 fois chacune, puis un diagnostic et vos actions prioritaires dans votre espace AIGEO. Le nombre de réponses exploitables n'est pas garanti. Paiement unique.
+- [Veille AIGEO](https://aigeoconseil.com/tarifs/#veille): Chaque mois, les mêmes questions sont posées mot pour mot à OpenAI (l'éditeur de ChatGPT), avec recherche web, depuis le même lieu, avec 3 essais par question. Veille 6 mois : 99 € par mois. Veille 12 mois : 89 € par mois.
+- [Expert](https://aigeoconseil.com/tarifs/#sur-mesure): Les corrections identifiées par l'audit, livrées à date. À partir de 500 €.
+- [Pilote](https://aigeoconseil.com/tarifs/#sur-mesure): Nous pilotons le sujet avec vous, de la mesure à la publication. 699 € par mois.
+- [Relevé en direct](https://aigeoconseil.com/rendez-vous/): Réservez un relevé en direct avec AIGEO : nous posons devant vous, à une IA, des questions d'acheteur de votre marché, et vous voyez si votre marque est citée.
+- [Tarifs](https://aigeoconseil.com/tarifs/): Tarifs AIGEO : Audit AIGEO 149 €, Veille à partir de 89 € par mois. Expert à partir de 500 €, Pilote 699 € par mois. TVA non applicable, article 293 B du CGI.
+- [Questions fréquentes](https://aigeoconseil.com/faq/): Questions fréquentes sur AIGEO, agence de visibilité dans les réponses des IA : être cité par ChatGPT ou Gemini, choisir une agence GEO, test gratuit, Audit AIGEO à 149 €, suivi et commande.
+
+## Articles
+
+- [AIGEO : votre entreprise dans les réponses des IA](https://aigeoconseil.com/blog/aigeo-comprendre-place-reponses-ia/): Découvrez l’approche AIGEO : partir des questions de vos clients, examiner les réponses des IA et choisir les premières informations à améliorer.
+- [Le GEO, expliqué simplement aux dirigeants](https://aigeoconseil.com/blog/geo-explique-simplement-entreprises/): Le GEO concerne la présence de votre entreprise dans les réponses des IA. Comprenez le sujet avec un exemple simple et une première action utile.
+- [GEO vs SEO : ce qui change quand Google répond à votre place](https://aigeoconseil.com/blog/geo-vs-seo-ce-qui-change/): Depuis le 22 juillet 2026, Google affiche des Aperçus IA en France. Une première étude d'éditeur observe une baisse de clics sur les sites les plus exposés ; l'effet durable reste à mesurer.
+- [Partez des questions de vos clients, pas de votre nom](https://aigeoconseil.com/blog/client-cherche-solution-avant-votre-nom/): Une présentation de marque et une recherche de prestataire répondent à deux besoins différents. Apprenez à partir d’une vraie question de client.
+- [Entreprise citée ou recommandée : lire la différence](https://aigeoconseil.com/blog/entreprise-citee-ou-recommandee/): Un nom dans une réponse IA ne suffit pas. Découvrez comment distinguer une information, une recommandation et une réserve avec un exemple simple.
+- [Une citation se vérifie dans le passage source](https://aigeoconseil.com/blog/citation-ia-verifier-passage-source/): Une citation ne se lit pas seule. Retrouvez le passage source et ses conditions pour vérifier une affirmation sur votre entreprise.
+- [Réponse IA : vérifier ce que dit vraiment la source](https://aigeoconseil.com/blog/reponse-ia-lire-la-source/): Un titre ou un lien ne suffit pas à vérifier une réponse. Une méthode simple pour lire le passage utile, son contexte et la date de l’information.
+- [Informations d’entreprise : repérer les contradictions](https://aigeoconseil.com/blog/coherence-informations-entreprise-visibilite/): Nom, activité, zone de service et coordonnées : une méthode pour vérifier la cohérence des informations de votre entreprise sur ses supports.
+- [Présenter votre entreprise en ligne : premières actions](https://aigeoconseil.com/blog/mieux-presenter-entreprise-en-ligne-premieres-actions/): Nom, activité, clients, zone et conditions : une première vérification simple pour rendre votre entreprise plus compréhensible sur votre site et vos profils.
+- [Après une correction, comment suivre la visibilité IA ?](https://aigeoconseil.com/blog/correction-contenu-observer-visibilite-ia/): Après une correction du site, conservez les changements et des relevés comparables pour interpréter la visibilité IA sans promettre un effet garanti.
+- [Robots IA : distinguer recherche et entraînement](https://aigeoconseil.com/blog/robots-ia-recherche-entrainement/): Recherche et entraînement ont des usages distincts. Voici les questions à poser avant de modifier les accès des robots sur votre site.
+- [Ce que les Français demandent vraiment à l'IA avant d'acheter](https://aigeoconseil.com/blog/requetes-conversationnelles-achat/): Près d'un cyberacheteur français sur trois utilise l'IA générative quand il achète en ligne, surtout avant l'achat (Odoxa pour la FEVAD, 2026). Ce que ça change pour votre fiche produit.
+- [Publicité dans les réponses IA : ce qui a changé depuis fin août 2026](https://aigeoconseil.com/blog/publicite-ia-generative-ce-qui-a-change/): Publicité ChatGPT en France, partenariat Amazon-OpenAI, écarts de prix sur Google AI Mode : ce qui change pour votre marque, et ce que ça ne remplace pas.
+- [Publicité dans les réponses IA : faut-il l'intégrer à votre visibilité de marque ?](https://aigeoconseil.com/blog/publicite-reponses-ia-visibilite-marque-geo/): Publicité dans ChatGPT et Google AI Max en 2026 : ce que ça change (ou non) pour la visibilité organique de votre marque.
+
+## Optional
+
+- [Conditions générales de prestation](https://aigeoconseil.com/conditions-generales/): Conditions générales de prestation de services du site aigeoconseil.com : offres en ligne et sur devis, prix et paiement, abonnements avec ou sans engagement, défaut de paiement, obligations, propriété intellectuelle, droit de rétractation.
+- [Conditions de l'espace client](https://aigeoconseil.com/conditions-generales/espace/): Conditions d'utilisation de l'espace client AIGEO et accord de traitement des données personnelles (article 28 du RGPD).
+- [Politique de confidentialité](https://aigeoconseil.com/confidentialite/): Politique de confidentialité d'AIGEO : données traitées pour le site, le scan gratuit, le contact, l'espace client et l'Audit, durées, fournisseurs d'IA et vos droits.
+- [Mentions légales](https://aigeoconseil.com/mentions-legales/): Mentions légales du site aigeoconseil.com : éditeur, hébergeur, propriété intellectuelle, données personnelles et cookies.
