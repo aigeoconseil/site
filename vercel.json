@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/geo", "destination": "https://app.aigeoconseil.com/scan?src=insta-dm", "permanent": false },
+    { "source": "/geo/", "destination": "https://app.aigeoconseil.com/scan?src=insta-dm", "permanent": false }
+  ]
+}
