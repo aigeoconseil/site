@@ -33,7 +33,7 @@
   const collect = (f) => {
     const fd = new FormData(f), reponses = {};
     for (const [k, v] of fd.entries()) {
-      if (['nom', 'email', 'telephone', 'consentement', 'website'].includes(k)) continue;
+      if (['nom', 'email', 'telephone', 'consentement', 'website'].includes(k) || k.startsWith('cf-')) continue; // champ caché du captcha : envoyé à part, dans « captcha »
       const val = String(v).trim();
       if (!val) continue;
       if (k in reponses) reponses[k] = [].concat(reponses[k], val); else reponses[k] = val;
