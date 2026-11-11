@@ -1,6 +1,6 @@
 # AIGEO
 
-> AIGEO mesure si votre marque est citée quand un acheteur demande conseil à une IA, et vous dit quoi corriger. Test gratuit, audit à prix affiché, veille.
+> AIGEO mesure si votre marque est citée quand un acheteur demande conseil à une IA, et vous dit quoi corriger. Test gratuit et audit à prix affiché.
 
 - Éditeur : Georges Hartmann, entrepreneur individuel, nom commercial Georges ADS, marque AIGEO, SIREN 103 768 628, Wasselonne (67310). Contact : contact@aigeoconseil.com.
 - Cofondateurs : Georges Hartmann et Romain Boos.
@@ -13,11 +13,10 @@
 
 - [Test gratuit](https://app.aigeoconseil.com/scan): Trois situations adaptées à votre activité, une seule IA (OpenAI, l'éditeur de ChatGPT) et un résultat immédiat après traitement. Gratuit, sans obligation d'achat.
 - [Audit AIGEO, 149 €](https://aigeoconseil.com/tarifs/#audit): 20 questions d'acheteur propres à votre activité, posées à OpenAI (l'éditeur de ChatGPT) avec recherche web, jusqu'à 2 fois chacune, puis un diagnostic et vos actions prioritaires dans votre espace AIGEO. Le nombre de réponses exploitables n'est pas garanti. Paiement unique.
-- [Veille AIGEO](https://aigeoconseil.com/tarifs/#veille): Chaque mois, les mêmes questions sont posées mot pour mot à OpenAI (l'éditeur de ChatGPT), avec recherche web, depuis le même lieu, avec 3 essais par question. Veille 6 mois : 99 € par mois. Veille 12 mois : 89 € par mois.
 - [Expert](https://aigeoconseil.com/tarifs/#sur-mesure): Les corrections identifiées par l'audit, livrées à date. À partir de 500 €.
 - [Pilote](https://aigeoconseil.com/tarifs/#sur-mesure): Nous pilotons le sujet avec vous, de la mesure à la publication. 699 € par mois.
 - [Relevé en direct](https://aigeoconseil.com/rendez-vous/): Réservez un relevé en direct avec AIGEO : nous posons devant vous, à une IA, des questions d'acheteur de votre marché, et vous voyez si votre marque est citée.
-- [Tarifs](https://aigeoconseil.com/tarifs/): Tarifs AIGEO : Audit AIGEO 149 €, Veille à partir de 89 € par mois. Expert à partir de 500 €, Pilote 699 € par mois. TVA non applicable, article 293 B du CGI.
+- [Tarifs](https://aigeoconseil.com/tarifs/): Tarifs AIGEO : Audit AIGEO 149 €, Expert à partir de 500 €, Pilote 699 € par mois. TVA non applicable, article 293 B du CGI.
 - [Questions fréquentes](https://aigeoconseil.com/faq/): Questions fréquentes sur AIGEO, agence de visibilité dans les réponses des IA : être cité par ChatGPT ou Gemini, choisir une agence GEO, test gratuit, Audit AIGEO à 149 €, suivi et commande.
 
 ## Articles
