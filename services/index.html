@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Services : SEO et GEO, site internet, CRM, vidéos, formations IA, création graphique · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Les services AIGEO sur devis : SEO et GEO, site internet, CRM sur mesure, vidéos courtes pour les réseaux, formations à l&#x27;IA, créations graphiques. Un premier échange de 30 minutes, gratuit.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aigeoconseil.com/services/">
+<style>
+@font-face{font-family:"Space Grotesk";src:url("/fonts/space-grotesk-var.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url("/fonts/ibm-plex-sans-var.woff2") format("woff2");font-weight:100 700;font-stretch:85% 100%;font-style:normal;font-display:swap}
+:root{
+  --ink:#121216; --paper:#F5F5F7; --muted:#6B6B73; --line:#E4E2DC;
+  --accent:#6C10BF; --accent2:#D20DAD; --surface:#FFFFFF;
+  --g1:#6C10BF; --g2:#990DD2; --g3:#D20DAD;
+  --font-title:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font-body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#C77DFF; --accent2:#E44FC6; --surface:#1A1A21;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+h1,h2,h3,h4,.price b,.stat b{font-family:var(--font-title)}
+[data-theme="dark"] .grad{background-image:linear-gradient(90deg,#B57CF2,#C77DFF,#E44FC6)}
+
+a{color:inherit}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:46px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:34px 0 8px;scroll-margin-top:92px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block}
+.bar>a:first-child{margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.meta{font-size:14px;color:var(--muted);margin-top:22px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+article{padding-bottom:20px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin-bottom:10px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:840px){
+  .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
+  .logo{height:22px}
+  nav{width:100%;order:3;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
+  .themebtn{margin-left:0}
+}
+@media(max-width:640px){ .hero{padding:40px 0 4px} }
+
+/* Veille : onglets avec ou sans engagement, jauge d'économie */
+.vj{border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:18px;margin-top:6px}
+.vj-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:11px;background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.vj-tabs button{-webkit-tap-highlight-color:transparent;font:inherit;font-size:14.5px;font-weight:600;border:0;border-radius:8px;padding:10px 8px;background:transparent;color:var(--muted);cursor:pointer}
+.vj-tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(14,14,18,.12)}
+.vj-tabs button:focus-visible,.vj input:focus-visible,.vj-go:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.vj-price{display:flex;align-items:baseline;gap:8px;margin:18px 0 4px;flex-wrap:wrap}
+.vj-price b{font-size:34px;font-weight:680;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.vj-price span{font-size:14.5px;color:var(--muted)}
+.vj-sub{font-size:14px;color:var(--muted);margin:0 0 16px}
+.vj-range{margin:0 0 18px}
+.vj-range label{display:block;font-size:14px;margin-bottom:8px}
+.vj-range input{width:100%;accent-color:var(--accent);margin:0}
+.vj .vj-range input[type=range]{-webkit-appearance:auto;appearance:auto;background:none;border:0;padding:0;height:auto;min-height:0;box-shadow:none;border-radius:0}
+.vj-ticks{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-top:4px}
+.vj-ticks button{-webkit-tap-highlight-color:transparent;font:inherit;border:0;background:none;color:inherit;padding:2px 0;cursor:pointer}
+.vj-ticks button[aria-pressed="true"]{color:var(--ink);font-weight:700}
+.vj-gauge{margin:0 0 18px}
+.vj-gauge-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:13.5px;color:var(--muted);margin-bottom:8px}
+.vj-gauge-head b{font-size:20px;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.vj-bar{height:12px;border-radius:999px;background:color-mix(in srgb,var(--ink) 8%,transparent);overflow:hidden}
+.vj-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));transition:width .35s ease}
+.vj-save{font-size:14px;margin-top:8px}
+.vj-gift{font-size:13.5px;font-weight:650;color:var(--accent);margin:0 0 14px}
+.vj-go{display:block;width:100%;box-sizing:border-box;text-align:center;text-decoration:none;background:var(--ink);color:var(--paper);font-weight:600;font-size:16px;padding:14px 18px;border-radius:9px}
+.vj-go:hover{opacity:.9}
+.vj [hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){.vj-bar i{transition:none}}
+@media (max-width:349px){.vj-tabs button{white-space:normal}}
+@media (max-width:520px){.vj{padding:12px}.plan .vj{border:0;padding:0;background:none;margin-top:14px}.vj-tabs button{font-size:13px;padding:10px 2px;white-space:nowrap}.vj-gauge-head span{font-size:12.5px}.vj-price{margin-top:14px}.vj-price b{font-size:30px}.vj-gauge-head{font-size:13px}.vj-gauge-head b{font-size:18px}.vj-go{font-size:15px;padding:13px 10px}}
+.legal .vj{margin:8px 0 22px}
+@media (max-width:560px){.ptable thead{display:none}.ptable tr{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:14px 0;border-bottom:1px solid var(--line)}.ptable tr:last-child{border-bottom:0}.ptable td{border:0!important;padding:0!important}.ptable td:nth-child(1){grid-row:1;grid-column:1;font-weight:600}.ptable td:nth-child(3){grid-row:1;grid-column:2}.ptable td:nth-child(2){grid-row:2;grid-column:1/-1;color:var(--muted);font-size:14.5px}}
+.legal .vj-go{color:var(--paper);border:0;text-decoration:none}
+.legal .vj p{margin:0 0 16px}
+@media(max-width:520px){nav a{padding:6px 5px;font-size:13px}}
+</style><style>
+.svc{padding-top:6px;scroll-margin-top:130px}
+.svc ul{margin:6px 0 14px;padding-left:20px}
+.svc li{margin:4px 0}
+.svc .devis{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:14px 0 6px}
+.svc .devis b{font-size:15px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.toc a{font-size:14px;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+
+.wrap{max-width:720px}
+.legal h2{font-size:clamp(20px,2.4vw,25px);margin:44px 0 14px}
+.legal h3{margin:26px 0 6px}
+.legal p{font-size:16px}
+.ptable{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:16px}
+.ptable th,.ptable td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable th{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.ptable td.num{text-align:right;white-space:nowrap;font-weight:640}
+.ptable tr:last-child td{border-bottom:0}
+.ptable td.go{text-align:right;white-space:nowrap}
+.ptable td.go a{font-weight:640}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "@id": "https://aigeoconseil.com/services/#services", "name": "Services AIGEO", "url": "https://aigeoconseil.com/services/", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Service", "@id": "https://aigeoconseil.com/services/#seo-geo", "name": "SEO et GEO", "url": "https://aigeoconseil.com/services/#seo-geo", "description": "Vous voulez que votre site soit trouvé sur Google et lisible par les IA quand un acheteur leur demande conseil.", "provider": {"@id": "https://aigeoconseil.com/#organisation"}, "audience": {"@type": "BusinessAudience"}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Service", "@id": "https://aigeoconseil.com/services/#site-internet", "name": "Site internet", "url": "https://aigeoconseil.com/services/#site-internet", "description": "Vous n'avez pas de site, ou le vôtre est daté, lent sur téléphone ou difficile à modifier.", "provider": {"@id": "https://aigeoconseil.com/#organisation"}, "audience": {"@type": "BusinessAudience"}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Service", "@id": "https://aigeoconseil.com/services/#crm", "name": "CRM sur mesure", "url": "https://aigeoconseil.com/services/#crm", "description": "Vous suivez vos clients, vos demandes et vos devis dans des tableurs, des carnets ou votre boîte mail.", "provider": {"@id": "https://aigeoconseil.com/#organisation"}, "audience": {"@type": "BusinessAudience"}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Service", "@id": "https://aigeoconseil.com/services/#videos", "name": "Vidéos courtes pour les réseaux", "url": "https://aigeoconseil.com/services/#videos", "description": "Vous voulez publier régulièrement sur Instagram, TikTok, LinkedIn ou YouTube, sans y passer vos soirées.", "provider": {"@id": "https://aigeoconseil.com/#organisation"}, "audience": {"@type": "BusinessAudience"}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Service", "@id": "https://aigeoconseil.com/services/#formations-ia", "name": "Formations à l'IA", "url": "https://aigeoconseil.com/services/#formations-ia", "description": "Vous et votre équipe voulez utiliser les outils d'IA dans votre travail de tous les jours.", "provider": {"@id": "https://aigeoconseil.com/#organisation"}, "audience": {"@type": "BusinessAudience"}}}, {"@type": "ListItem", "position": 6, "item": {"@type": "Service", "@id": "https://aigeoconseil.com/services/#creations-graphiques", "name": "Créations graphiques", "url": "https://aigeoconseil.com/services/#creations-graphiques", "description": "Vous avez besoin d'un logo, d'une charte ou de supports qui se ressemblent.", "provider": {"@id": "https://aigeoconseil.com/#organisation"}, "audience": {"@type": "BusinessAudience"}}}]}</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIGEO">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Services : SEO et GEO, site internet, CRM, vidéos, formations IA, création graphique · AIGEO">
+<meta property="og:description" content="Les services AIGEO sur devis : SEO et GEO, site internet, CRM sur mesure, vidéos courtes pour les réseaux, formations à l&#x27;IA, créations graphiques. Un premier échange de 30 minutes, gratuit.">
+<meta property="og:url" content="https://aigeoconseil.com/services/">
+<meta property="og:image" content="https://aigeoconseil.com/brand/og/aigeo-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AIGEO : votre marque est-elle citée par les IA ?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://aigeoconseil.com/brand/og/aigeo-og.jpg">
+<link rel="stylesheet" href="/brand/motion.css">
+<script src="/brand/motion.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/brand/aigeo-logo-noir.svg"></a>
+    <nav>
+      <a href="/#accueil">Accueil</a>
+      <a href="/#offres">Offres</a>
+      <a href="/services/" aria-current="page">Services</a>
+      <a href="/#methode">Méthode</a>
+      <a href="/#blog">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://espace.aigeoconseil.com">Espace client</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Services</div>
+    <h1>Votre présence en ligne, <span class="grad">sur devis.</span></h1>
+    <div class="meta">Pour les professionnels uniquement. Chaque service est chiffré sur devis, après un premier échange de 30 minutes, gratuit.</div>
+    <nav class="toc" aria-label="Les six services"><a href="#seo-geo">SEO et GEO</a><a href="#site-internet">Site internet</a><a href="#crm">CRM sur mesure</a><a href="#videos">Vidéos courtes pour les réseaux</a><a href="#formations-ia">Formations à l&#x27;IA</a><a href="#creations-graphiques">Créations graphiques</a></nav>
+  </div>
+
+  <article class="legal">
+    <p>Le cœur d&#x27;AIGEO reste la visibilité de votre marque dans les réponses des IA : le <a href="https://app.aigeoconseil.com/scan?src=site">test gratuit</a>, l&#x27;Audit AIGEO et la Veille, détaillés sur la page <a href="/tarifs/">Tarifs</a>.</p>
+    <p>Autour de ce cœur, nous proposons six services pour le reste de votre présence en ligne. Pour chacun, vous savez à qui il s&#x27;adresse et ce que nous livrons. Le prix, le délai et le périmètre sont écrits dans le devis, avant toute commande.</p>
+
+    <section class="svc" id="seo-geo">
+      <h2>SEO et GEO</h2>
+      <p><b>Pour qui.</b> Vous voulez que votre site soit trouvé sur Google et lisible par les IA quand un acheteur leur demande conseil.</p>
+      <p><b>Ce que nous livrons.</b></p>
+      <ul><li>Un état des lieux de votre site : pages, titres, structure, vitesse, données structurées, fichiers lus par les robots.</li><li>Les corrections faites sur vos pages, ou une liste précise pour votre prestataire.</li><li>Des textes de pages et de questions fréquentes écrits pour répondre aux questions de vos acheteurs.</li><li>Le relevé de ce qui a été modifié, page par page.</li></ul>
+      <p class="small">Pour savoir d&#x27;abord si les IA vous nomment, commencez par le <a href="https://app.aigeoconseil.com/scan?src=site">test gratuit</a> ou l&#x27;Audit AIGEO.</p>
+      <div class="devis"><b>Sur devis.</b><a class="vj-go" href="https://calendly.com/aigeo/releve-en-direct?utm_source=site&amp;utm_medium=services&amp;utm_content=seo-geo" target="_blank" rel="noopener">En parler 30 minutes</a></div>
+    </section>
+
+    <section class="svc" id="site-internet">
+      <h2>Site internet</h2>
+      <p><b>Pour qui.</b> Vous n&#x27;avez pas de site, ou le vôtre est daté, lent sur téléphone ou difficile à modifier.</p>
+      <p><b>Ce que nous livrons.</b></p>
+      <ul><li>Un site rapide et lisible sur téléphone, avec des pages claires sur ce que vous vendez, où et pour qui.</li><li>Les données structurées et les fichiers qui aident les moteurs de recherche et les IA à lire vos pages.</li><li>La mise en ligne sur votre nom de domaine.</li><li>Une prise en main pour modifier vos textes et vos photos vous-même.</li></ul>
+      <div class="devis"><b>Sur devis.</b><a class="vj-go" href="https://calendly.com/aigeo/releve-en-direct?utm_source=site&amp;utm_medium=services&amp;utm_content=site-internet" target="_blank" rel="noopener">En parler 30 minutes</a></div>
+    </section>
+
+    <section class="svc" id="crm">
+      <h2>CRM sur mesure</h2>
+      <p><b>Pour qui.</b> Vous suivez vos clients, vos demandes et vos devis dans des tableurs, des carnets ou votre boîte mail.</p>
+      <p><b>Ce que nous livrons.</b></p>
+      <ul><li>Un outil construit pour votre façon de travailler : fiches clients, suivi des demandes et des devis, rappels de relance.</li><li>Des accès pour chaque personne de votre équipe.</li><li>La reprise de vos fichiers existants.</li><li>Une prise en main avec votre équipe.</li></ul>
+      <div class="devis"><b>Sur devis.</b><a class="vj-go" href="https://calendly.com/aigeo/releve-en-direct?utm_source=site&amp;utm_medium=services&amp;utm_content=crm" target="_blank" rel="noopener">En parler 30 minutes</a></div>
+    </section>
+
+    <section class="svc" id="videos">
+      <h2>Vidéos courtes pour les réseaux</h2>
+      <p><b>Pour qui.</b> Vous voulez publier régulièrement sur Instagram, TikTok, LinkedIn ou YouTube, sans y passer vos soirées.</p>
+      <p><b>Ce que nous livrons.</b></p>
+      <ul><li>Des vidéos courtes au format vertical, écrites et montées pour chaque réseau.</li><li>Des sous-titres, pour les vidéos regardées sans le son.</li><li>Le texte de publication qui accompagne chaque vidéo.</li><li>À l&#x27;unité ou en série.</li></ul>
+      <div class="devis"><b>Sur devis.</b><a class="vj-go" href="https://calendly.com/aigeo/releve-en-direct?utm_source=site&amp;utm_medium=services&amp;utm_content=videos" target="_blank" rel="noopener">En parler 30 minutes</a></div>
+    </section>
+
+    <section class="svc" id="formations-ia">
+      <h2>Formations à l&#x27;IA</h2>
+      <p><b>Pour qui.</b> Vous et votre équipe voulez utiliser les outils d&#x27;IA dans votre travail de tous les jours.</p>
+      <p><b>Ce que nous livrons.</b></p>
+      <ul><li>Des sessions en petit groupe, à distance, ou dans vos locaux en Alsace.</li><li>Des exercices construits sur vos tâches réelles : écrire, résumer, préparer une réponse à un client.</li><li>Les règles de prudence : ce qu&#x27;on ne confie pas à une IA, et comment relire ce qu&#x27;elle produit.</li><li>Un support écrit à garder.</li></ul>
+      <div class="devis"><b>Sur devis.</b><a class="vj-go" href="https://calendly.com/aigeo/releve-en-direct?utm_source=site&amp;utm_medium=services&amp;utm_content=formations-ia" target="_blank" rel="noopener">En parler 30 minutes</a></div>
+    </section>
+
+    <section class="svc" id="creations-graphiques">
+      <h2>Créations graphiques</h2>
+      <p><b>Pour qui.</b> Vous avez besoin d&#x27;un logo, d&#x27;une charte ou de supports qui se ressemblent.</p>
+      <p><b>Ce que nous livrons.</b></p>
+      <ul><li>Un logo et une charte : couleurs, typographies, règles d&#x27;usage.</li><li>Des supports imprimés et numériques : cartes de visite, flyers, visuels pour les réseaux, présentations.</li><li>Les fichiers sources, qui vous appartiennent une fois réglés.</li></ul>
+      <div class="devis"><b>Sur devis.</b><a class="vj-go" href="https://calendly.com/aigeo/releve-en-direct?utm_source=site&amp;utm_medium=services&amp;utm_content=creations-graphiques" target="_blank" rel="noopener">En parler 30 minutes</a></div>
+    </section>
+
+    <h2>Comment ça se passe</h2>
+    <ol><li>Vous réservez un échange de 30 minutes, gratuit, en visio.</li><li>Nous vous envoyons un devis : ce qui sera livré, le délai et le prix.</li><li>Rien n&#x27;est commandé ni facturé avant votre accord écrit sur le devis.</li></ol>
+
+    <h2>Ce qu&#x27;aucun service ne promet</h2>
+    <p>Aucune position sur Google, aucune citation par une IA, aucun nombre de vues ni aucun résultat commercial. Nous livrons ce que le devis décrit, à la date prévue, et nous vous disons ce qui dépend de vous ou d&#x27;autres que nous.</p>
+
+    <p class="small">Les <a href="/conditions-generales/">conditions générales</a> s&#x27;appliquent à ces services ; elles seront complétées avant leur ouverture.</p>
+
+  </article>
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/">Retour à l'accueil</a> · <a href="/conditions-generales/">Conditions générales</a> · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a> · <a href="/faq/">Questions fréquentes</a>
+  <div class="small" style="margin-top:8px"><a href="/#blog">Blog</a> · <a href="/#commerces">Commerces</a> · <a href="/tarifs/">Tarifs</a> · <a href="https://espace.aigeoconseil.com">Espace client</a> · <a href="https://www.instagram.com/aigeo.conseil/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aigeo.conseil" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.linkedin.com/company/agence-aigeo/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+</main>
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/brand/aigeo-logo-blanc.svg':'/brand/aigeo-logo-noir.svg';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+
+</body>
+</html>
