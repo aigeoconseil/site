@@ -411,6 +411,10 @@ section:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-9p
 section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tight)::after{display:none}
 @media (prefers-reduced-motion:reduce){.hero-art img{animation:none}}
 @media (max-width:640px){.hero-art .a1{width:52px;right:52px;top:8px}.hero-art .a2{display:none}.cta-band{padding:24px 20px}.cta-band p{font-size:19px}}
+/* Bandeau « Au-delà du GEO » (11/11), en fin d'accueil */
+section.beyond-geo{padding:30px 0 70px;border-bottom:0}
+.beyond-geo .card{display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap;padding:20px 26px}
+.beyond-geo .eyebrow{margin-bottom:8px}
 </style>
 <style>
 /* Page Services (11/11) : couleurs, polices et composants du site seulement. */
@@ -458,6 +462,25 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
 .bento .wide{grid-column:span 3}
 .bento .wide ul.check{columns:3;column-gap:28px}
 .bento ul.check li{break-inside:avoid}
+/* A : visuel de tête, planète AIGEO et IA en orbite (11/11) */
+.planet-sys{position:relative;width:min(520px,100%);aspect-ratio:1;margin:14px auto 0;overflow:hidden}
+.planet-sys::before{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--g1) 16%,transparent),transparent 72%);pointer-events:none}
+.ps-ring{position:absolute;inset:var(--inset);border-radius:50%;border:1px solid var(--line)}
+.ps-orbit{position:absolute;inset:var(--inset);border-radius:50%;transform:rotate(var(--a));animation:ps-turn var(--t) linear infinite}
+.ps-orbit::before{content:"";position:absolute;inset:-1.5px;border-radius:50%;
+  background:conic-gradient(from 0deg,transparent 0turn 0.7turn,color-mix(in srgb,var(--g1) 0%,transparent) 0.7turn,color-mix(in srgb,var(--g1) 55%,transparent) 0.93turn,var(--g2) 0.995turn,transparent 0.995turn);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2.5px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2.5px));
+  filter:drop-shadow(0 0 5px color-mix(in srgb,var(--g1) 60%,transparent))}
+.ps-logo{position:absolute;left:50%;top:0;width:var(--s,54px);height:var(--s,54px);display:grid;place-items:center;border-radius:50%;transform:translate(-50%,-50%) rotate(calc(-1 * var(--a)));animation:ps-upright var(--t) linear infinite}
+.ps-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.ps-logo:empty{border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
+@keyframes ps-turn{from{transform:rotate(var(--a))}to{transform:rotate(calc(var(--a) + 1turn))}}
+@keyframes ps-upright{from{transform:translate(-50%,-50%) rotate(calc(-1 * var(--a)))}to{transform:translate(-50%,-50%) rotate(calc(-1 * var(--a) - 1turn))}}
+.ps-planet{position:absolute;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#FFFFFF 0%,#F5F5F7 70%,#E9E7EF 100%);box-shadow:0 0 0 1px var(--line),0 24px 60px -18px color-mix(in srgb,var(--g1) 50%,transparent)}
+.ps-planet img{width:56%;height:auto}
+@media(max-width:640px){.planet-sys{--s:40px}.ps-logo{--s:40px}}
+@media (prefers-reduced-motion:reduce){.ps-orbit,.ps-logo{animation:none}}
 /* B : défilement narratif */
 .geo-first{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
 .geo-first .orbit-core{position:relative;left:auto;top:auto;transform:none;width:min(300px,70%);margin:0 auto}

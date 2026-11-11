@@ -411,6 +411,10 @@ section:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-9p
 section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tight)::after{display:none}
 @media (prefers-reduced-motion:reduce){.hero-art img{animation:none}}
 @media (max-width:640px){.hero-art .a1{width:52px;right:52px;top:8px}.hero-art .a2{display:none}.cta-band{padding:24px 20px}.cta-band p{font-size:19px}}
+/* Bandeau « Au-delà du GEO » (11/11), en fin d'accueil */
+section.beyond-geo{padding:30px 0 70px;border-bottom:0}
+.beyond-geo .card{display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap;padding:20px 26px}
+.beyond-geo .eyebrow{margin-bottom:8px}
 </style>
 <style>
 /* Page Services (11/11) : couleurs, polices et composants du site seulement. */
@@ -458,6 +462,25 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
 .bento .wide{grid-column:span 3}
 .bento .wide ul.check{columns:3;column-gap:28px}
 .bento ul.check li{break-inside:avoid}
+/* A : visuel de tête, planète AIGEO et IA en orbite (11/11) */
+.planet-sys{position:relative;width:min(520px,100%);aspect-ratio:1;margin:14px auto 0;overflow:hidden}
+.planet-sys::before{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--g1) 16%,transparent),transparent 72%);pointer-events:none}
+.ps-ring{position:absolute;inset:var(--inset);border-radius:50%;border:1px solid var(--line)}
+.ps-orbit{position:absolute;inset:var(--inset);border-radius:50%;transform:rotate(var(--a));animation:ps-turn var(--t) linear infinite}
+.ps-orbit::before{content:"";position:absolute;inset:-1.5px;border-radius:50%;
+  background:conic-gradient(from 0deg,transparent 0turn 0.7turn,color-mix(in srgb,var(--g1) 0%,transparent) 0.7turn,color-mix(in srgb,var(--g1) 55%,transparent) 0.93turn,var(--g2) 0.995turn,transparent 0.995turn);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2.5px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2.5px));
+  filter:drop-shadow(0 0 5px color-mix(in srgb,var(--g1) 60%,transparent))}
+.ps-logo{position:absolute;left:50%;top:0;width:var(--s,54px);height:var(--s,54px);display:grid;place-items:center;border-radius:50%;transform:translate(-50%,-50%) rotate(calc(-1 * var(--a)));animation:ps-upright var(--t) linear infinite}
+.ps-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.ps-logo:empty{border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
+@keyframes ps-turn{from{transform:rotate(var(--a))}to{transform:rotate(calc(var(--a) + 1turn))}}
+@keyframes ps-upright{from{transform:translate(-50%,-50%) rotate(calc(-1 * var(--a)))}to{transform:translate(-50%,-50%) rotate(calc(-1 * var(--a) - 1turn))}}
+.ps-planet{position:absolute;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#FFFFFF 0%,#F5F5F7 70%,#E9E7EF 100%);box-shadow:0 0 0 1px var(--line),0 24px 60px -18px color-mix(in srgb,var(--g1) 50%,transparent)}
+.ps-planet img{width:56%;height:auto}
+@media(max-width:640px){.planet-sys{--s:40px}.ps-logo{--s:40px}}
+@media (prefers-reduced-motion:reduce){.ps-orbit,.ps-logo{animation:none}}
 /* B : défilement narratif */
 .geo-first{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
 .geo-first .orbit-core{position:relative;left:auto;top:auto;transform:none;width:min(300px,70%);margin:0 auto}
@@ -511,17 +534,10 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
   <h1>Être cité par les IA, <span class="grad">et tout ce qui rend une marque visible autour.</span></h1>
   <p class="lead" style="margin-top:22px">Le GEO reste notre métier et notre priorité : savoir si les IA nomment votre marque quand un acheteur leur demande conseil, et corriger ce qui manque. Autour, six services pour le reste de votre présence en ligne.</p>
   <p class="tiny svc-meta">Pour les professionnels uniquement. Chaque service est chiffré sur devis, sauf le SEO, qui suit les prix affichés de l&#x27;offre Expert.</p>
-  <nav class="orbit" aria-label="Le GEO au centre, six services autour">
-    <svg class="orbit-lines" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-      <defs><linearGradient id="svcGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="var(--g1)"/><stop offset=".5" stop-color="var(--g2)"/><stop offset="1" stop-color="var(--g3)"/></linearGradient></defs>
-      <circle class="ring" cx="50" cy="50" r="41.0" vector-effect="non-scaling-stroke"/>
-      <circle class="ring-move" cx="50" cy="50" r="41.0" pathLength="360"/>
-      <circle class="ring" cx="50" cy="50" r="26" vector-effect="non-scaling-stroke" opacity=".6"/>
-      <line class="spoke" data-i="0" x1="50" y1="50" x2="50.00" y2="9.00" vector-effect="non-scaling-stroke"/><line class="spoke" data-i="1" x1="50" y1="50" x2="85.51" y2="29.50" vector-effect="non-scaling-stroke"/><line class="spoke" data-i="2" x1="50" y1="50" x2="85.51" y2="70.50" vector-effect="non-scaling-stroke"/><line class="spoke" data-i="3" x1="50" y1="50" x2="50.00" y2="91.00" vector-effect="non-scaling-stroke"/><line class="spoke" data-i="4" x1="50" y1="50" x2="14.49" y2="70.50" vector-effect="non-scaling-stroke"/><line class="spoke" data-i="5" x1="50" y1="50" x2="14.49" y2="29.50" vector-effect="non-scaling-stroke"/>
-    </svg>
-    <a class="orbit-core" href="#geo"><img src="/brand/aigeo-symbole.svg" alt=""><b>GEO</b><span>au centre</span></a>
-    <a class="orbit-node" data-i="0" href="#seo" style="--x:50.00%;--y:9.00%;--dx:0.0px;--dy:-7.0px"><span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.4 15.4 20.5 20.5"/><path d="M8 13v-2M10.5 13V8.5M13 13v-3"/></svg></span><span>SEO</span></a><a class="orbit-node" data-i="1" href="#crm" style="--x:85.51%;--y:29.50%;--dx:6.1px;--dy:-3.5px"><span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="9" cy="10.6" r="2.1"/><path d="M5.9 16c.7-1.5 1.8-2.3 3.1-2.3s2.4.8 3.1 2.3"/><path d="M14.5 10h4M14.5 13.5h3"/></svg></span><span>CRM</span></a><a class="orbit-node" data-i="2" href="#site" style="--x:85.51%;--y:70.50%;--dx:6.1px;--dy:3.5px"><span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M3 9h18"/><path d="M6 6.8h.01M8.3 6.8h.01"/><path d="M7 13h7M7 16h4.5"/></svg></span><span>Site internet</span></a><a class="orbit-node" data-i="3" href="#videos" style="--x:50.00%;--y:91.00%;--dx:0.0px;--dy:7.0px"><span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="12.5" height="14" rx="2.5"/><path d="M8 9.4v5.2l4.2-2.6z"/><path d="M18.4 9c1.1 1.6 1.1 4.4 0 6M20.8 7c1.9 2.8 1.9 7.2 0 10"/></svg></span><span>Vidéos</span></a><a class="orbit-node" data-i="4" href="#formations" style="--x:14.49%;--y:70.50%;--dx:-6.1px;--dy:3.5px"><span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12.5" rx="2"/><path d="M8.5 20.5 12 16.5l3.5 4"/><path d="M12 7.2l.9 1.9 1.9.9-1.9.9-.9 1.9-.9-1.9-1.9-.9 1.9-.9z"/></svg></span><span>Formations IA</span></a><a class="orbit-node" data-i="5" href="#briefs" style="--x:14.49%;--y:29.50%;--dx:-6.1px;--dy:-3.5px"><span class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h7.5l4 4v12.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V4a.5.5 0 0 1 .5-.5z"/><path d="M14 3.5V8h4"/><path d="M12.6 10.3 10.2 14h3.2l-2.4 3.8"/></svg></span><span>Briefs créatifs</span></a>
-  </nav>
+  <div class="planet-sys" aria-hidden="true">
+    <span class="ps-ring" style="--inset:6%"></span><span class="ps-ring" style="--inset:15%"></span><span class="ps-ring" style="--inset:24%"></span><span class="ps-orbit" style="--inset:6%;--t:84s;--a:-40deg"><span class="ps-logo" style="--t:84s;--a:-40deg"><img src="/brand/ia/chatgpt.svg" alt="" onerror="this.remove()"></span></span><span class="ps-orbit" style="--inset:15%;--t:61s;--a:130deg"><span class="ps-logo" style="--t:61s;--a:130deg"><img src="/brand/ia/gemini.svg" alt="" onerror="this.remove()"></span></span><span class="ps-orbit" style="--inset:24%;--t:43s;--a:245deg"><span class="ps-logo" style="--t:43s;--a:245deg"><img src="/brand/ia/claude.svg" alt="" onerror="this.remove()"></span></span>
+    <span class="ps-planet"><img src="/brand/aigeo-symbole.svg" alt=""></span>
+  </div>
 
   <div class="plan hi geo-block" id="geo">
     <div><span class="badge">Au centre</span><h2>Le GEO</h2><p class="mb0">Le test gratuit pose trois situations d&#x27;achat à l&#x27;IA d&#x27;OpenAI, l&#x27;éditeur de ChatGPT, et vous montre quelles entreprises elle nomme. L&#x27;Audit AIGEO va plus loin : 20 questions d&#x27;acheteur validées avec vous, un diagnostic et vos actions prioritaires.</p></div>
