@@ -5,14 +5,14 @@
 - Éditeur : Georges Hartmann, entrepreneur individuel, nom commercial Georges ADS, marque AIGEO, SIREN 103 768 628, Wasselonne (67310). Contact : contact@aigeoconseil.com.
 - Cofondateurs : Georges Hartmann et Romain Boos.
 - Clients professionnels uniquement.
-- IA mesurée : OpenAI (l'éditeur de ChatGPT), avec recherche web. Gemini est en préparation.
+- IA mesurées dans l'Audit : OpenAI (l'éditeur de ChatGPT) et Gemini (Google), avec recherche web. Gemini ne lance pas toujours de recherche sur le web. Quand il n'en lance pas, sa réponse est affichée mais n'est pas comptée. Le test gratuit interroge OpenAI seul.
 - Ce qu'aucune offre ne promet : aucune position, aucune citation, aucune progression dans les réponses des assistants IA.
 - Liste complète des pages : https://aigeoconseil.com/sitemap.xml
 
 ## Offres
 
 - [Test gratuit](https://app.aigeoconseil.com/scan): Trois situations adaptées à votre activité, une seule IA (OpenAI, l'éditeur de ChatGPT) et un résultat immédiat après traitement. Gratuit, sans obligation d'achat.
-- [Audit AIGEO, 149 €](https://aigeoconseil.com/tarifs/#audit): 20 questions d'acheteur propres à votre activité, posées à OpenAI (l'éditeur de ChatGPT) avec recherche web, jusqu'à 2 fois chacune, puis un diagnostic et vos actions prioritaires dans votre espace AIGEO. Le nombre de réponses exploitables n'est pas garanti. Paiement unique.
+- [Audit AIGEO, 149 €](https://aigeoconseil.com/tarifs/#audit): 20 questions d'acheteur propres à votre activité, posées à OpenAI (l'éditeur de ChatGPT) et à Gemini (Google) avec recherche web, 2 essais au plus par question et par IA, soit jusqu'à 80 réponses, puis un diagnostic et vos actions prioritaires dans votre espace AIGEO. Le nombre de réponses exploitables n'est pas garanti. Gemini ne lance pas toujours de recherche sur le web. Quand il n'en lance pas, sa réponse est affichée mais n'est pas comptée. Paiement unique.
 - [Expert](https://aigeoconseil.com/tarifs/#sur-mesure): Les corrections identifiées par l'audit, livrées à date. À partir de 500 €.
 - [Pilote](https://aigeoconseil.com/tarifs/#sur-mesure): Nous pilotons le sujet avec vous, de la mesure à la publication. 699 € par mois.
 - [Relevé en direct](https://aigeoconseil.com/rendez-vous/): Réservez un relevé en direct avec AIGEO : nous posons devant vous, à une IA, des questions d'acheteur de votre marché, et vous voyez si votre marque est citée.
