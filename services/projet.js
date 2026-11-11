@@ -14,6 +14,7 @@
     form = d.querySelector(`form[data-version="${v}"]`);
     if (!form) return;
     titre.textContent = form.dataset.titre;
+    document.getElementById('projet-duree').textContent = form.dataset.duree;
     merci.hidden = true;
     d.showModal();
     d.scrollTop = 0;
@@ -29,16 +30,31 @@
     c.addEventListener('change', () => { u.disabled = c.checked; u.required = !c.checked; if (c.checked) u.value = ''; });
   });
 
+  // Fichiers joints : contrôle du nombre, du poids et du format dès le choix
+  const checkFiles = (inp) => {
+    const fs = [...inp.files]; const tot = fs.reduce((a, x) => a + x.size, 0);
+    const bad = fs.length > cfg.fichiers_max || tot > cfg.fichiers_octets || fs.some((x) => !cfg.fichiers_types.includes(x.type));
+    inp.setCustomValidity(bad ? cfg.fichiers_erreur : '');
+    return !bad;
+  };
+  d.querySelectorAll('input[data-fichiers]').forEach((inp) => inp.addEventListener('change', () => { if (!checkFiles(inp)) inp.reportValidity(); }));
+  const readFiles = (f) => Promise.all([...f.querySelectorAll('input[data-fichiers]')].flatMap((inp) => [...inp.files]).map((x) => new Promise((ok, ko) => {
+    const r = new FileReader();
+    r.onload = () => ok({ nom: x.name.slice(0, 120), type: x.type, taille: x.size, contenu: String(r.result).split(',')[1] || '' });
+    r.onerror = () => ko(r.error); r.readAsDataURL(x);
+  })));
+
   const status = (f, msg) => { const s = f.querySelector('.pj-status'); s.textContent = msg || ''; s.hidden = !msg; };
   const collect = (f) => {
     const fd = new FormData(f), reponses = {};
     for (const [k, v] of fd.entries()) {
       if (['nom', 'email', 'telephone', 'consentement', 'website'].includes(k) || k.startsWith('cf-')) continue; // champ caché du captcha : envoyé à part, dans « captcha »
+      if (typeof File !== 'undefined' && v instanceof File) continue; // fichiers : envoyés à part, dans « fichiers »
       const val = String(v).trim();
       if (!val) continue;
       if (k in reponses) reponses[k] = [].concat(reponses[k], val); else reponses[k] = val;
     }
-    for (const k of ['modules', 'fonctions', 'difficultes']) if (typeof reponses[k] === 'string') reponses[k] = [reponses[k]];
+    for (const k of ['modules', 'fonctions', 'difficultes', 'outils_a_relier']) if (typeof reponses[k] === 'string') reponses[k] = [reponses[k]];
     return {
       service: f.dataset.version, reponses,
       contact: { nom: String(fd.get('nom') || '').trim(), email: String(fd.get('email') || '').trim(), telephone: String(fd.get('telephone') || '').trim() },
@@ -71,6 +87,7 @@
   d.querySelectorAll('form[data-version]').forEach((f) => f.addEventListener('submit', async (ev) => {
     ev.preventDefault();
     status(f, '');
+    f.querySelectorAll('input[data-fichiers]').forEach(checkFiles);
     if (!f.checkValidity()) {
       const bad = f.querySelector(':invalid');
       f.reportValidity();
@@ -83,7 +100,9 @@
     if (cfg.endpoint) {
       const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 15000);
       try {
-        const body = collect(f); body.captcha = await captcha(f);
+        const body = collect(f);
+        const fichiers = await readFiles(f); if (fichiers.length) body.fichiers = fichiers;
+        body.captcha = await captcha(f);
         const r = await fetch(cfg.endpoint, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body), signal: ctl.signal, credentials: 'omit', mode: 'cors' });
         ok = r.ok;
       } catch { ok = false; } finally { clearTimeout(t); }
