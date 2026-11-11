@@ -472,14 +472,13 @@ section.beyond-geo{padding:30px 0 70px;border-bottom:0}
 .ps-y{animation-name:ps-y;animation-delay:calc(var(--d) - var(--t) / 4)}
 @keyframes ps-x{from{transform:translateX(-42%)}to{transform:translateX(42%)}}
 @keyframes ps-y{from{transform:translateY(-22%)}to{transform:translateY(22%)}}
-.ps-logo{position:absolute;left:50%;top:50%;width:var(--s,58px);height:var(--s,58px);box-sizing:border-box;padding:9px;display:grid;place-items:center;border-radius:50%;background:#FFFFFF;
-  box-shadow:0 0 0 1px var(--line),0 10px 26px -10px color-mix(in srgb,var(--g1) 55%,transparent);transform:translate(-50%,-50%) rotate(calc(-1 * var(--tilt)))}
+.ps-logo{position:absolute;left:50%;top:50%;width:var(--s,48px);height:var(--s,48px);box-sizing:border-box;display:grid;place-items:center;transform:translate(-50%,-50%) rotate(calc(-1 * var(--tilt)))}
 .ps-logo img{width:100%;height:100%;object-fit:contain;display:block}
-.ps-logo:empty{background:transparent;box-shadow:none;border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
+.ps-logo:empty{border-radius:50%;border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
 .ps-planet{position:absolute;z-index:2;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;
   background:radial-gradient(circle at 35% 30%,#FFFFFF 0%,#F5F5F7 70%,#E9E7EF 100%);box-shadow:0 0 0 1px var(--line),0 24px 60px -18px color-mix(in srgb,var(--g1) 50%,transparent)}
 .ps-planet img{width:56%;height:auto}
-@media(max-width:640px){.ps-logo{--s:44px;padding:7px}}
+@media(max-width:640px){.ps-logo{--s:40px}}
 @media (prefers-reduced-motion:reduce){.ps-x,.ps-y{animation-play-state:paused}}
 .ps-note{max-width:520px;margin:6px auto 0;text-align:center;color:var(--muted)}
 /* B : défilement narratif */
