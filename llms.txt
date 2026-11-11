@@ -5,7 +5,7 @@
 - Éditeur : Georges Hartmann, entrepreneur individuel, nom commercial Georges ADS, marque AIGEO, SIREN 103 768 628, Wasselonne (67310). Contact : contact@aigeoconseil.com.
 - Cofondateurs : Georges Hartmann et Romain Boos.
 - Clients professionnels uniquement.
-- IA mesurées dans l'Audit : OpenAI (l'éditeur de ChatGPT) et Gemini (Google), avec recherche web. Gemini ne lance pas toujours de recherche sur le web. Quand il n'en lance pas, sa réponse est affichée mais n'est pas comptée. Le test gratuit interroge OpenAI seul.
+- IA mesurées dans l'Audit : OpenAI (l'éditeur de ChatGPT) et Gemini (Google), avec recherche web. Gemini ne lance pas toujours de recherche sur le web. Quand il n'en lance pas, sa réponse est affichée mais n'est pas comptée.
 - Ce qu'aucune offre ne promet : aucune position, aucune citation, aucune progression dans les réponses des assistants IA.
 - Liste complète des pages : https://aigeoconseil.com/sitemap.xml
 
