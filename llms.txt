@@ -19,6 +19,16 @@
 - [Tarifs](https://aigeoconseil.com/tarifs/): Tarifs AIGEO : Audit AIGEO 149 €, Expert à partir de 500 €, Pilote 699 € par mois. TVA non applicable, article 293 B du CGI.
 - [Questions fréquentes](https://aigeoconseil.com/faq/): Questions fréquentes sur AIGEO, agence de visibilité dans les réponses des IA : être cité par ChatGPT ou Gemini, choisir une agence GEO, test gratuit, Audit AIGEO à 149 €, suivi et commande.
 
+## Services
+
+- [Services AIGEO](https://aigeoconseil.com/services/): Être cité par les IA, et tout ce qui rend une marque visible autour. Le GEO au centre, six services pour les professionnels, chiffrés sur devis, sauf le SEO, qui suit les prix affichés de l'offre Expert.
+- [SEO](https://aigeoconseil.com/services/#seo): Les corrections trouvées par l'Audit AIGEO, faites pour vous, sur votre site et vos fiches. Prix affichés : offre Expert.
+- [Création de CRM](https://aigeoconseil.com/services/#crm): Un outil simple, fait pour votre façon de travailler, pour suivre vos clients et vos devis. Sur devis.
+- [Création de site internet](https://aigeoconseil.com/services/#site): Un site clair et rapide sur téléphone, écrit pour vos clients et lisible par les moteurs et les IA. Sur devis.
+- [Vidéos courtes en motion design](https://aigeoconseil.com/services/#videos): Des vidéos animées au format vertical, à vos couleurs, pour vos réseaux. Sur devis.
+- [Formations à l'IA pour les entreprises](https://aigeoconseil.com/services/#formations): Votre équipe apprend à utiliser l'IA sur ses vraies tâches, avec les bonnes précautions. Sur devis.
+- [Briefs de créatives pour les réseaux](https://aigeoconseil.com/services/#briefs): Des idées de vidéos et de visuels courts, prêtes à tourner, pensées pour donner envie de partager. Sur devis.
+
 ## Articles
 
 - [AIGEO : votre entreprise dans les réponses des IA](https://aigeoconseil.com/blog/aigeo-comprendre-place-reponses-ia/): Découvrez l’approche AIGEO : partir des questions de vos clients, examiner les réponses des IA et choisir les premières informations à améliorer.

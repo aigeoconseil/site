@@ -410,6 +410,10 @@ section:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-9p
 section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tight)::after{display:none}
 @media (prefers-reduced-motion:reduce){.hero-art img{animation:none}}
 @media (max-width:640px){.hero-art .a1{width:52px;right:52px;top:8px}.hero-art .a2{display:none}.cta-band{padding:24px 20px}.cta-band p{font-size:19px}}
+/* Bandeau « Au-delà du GEO » (11/11), en fin d'accueil */
+section.beyond-geo{padding:30px 0 70px;border-bottom:0}
+.beyond-geo .card{display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap;padding:20px 26px}
+.beyond-geo .eyebrow{margin-bottom:8px}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AIGEO">
@@ -704,6 +708,14 @@ section:has(+ section[style*="padding-top:0"])::after,section:has(+ section.tigh
             <li>Nous ne produisons pas de contenu automatisé en masse : c'est exactement ce que les modèles apprennent à ignorer.</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="beyond-geo" aria-label="Au-delà du GEO">
+    <div class="wrap">
+      <div class="card">
+        <div><div class="eyebrow">Au-delà du GEO</div><p class="small mb0">Site internet, CRM, vidéos, formations à l&#x27;IA : six services sur devis, autour de votre visibilité.</p></div>
+        <a class="cta ghost" href="/services/">Voir les services</a>
       </div>
     </div>
   </section>
@@ -1189,6 +1201,7 @@ PAGES.forEach(([id,label])=>{
   const b=document.createElement('button');b.textContent=label;b.dataset.id=id;
   b.onclick=()=>go(id);nav.appendChild(b);
 });
+{const v=document.createElement('a');v.href='/services/';v.textContent='Services';nav.insertBefore(v,nav.querySelector('button[data-id="methode"]'));}
 {const f=document.createElement('a');f.href='/faq/';f.textContent='FAQ';nav.insertBefore(f,nav.querySelector('button[data-id="contact"]'));}
 function go(id){
   id=ALIAS[id]||id;
