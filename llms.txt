@@ -40,5 +40,5 @@
 
 - [Conditions générales de prestation](https://aigeoconseil.com/conditions-generales/): Conditions générales de prestation de services du site aigeoconseil.com : offres en ligne et sur devis, prix et paiement, abonnements avec ou sans engagement, défaut de paiement, obligations, propriété intellectuelle, droit de rétractation.
 - [Conditions de l'espace client](https://aigeoconseil.com/conditions-generales/espace/): Conditions d'utilisation de l'espace client AIGEO et accord de traitement des données personnelles (article 28 du RGPD).
-- [Politique de confidentialité](https://aigeoconseil.com/confidentialite/): Politique de confidentialité d'AIGEO : données traitées pour le site, le scan gratuit, le contact, l'espace client et l'Audit, durées, fournisseurs d'IA et vos droits.
+- [Politique de confidentialité](https://aigeoconseil.com/confidentialite/): Politique de confidentialité d'AIGEO : données traitées pour le site, le test gratuit, le contact, l'espace client et l'Audit, durées, fournisseurs d'IA et vos droits.
 - [Mentions légales](https://aigeoconseil.com/mentions-legales/): Mentions légales du site aigeoconseil.com : éditeur, hébergeur, propriété intellectuelle, données personnelles et cookies.
