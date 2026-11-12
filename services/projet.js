@@ -24,6 +24,15 @@
   d.querySelector('[data-fermer]').addEventListener('click', () => d.close());
   d.addEventListener('close', () => { if (opener) opener.focus(); });
 
+  // Les liens vers #crm ouvrent le formulaire, y compris à l’arrivée depuis un autre site.
+  const openCrmFromLink = () => {
+    if (window.location.hash !== '#crm' || d.open) return;
+    const button = document.querySelector('#crm [data-projet="crm"]');
+    if (button) open('crm', button);
+  };
+  window.addEventListener('hashchange', openCrmFromLink);
+  openCrmFromLink();
+
   // « Je n'ai pas encore de site » : l'adresse devient inutile
   d.querySelectorAll('input[data-aucun]').forEach((u) => {
     const c = document.getElementById(u.dataset.aucun);
