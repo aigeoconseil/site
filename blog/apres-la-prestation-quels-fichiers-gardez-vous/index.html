@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Après la prestation, quels fichiers gardez-vous ? · AIGEO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Faire distinguer un rendu final des fichiers nécessaires pour modifier ou reprendre un travail, sans affirmer un droit de propriété automatique.">
+<link rel="canonical" href="https://aigeoconseil.com/blog/apres-la-prestation-quels-fichiers-gardez-vous/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Après la prestation, quels fichiers gardez-vous ?">
+<meta property="og:description" content="Faire distinguer un rendu final des fichiers nécessaires pour modifier ou reprendre un travail, sans affirmer un droit de propriété automatique.">
+<meta property="og:url" content="https://aigeoconseil.com/blog/apres-la-prestation-quels-fichiers-gardez-vous/">
+<meta property="og:site_name" content="AIGEO">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:"Space Grotesk";src:url("/fonts/space-grotesk-var.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url("/fonts/ibm-plex-sans-var.woff2") format("woff2");font-weight:100 700;font-stretch:85% 100%;font-style:normal;font-display:swap}
+:root{
+  --ink:#121216; --paper:#F5F5F7; --muted:#6B6B73; --line:#E4E2DC;
+  --accent:#6C10BF; --accent2:#D20DAD; --surface:#FFFFFF;
+  --g1:#6C10BF; --g2:#990DD2; --g3:#D20DAD;
+  --font-title:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --font-body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
+[data-theme="dark"]{
+  --ink:#F2F2F4; --paper:#121216; --muted:#9A9AA6; --line:#2A2A34;
+  --accent:#C77DFF; --accent2:#E44FC6; --surface:#1A1A21;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  transition:background .25s ease,color .25s ease;
+}
+h1,h2,h3,h4,.price b,.stat b{font-family:var(--font-title)}
+[data-theme="dark"] .grad{background-image:linear-gradient(90deg,#B57CF2,#C77DFF,#E44FC6)}
+
+a{color:inherit}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(31px,4.4vw,50px);font-weight:680}
+h2{font-size:clamp(23px,2.8vw,31px);font-weight:640;margin:46px 0 16px;scroll-margin-top:92px}
+h3{font-size:19px;font-weight:640;margin:34px 0 8px;scroll-margin-top:92px}
+p{margin:0 0 18px}
+.small{font-size:14.5px;color:var(--muted)}
+.tiny{font-size:13px;color:var(--muted)}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px;width:100%;padding:0 34px}
+.logo{height:27px;display:block}
+.bar>a:first-child{margin-right:auto}
+nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+nav a{font-size:15px;color:var(--muted);padding:8px 12px;border-radius:8px;text-decoration:none;transition:.15s}
+nav a:hover{color:var(--ink);background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.themebtn{width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;display:grid;place-items:center;margin-left:8px;flex:0 0 auto}
+.themebtn svg{width:17px;height:17px;stroke:var(--ink);fill:none;stroke-width:1.7}
+.cta{display:inline-block;background:var(--ink);color:var(--paper);border:0;font:inherit;font-size:16px;font-weight:600;padding:14px 26px;border-radius:9px;cursor:pointer;text-decoration:none;transition:.15s}
+.cta:hover{transform:translateY(-1px);opacity:.9}
+.cta.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+.hero{padding:64px 0 8px}
+.eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+.meta{font-size:14px;color:var(--muted);margin-top:22px;padding-bottom:26px;border-bottom:1px solid var(--line)}
+.chapo{font-size:clamp(18px,2vw,20px);color:var(--muted);margin:30px 0 8px}
+article{padding-bottom:20px}
+article ul{margin:0 0 20px;padding-left:22px}
+article li{margin-bottom:10px}
+figure{margin:38px 0}
+figure img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+.faq{border-top:1px solid var(--line);margin-top:14px;padding-top:6px}
+.faq .q{font-weight:640;margin:26px 0 6px}
+.end{margin:52px 0 20px;padding:30px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.end h3{margin:0 0 10px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.srcs{margin-top:48px;padding-top:26px;border-top:1px solid var(--line)}
+.srcs ol{padding-left:20px;margin:0}
+.srcs li{margin-bottom:12px;font-size:14px;color:var(--muted)}
+.srcs a{color:var(--muted)}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 44px;font-size:13.5px;color:var(--muted)}
+@media(max-width:840px){
+  .bar{height:auto;padding:13px 20px;flex-wrap:wrap;gap:12px}
+  .logo{height:22px}
+  nav{width:100%;order:3;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{white-space:nowrap;padding:7px 11px;font-size:14.5px}
+  .themebtn{margin-left:0}
+}
+@media(max-width:640px){ .hero{padding:40px 0 4px} .end{padding:22px} }
+@media(max-width:520px){nav a{padding:6px 5px;font-size:13px}}
+</style>
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AIGEO : votre marque est-elle citée par les IA ?">
+<meta name="twitter:image" content="https://aigeoconseil.com/blog/apres-la-prestation-quels-fichiers-gardez-vous/7ca7a4b8a3b083eccf586afee34dc0973a0f0af942ecc51ef7e71aa14c333d77.png">
+<link rel="stylesheet" href="/brand/motion.css">
+<script src="/brand/motion.js" defer></script>
+<meta property="og:image" content="https://aigeoconseil.com/blog/apres-la-prestation-quels-fichiers-gardez-vous/7ca7a4b8a3b083eccf586afee34dc0973a0f0af942ecc51ef7e71aa14c333d77.png"><meta name="aigeo-content-id" content="AGC-b98eef9d-d184-534a-8139-3d428f2b3194"><meta name="aigeo-content-digest" content="59159d8da221a3d4b5adab516cc83eef2881280f0f4fa2caf1c8d1b7ad626a63"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Après la prestation, quels fichiers gardez-vous ?","description":"Faire distinguer un rendu final des fichiers nécessaires pour modifier ou reprendre un travail, sans affirmer un droit de propriété automatique.","image":"https://aigeoconseil.com/blog/apres-la-prestation-quels-fichiers-gardez-vous/7ca7a4b8a3b083eccf586afee34dc0973a0f0af942ecc51ef7e71aa14c333d77.png","datePublished":"2026-11-13T08:01:34.767Z","dateModified":"2026-11-13T08:01:34.767Z","author":{"@type":"Organization","name":"AIGEO","url":"https://aigeoconseil.com/"},"publisher":{"@type":"Organization","name":"AIGEO","url":"https://aigeoconseil.com/"},"mainEntityOfPage":"https://aigeoconseil.com/blog/apres-la-prestation-quels-fichiers-gardez-vous/"}</script><style>article figure{margin:30px 0}article figure img{width:100%;height:auto;border-radius:12px}article p+p{margin-top:1.1em}</style></head>
+<body>
+
+<header>
+  <div class="bar">
+    <a href="/"><img class="logo" id="logo" alt="AIGEO" src="/brand/aigeo-logo-noir.svg"></a>
+    <nav>
+      <a href="/#accueil">Accueil</a>
+      <a href="/#offres">Offres</a>
+      <a href="/services/">Services</a>
+      <a href="/#methode">Méthode</a>
+      <a href="/#blog">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://espace.aigeoconseil.com">Espace client</a>
+    </nav>
+    <button class="themebtn" onclick="toggleTheme()" aria-label="Changer de thème">
+      <svg id="ticon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap"><div class="hero"><div class="eyebrow">Méthode AIGEO</div><h1>Après la prestation, quels fichiers gardez-vous ?</h1><div class="meta">Publié le 13 novembre 2026 · AIGEO</div></div><article><figure><img src="7ca7a4b8a3b083eccf586afee34dc0973a0f0af942ecc51ef7e71aa14c333d77.png" alt="Couverture de l’article Le rendu. Et les fichiers. Texte : Le rendu. Et les fichiers. Précisez ce que le client reçoit." width="1600" height="900" loading="eager"></figure><p>À la fin d’une prestation de création, un client peut recevoir un résultat prêt à utiliser. Il peut aussi avoir besoin de le modifier plus tard, de le décliner ou d’en confier la reprise à une autre équipe. Ces besoins ne sont pas identiques. Une description d’offre claire permet de comprendre les livrables prévus avant la mission, sans supposer ce que le contrat ou les licences n’ont pas confirmé.</p>
+<h2>Le résultat visible ne décrit pas tout ce qui est remis</h2>
+<p>Une image exportée permet de voir une composition. Un fichier de travail peut contenir d’autres éléments utiles à sa modification. Une vidéo finale et le projet qui a servi à la fabriquer ne remplissent pas la même fonction. Nous ne déduisons pas de cette différence que l’un doit toujours être fourni avec l’autre. Nous recommandons de rendre la liste prévue compréhensible.</p>
+<p>La même question se pose dans la présentation commerciale. Un titre comme « création complète » peut sembler évident à l’équipe et laisser plusieurs interprétations au lecteur. Plutôt que de multiplier les adjectifs, nommez ce qui sera remis. Si certains éléments sont disponibles sur demande, cette possibilité doit correspondre à une pratique réelle et à des conditions confirmées.</p>
+<h2>Partir de l’usage prévu après la livraison</h2>
+<p>Le client souhaite-t-il publier le résultat tel quel, le décliner dans plusieurs formats ou le faire évoluer ? Cette question aide à préparer l’échange. Elle ne remplace pas un accord sur les droits ou les outils. Un format modifiable peut dépendre d’un logiciel, d’une police ou d’un élément tiers dont les conditions doivent être examinées séparément.</p>
+<p>Notre méthode consiste à relier chaque livrable à un geste concret. Le fichier prêt à publier sert à une utilisation immédiate. Une version de travail peut servir à une reprise. Une notice peut aider une équipe à retrouver les éléments. Cette organisation reste une proposition éditoriale ; elle ne crée aucune obligation contractuelle générale pour les prestataires.</p>
+<h2>Écrire une liste courte, vérifiable et actuelle</h2><figure><img src="731b390dfab1812736262d4ab1ce506802a9a7fc49d62ac443544f2665d20220.png" alt="Trois repères de méthode AIGEO pour Le rendu. Et les fichiers. Texte : Ce que la page doit préciser. L’usage prévu : Publier, modifier, reprendre. Les fichiers remis : Format et contenu exacts. Les droits et les accès : Conditions à confirmer à part" width="1200" height="900" loading="lazy"></figure>
+<p>Sur la page de service, indiquez les catégories de fichiers effectivement prévues et les principaux formats lorsque cela aide au choix. Si le détail dépend du projet, dites à quel moment il sera confirmé. Le lecteur n’a pas besoin d’un inventaire technique complet avant le premier échange, mais il doit pouvoir repérer ce qui nécessite une discussion.</p>
+<p>Vérifiez ensuite la cohérence entre cette page et les documents commerciaux utilisés par l’équipe. Une ancienne brochure peut annoncer des éléments qui ne font plus partie de l’offre. Une légende sociale peut employer un terme plus large que le devis. Ces écarts demandent une vérification humaine ; une reformulation automatique ne suffit pas à décider du contenu réel de la prestation.</p>
+<h2>Lire les réponses IA sans inventer de conditions</h2>
+<p>Si une réponse IA présente une offre de création, une formule générale ne permet pas d’établir les fichiers remis. Il faut retrouver la description pertinente et conserver les inconnues. Nous ne présentons ici aucun résultat d’assistant ni expérience client. Nous expliquons une manière de lire l’offre sans transformer une supposition en condition confirmée.</p>
+<p>Google recommande que les informations importantes soient accessibles sous forme de texte. Nous en tirons une action éditoriale limitée : écrire les éléments utiles à la compréhension de votre service. Cela ne garantit ni l’apparition de la page dans une réponse, ni l’interprétation exacte de chaque assistant.</p>
+<h2>Une question à poser à votre équipe</h2>
+<p>Prenez une prestation que vous vendez régulièrement. Demandez à deux personnes de décrire ce que le client reçoit à la fin, puis comparez leurs réponses avec la page publique. Toute différence mérite une clarification, pas une promesse ajoutée dans l’urgence. Lorsque la liste est confirmée, vous pouvez la rédiger simplement et conserver la version précédente.</p>
+<p>Le résultat attendu est une offre plus facile à comprendre. Les effets sur les demandes, la satisfaction ou la visibilité restent à observer avec des sources réelles. Pour les droits, licences ou clauses particulières, faites vérifier les accords concernés par les personnes compétentes : le contenu marketing ne décide pas à leur place.</p><div class="srcs"><h2>Sources consultées</h2><ul><li><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener noreferrer">Google Search Central — AI features and your website</a> · vérifiée le 2026-11-08T16:49:02.364Z</li><li><a href="https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search" target="_blank" rel="noopener noreferrer">OpenAI — Shopping with ChatGPT Search</a> · vérifiée le 2026-11-08T16:49:02.364Z</li></ul></div></article>
+
+  <footer>
+    © 2026 AIGEO · Georges Hartmann &amp; Romain Boos<br>
+    Visibilité des marques dans les réponses génératives · <a href="/#blog">Retour au blog</a> · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité</a>
+  <div class="small" style="margin-top:8px"><a href="/#blog">Blog</a> · <a href="/#commerces">Commerces</a> · <a href="https://espace.aigeoconseil.com">Espace client</a> · <a href="https://www.instagram.com/aigeo.conseil/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@aigeo.conseil" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.linkedin.com/company/agence-aigeo/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+</main>
+
+
+
+
+<script>
+const SUN='<path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.7-5.7 1.4-1.4M4.9 19.1l1.4-1.4m0-11.4L4.9 4.9m14.2 14.2-1.4-1.4"/><circle cx="12" cy="12" r="4"/>';
+const MOON='<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>';
+function applyTheme(t){
+  document.documentElement.dataset.theme=t;
+  document.getElementById('logo').src=(t==='dark')?'/brand/aigeo-logo-blanc.svg':'/brand/aigeo-logo-noir.svg';
+  document.getElementById('ticon').innerHTML=(t==='dark')?SUN:MOON;
+}
+function toggleTheme(){
+  const next=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  applyTheme(next);
+  try{localStorage.setItem('aigeo-theme',next)}catch(e){}
+}
+let start='light';
+try{
+  const s=localStorage.getItem('aigeo-theme');
+  if(s) start=s;
+  else if(window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches) start='dark';
+}catch(e){}
+applyTheme(start);
+</script>
+</body>
+</html>
