@@ -472,13 +472,20 @@ section.beyond-geo{padding:30px 0 70px;border-bottom:0}
 .ps-y{animation-name:ps-y;animation-delay:calc(var(--d) - var(--t) / 4)}
 @keyframes ps-x{from{transform:translateX(-42%)}to{transform:translateX(42%)}}
 @keyframes ps-y{from{transform:translateY(-22%)}to{transform:translateY(22%)}}
-.ps-logo{position:absolute;left:50%;top:50%;width:var(--s,48px);height:var(--s,48px);box-sizing:border-box;display:grid;place-items:center;transform:translate(-50%,-50%) rotate(calc(-1 * var(--tilt)))}
+.ps-logo{position:absolute;left:50%;top:50%;width:var(--s,58px);height:var(--s,58px);box-sizing:border-box;padding:var(--p,11px);display:grid;place-items:center;border-radius:50%;transform:translate(-50%,-50%) rotate(calc(-1 * var(--tilt)));
+  box-shadow:0 0 0 1px rgba(18,18,22,.10),0 10px 24px -10px rgba(18,18,22,.45)}
+.ps-logo.ps-clair{background:#FFFFFF}
+.ps-logo.ps-sombre{background:#121216;--p:9px}
+/* Gemini : le fichier est une icône d'application ; à l'affichage, l'icône remplit la pastille et la pastille la découpe en rond (fichier non modifié) */
+.ps-logo.ps-gemini{background:#EEF0FB;padding:0;overflow:hidden}
+.ps-logo.ps-gemini img{transform:scale(1.26)}
+[data-theme="dark"] .ps-logo{box-shadow:0 0 0 1px rgba(255,255,255,.22),0 10px 24px -10px rgba(0,0,0,.75)}
 .ps-logo img{width:100%;height:100%;object-fit:contain;display:block}
-.ps-logo:empty{border-radius:50%;border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
+.ps-logo:empty{background:transparent;box-shadow:none;border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
 .ps-planet{position:absolute;z-index:2;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;
   background:radial-gradient(circle at 35% 30%,#FFFFFF 0%,#F5F5F7 70%,#E9E7EF 100%);box-shadow:0 0 0 1px var(--line),0 24px 60px -18px color-mix(in srgb,var(--g1) 50%,transparent)}
 .ps-planet img{width:56%;height:auto}
-@media(max-width:640px){.ps-logo{--s:40px}}
+@media(max-width:640px){.ps-logo{--s:46px;--p:9px}.ps-logo.ps-sombre{--p:7px}}
 @media (prefers-reduced-motion:reduce){.ps-x,.ps-y{animation-play-state:paused}}
 .ps-note{max-width:520px;margin:6px auto 0;text-align:center;color:var(--muted)}
 /* B : défilement narratif */
@@ -582,7 +589,7 @@ input:disabled{opacity:.5}
   <p class="lead" style="margin-top:22px">Le GEO reste notre métier et notre priorité : savoir si les IA nomment votre marque quand un acheteur leur demande conseil, et corriger ce qui manque. Autour, six services pour le reste de votre présence en ligne.</p>
   <p class="tiny svc-meta">Pour les professionnels uniquement. Chaque service est chiffré sur devis, sauf le SEO, qui suit les prix affichés de l&#x27;offre Expert.</p>
   <div class="planet-sys" aria-hidden="true">
-    <span class="ps-orbit" style="--tilt:0deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:60deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:120deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:0deg;--t:30s;--d:0s"><span class="ps-x"><span class="ps-y"><span class="ps-logo"><img src="/brand/ia/chatgpt.png" alt=""></span></span></span></span><span class="ps-orbit" style="--tilt:60deg;--t:24s;--d:-9s"><span class="ps-x"><span class="ps-y"><span class="ps-logo"><img src="/brand/ia/gemini.png" alt=""></span></span></span></span><span class="ps-orbit" style="--tilt:120deg;--t:36s;--d:-20s"><span class="ps-x"><span class="ps-y"><span class="ps-logo"><img src="/brand/ia/claude.svg" alt=""></span></span></span></span>
+    <span class="ps-orbit" style="--tilt:0deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:60deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:120deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:0deg;--t:30s;--d:0s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-sombre"><img src="/brand/ia/chatgpt-blanc.png" alt=""></span></span></span></span><span class="ps-orbit" style="--tilt:60deg;--t:24s;--d:-9s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-gemini"><img src="/brand/ia/gemini.png" alt=""></span></span></span></span><span class="ps-orbit" style="--tilt:120deg;--t:36s;--d:-20s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-clair"><img src="/brand/ia/claude.svg" alt=""></span></span></span></span>
     <span class="ps-planet"><img src="/brand/aigeo-symbole.svg" alt=""></span>
   </div>
   <p class="small ps-note">Les logos illustrent les principaux assistants IA. L&#x27;Audit AIGEO mesure aujourd&#x27;hui les réponses d&#x27;OpenAI et de Gemini. Aucun lien commercial avec ces éditeurs.</p>
