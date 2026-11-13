@@ -473,19 +473,21 @@ section.beyond-geo{padding:30px 0 70px;border-bottom:0}
 @keyframes ps-x{from{transform:translateX(-42%)}to{transform:translateX(42%)}}
 @keyframes ps-y{from{transform:translateY(-22%)}to{transform:translateY(22%)}}
 .ps-logo{position:absolute;left:50%;top:50%;width:var(--s,58px);height:var(--s,58px);box-sizing:border-box;padding:var(--p,11px);display:grid;place-items:center;border-radius:50%;transform:translate(-50%,-50%) rotate(calc(-1 * var(--tilt)));
-  box-shadow:0 0 0 1px rgba(18,18,22,.10),0 10px 24px -10px rgba(18,18,22,.45)}
-.ps-logo.ps-clair{background:#FFFFFF}
-.ps-logo.ps-sombre{background:#121216;--p:9px}
-/* Gemini : le fichier est une icône d'application ; à l'affichage, l'icône remplit la pastille et la pastille la découpe en rond (fichier non modifié) */
-.ps-logo.ps-gemini{background:#EEF0FB;padding:0;overflow:hidden}
-.ps-logo.ps-gemini img{transform:scale(1.26)}
-[data-theme="dark"] .ps-logo{box-shadow:0 0 0 1px rgba(255,255,255,.22),0 10px 24px -10px rgba(0,0,0,.75)}
+  background:#121216;box-shadow:0 0 0 1px rgba(18,18,22,.12),0 10px 24px -10px rgba(18,18,22,.5)}
+/* Bulles noires sur fond clair, blanches sur fond sombre (Georges, 13/11) */
+[data-theme="dark"] .ps-logo{background:#FFFFFF;box-shadow:0 0 0 1px rgba(255,255,255,.22),0 10px 24px -10px rgba(0,0,0,.75)}
+.ps-logo.ps-sombre{--p:9px}
+/* ChatGPT : blanc sur bulle noire ; noir sur bulle blanche (même fichier, affiché en noir) */
+[data-theme="dark"] .ps-logo.ps-sombre img{filter:brightness(0)}
+/* Gemini : le fichier est une icône d'application ; à l'affichage, seul un disque central de l'icône est montré (fichier non modifié) */
+.ps-logo.ps-gemini{--p:5px}
+.ps-logo.ps-gemini img{clip-path:circle(39% at 50% 50%);transform:scale(1.26)}
 .ps-logo img{width:100%;height:100%;object-fit:contain;display:block}
 .ps-logo:empty{background:transparent;box-shadow:none;border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
 .ps-planet{position:absolute;z-index:2;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;
   background:radial-gradient(circle at 35% 30%,#FFFFFF 0%,#F5F5F7 70%,#E9E7EF 100%);box-shadow:0 0 0 1px var(--line),0 24px 60px -18px color-mix(in srgb,var(--g1) 50%,transparent)}
 .ps-planet img{width:56%;height:auto}
-@media(max-width:640px){.ps-logo{--s:46px;--p:9px}.ps-logo.ps-sombre{--p:7px}}
+@media(max-width:640px){.ps-logo{--s:46px;--p:9px}.ps-logo.ps-sombre{--p:7px}.ps-logo.ps-gemini{--p:4px}}
 @media (prefers-reduced-motion:reduce){.ps-x,.ps-y{animation-play-state:paused}}
 .ps-note{max-width:520px;margin:6px auto 0;text-align:center;color:var(--muted)}
 /* B : défilement narratif */
