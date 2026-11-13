@@ -479,15 +479,14 @@ section.beyond-geo{padding:30px 0 70px;border-bottom:0}
 .ps-logo.ps-sombre{--p:9px}
 /* ChatGPT : blanc sur bulle noire ; noir sur bulle blanche (même fichier, affiché en noir) */
 [data-theme="dark"] .ps-logo.ps-sombre img{filter:brightness(0)}
-/* Gemini : le fichier est une icône d'application ; à l'affichage, seul un disque central de l'icône est montré (fichier non modifié) */
-.ps-logo.ps-gemini{--p:5px}
-.ps-logo.ps-gemini img{clip-path:circle(39% at 50% 50%);transform:scale(1.26)}
+/* Gemini : étoile seule, extraite de l'icône fournie par Georges (fond de tuile rendu transparent, 13/11) */
+.ps-logo.ps-etoile{--p:12px}
 .ps-logo img{width:100%;height:100%;object-fit:contain;display:block}
 .ps-logo:empty{background:transparent;box-shadow:none;border:1.5px dashed color-mix(in srgb,var(--muted) 55%,transparent)}
 .ps-planet{position:absolute;z-index:2;left:50%;top:50%;width:32%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;
   background:radial-gradient(circle at 35% 30%,#FFFFFF 0%,#F5F5F7 70%,#E9E7EF 100%);box-shadow:0 0 0 1px var(--line),0 24px 60px -18px color-mix(in srgb,var(--g1) 50%,transparent)}
 .ps-planet img{width:56%;height:auto}
-@media(max-width:640px){.ps-logo{--s:46px;--p:9px}.ps-logo.ps-sombre{--p:7px}.ps-logo.ps-gemini{--p:4px}}
+@media(max-width:640px){.ps-logo{--s:46px;--p:9px}.ps-logo.ps-sombre{--p:7px}.ps-logo.ps-etoile{--p:10px}}
 @media (prefers-reduced-motion:reduce){.ps-x,.ps-y{animation-play-state:paused}}
 .ps-note{max-width:520px;margin:6px auto 0;text-align:center;color:var(--muted)}
 /* B : défilement narratif */
@@ -591,7 +590,7 @@ input:disabled{opacity:.5}
   <p class="lead" style="margin-top:22px">Le GEO reste notre métier et notre priorité : savoir si les IA nomment votre marque quand un acheteur leur demande conseil, et corriger ce qui manque. Autour, six services pour le reste de votre présence en ligne.</p>
   <p class="tiny svc-meta">Pour les professionnels uniquement. Chaque service est chiffré sur devis, sauf le SEO, qui suit les prix affichés de l&#x27;offre Expert.</p>
   <div class="planet-sys" aria-hidden="true">
-    <span class="ps-orbit" style="--tilt:0deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:60deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:120deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:0deg;--t:30s;--d:0s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-sombre"><img src="/brand/ia/chatgpt-blanc.png" alt=""></span></span></span></span><span class="ps-orbit" style="--tilt:60deg;--t:24s;--d:-9s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-gemini"><img src="/brand/ia/gemini.png" alt=""></span></span></span></span><span class="ps-orbit" style="--tilt:120deg;--t:36s;--d:-20s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-clair"><img src="/brand/ia/claude.svg" alt=""></span></span></span></span>
+    <span class="ps-orbit" style="--tilt:0deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:60deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:120deg"><span class="ps-ring"></span></span><span class="ps-orbit" style="--tilt:0deg;--t:30s;--d:0s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-sombre"><img src="/brand/ia/chatgpt-blanc.png" alt=""></span></span></span></span><span class="ps-orbit" style="--tilt:60deg;--t:24s;--d:-9s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-etoile"><img src="/brand/ia/gemini-etoile.png" alt=""></span></span></span></span><span class="ps-orbit" style="--tilt:120deg;--t:36s;--d:-20s"><span class="ps-x"><span class="ps-y"><span class="ps-logo ps-clair"><img src="/brand/ia/claude.svg" alt=""></span></span></span></span>
     <span class="ps-planet"><img src="/brand/aigeo-symbole.svg" alt=""></span>
   </div>
   <p class="small ps-note">Les logos illustrent les principaux assistants IA. L&#x27;Audit AIGEO mesure aujourd&#x27;hui les réponses d&#x27;OpenAI et de Gemini. Aucun lien commercial avec ces éditeurs.</p>
