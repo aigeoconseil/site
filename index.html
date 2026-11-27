@@ -531,7 +531,7 @@ section.beyond-geo{padding:30px 0 70px;border-bottom:0}
           </div>
           <div class="test-next test-after">
           <p class="small">Après le test, échangeons sur votre résultat. L'Audit AIGEO va plus loin : il pose 20 questions d'acheteur propres à votre activité à OpenAI (l'éditeur de ChatGPT) et à Gemini (Google), et analyse leurs réponses pour voir si votre entreprise y est nommée, et sur quelles sources ces IA s'appuient. Il transforme ensuite ces preuves en diagnostic et en actions.</p>
-            <div class="btns"><button class="cta" type="button" onclick="go('offres')" data-cta-location="after-free-scan">Découvrir l'Audit AIGEO · 149 €</button><button class="cta ghost" type="button" onclick="go('contact')">Parler à l'équipe</button></div>
+            <div class="btns"><button class="cta" type="button" onclick="go('offres')" data-cta-location="after-free-scan">Découvrir l'Audit AIGEO · <span data-prix-audit>149 €</span></button><button class="cta ghost" type="button" onclick="go('contact')">Parler à l'équipe</button></div>
           </div>
         </div>
         <aside class="test-example" aria-label="Exemple fictif de résultat du test AIGEO">
@@ -570,7 +570,7 @@ section.beyond-geo{padding:30px 0 70px;border-bottom:0}
           <div class="num">2</div>
           <h3>L'Audit AIGEO</h3>
           <p class="small">Panel de 20 questions d'acheteur validé avec vous, réponses et concurrents observés, sources disponibles, diagnostic étayé et plan d'action.</p>
-          <p class="small mb0"><b>Audit 149 €, paiement unique.</b></p>
+          <p class="small mb0"><b>Audit <span data-prix-audit>149 €</span>, paiement unique.</b></p>
         </div>
         <div class="card">
           <div class="num">3</div>
@@ -739,7 +739,7 @@ section.beyond-geo{padding:30px 0 70px;border-bottom:0}
         <div class="plan hi">
           <span class="badge">Pour savoir</span>
           <h3>L'Audit AIGEO</h3>
-          <div class="price"><b>149 €</b><span class="small">paiement unique</span></div>
+          <div class="price"><b data-prix-audit data-prix-mention>149 €</b><span class="small">paiement unique</span></div>
           <div class="grow">
             <p class="small">20 questions d'acheteur propres à votre activité, posées à OpenAI (l'éditeur de ChatGPT) et à Gemini (Google) avec recherche web, 2 essais au plus par question, puis un diagnostic et vos actions prioritaires dans votre espace AIGEO. Le nombre de réponses exploitables n'est pas garanti. Gemini ne lance pas toujours de recherche sur le web. Quand il n'en lance pas, sa réponse est affichée mais n'est pas comptée.</p>
             <ul class="check">
@@ -750,7 +750,7 @@ section.beyond-geo{padding:30px 0 70px;border-bottom:0}
               <li>Un diagnostic et vos actions prioritaires</li>
               <li>Résultats sous 5 jours ouvrés après le paiement, délai suspendu tant que vos questions ne sont pas confirmées, dans votre espace AIGEO</li>
             </ul>
-            <p class="tiny" style="margin-top:14px">149 € déduits de l'Expert ou du Pilote si vous les commandez dans les 30 jours suivant votre Audit. Une seule déduction par Audit.</p>
+            <p class="tiny" style="margin-top:14px"><span data-bf-deduction>149 € déduits</span> de l'Expert ou du Pilote si vous les commandez dans les 30 jours suivant votre Audit. Une seule déduction par Audit.</p>
           </div>
           <div class="btns" style="margin-top:24px"><button class="cta full" type="button" data-topic="audit" data-audit-cta onclick="go('contact')">Définir mon audit</button></div>
           <p class="tiny" style="margin-top:12px" data-audit-parcours="ferme" hidden>Écrivez-nous : nous ouvrons avec vous votre compte et votre projet dans l'espace client. Aucun paiement n'est demandé avant.</p>
@@ -1294,5 +1294,6 @@ function showScanContext(){
 }
 showScanContext();
 </script>
+<script src="/black-friday-2026.js" defer></script>
 </body>
 </html>
