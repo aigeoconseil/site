@@ -4,7 +4,7 @@
  * Sans JavaScript, ou après la date de fin, la page affiche le prix normal : rien à retirer à la main.
  */
 (function () {
-  var FIN = Date.parse("2026-11-27T23:59:59+01:00");
+  var FIN = Date.parse("2026-11-27T23:59:00+01:00");
   if (!(Date.now() < FIN)) return;
 
   var css =
@@ -32,7 +32,7 @@
   for (var i = 0; i < prix.length; i++) {
     var el = prix[i];
     var mention = el.hasAttribute("data-prix-mention")
-      ? "<span class=\"bf-mention\">Aujourd'hui seulement, code BLACKFRIDAY50</span>"
+      ? "<span class=\"bf-mention\">Aujourd'hui jusqu'à minuit, code BLACKFRIDAY50</span>"
       : "";
     el.innerHTML =
       "<span class=\"bf-prix\"><span class=\"bf-ancien\" aria-label=\"Prix habituel 149 euros\">149 €</span>" +
